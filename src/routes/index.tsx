@@ -3,13 +3,15 @@ import { Navbar } from "@/components/site/Navbar";
 import { Hero } from "@/components/site/Hero";
 import { About } from "@/components/site/About";
 import { Programs } from "@/components/site/Programs";
-import { Facilities } from "@/components/site/Facilities";
+import { WhyChooseUs } from "@/components/site/WhyChooseUs";
+import { LearningEnvironment } from "@/components/site/LearningEnvironment";
 import { Gallery } from "@/components/site/Gallery";
 import { Testimonials } from "@/components/site/Testimonials";
 import { Admissions } from "@/components/site/Admissions";
 import { Contact } from "@/components/site/Contact";
 import { Footer } from "@/components/site/Footer";
 import { WhatsAppFab } from "@/components/site/WhatsAppFab";
+import { FloatingDecor } from "@/components/site/FloatingDecor";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -33,11 +35,13 @@ export const Route = createFileRoute("/")({
 function Index() {
   return (
     <main className="relative overflow-x-hidden">
+      <FloatingDecor />
       <Navbar />
       <Hero />
       <About />
       <Programs />
-      <Facilities />
+      <WhyChooseUs />
+      <LearningEnvironment />
       <Gallery />
       <Testimonials />
       <Admissions />
