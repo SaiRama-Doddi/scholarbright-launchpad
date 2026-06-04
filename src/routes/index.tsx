@@ -1,29 +1,49 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Navbar } from "@/components/site/Navbar";
+import { Hero } from "@/components/site/Hero";
+import { About } from "@/components/site/About";
+import { Programs } from "@/components/site/Programs";
+import { Facilities } from "@/components/site/Facilities";
+import { Gallery } from "@/components/site/Gallery";
+import { Testimonials } from "@/components/site/Testimonials";
+import { Admissions } from "@/components/site/Admissions";
+import { Contact } from "@/components/site/Contact";
+import { Footer } from "@/components/site/Footer";
+import { WhatsAppFab } from "@/components/site/WhatsAppFab";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Your App" },
-      { name: "description", content: "Replace this with a one-sentence description of your app." },
-      { property: "og:title", content: "Your App" },
-      { property: "og:description", content: "Replace this with a one-sentence description of your app." },
+      { title: "Little Scholars International Preschool | Inspiring Future Leaders" },
+      {
+        name: "description",
+        content:
+          "Premium international preschool in Srikakulam — Day Care, Play Group, Nursery, Junior & Senior KG. Admissions Open 2025-26. Safe, digital, activity-based learning.",
+      },
+      { property: "og:title", content: "Little Scholars International Preschool" },
+      {
+        property: "og:description",
+        content: "Inspiring Future Leaders — Admissions Open 2025-26 in Srikakulam.",
+      },
     ],
   }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <main className="relative overflow-x-hidden">
+      <Navbar />
+      <Hero />
+      <About />
+      <Programs />
+      <Facilities />
+      <Gallery />
+      <Testimonials />
+      <Admissions />
+      <Contact />
+      <Footer />
+      <WhatsAppFab />
+    </main>
   );
 }
