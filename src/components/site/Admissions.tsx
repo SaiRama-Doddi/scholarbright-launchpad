@@ -1,8 +1,26 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { SectionEyebrow } from "./About";
 
+// Target: next academic session start. Adjust as needed.
+const TARGET = new Date("2026-06-15T09:00:00+05:30").getTime();
+
+function diff() {
+  const t = Math.max(0, TARGET - Date.now());
+  const d = Math.floor(t / 86400000);
+  const h = Math.floor((t % 86400000) / 3600000);
+  const m = Math.floor((t % 3600000) / 60000);
+  const s = Math.floor((t % 60000) / 1000);
+  return { d, h, m, s };
+}
+
 export function Admissions() {
+  const [t, setT] = useState(diff());
   const [sent, setSent] = useState(false);
+
+  useEffect(() => {
+    const id = setInterval(() => setT(diff()), 1000);
+    return () => clearInterval(id);
+  }, []);
 
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -36,16 +54,35 @@ export function Admissions() {
           <div className="relative grid gap-10 lg:grid-cols-[1fr_1.05fr] lg:items-center">
             <div>
               <div className="inline-flex items-center gap-2 rounded-full bg-white/15 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-white ring-1 ring-white/25">
-                <span className="h-2 w-2 rounded-full bg-accent" />
+                <span className="h-2 w-2 rounded-full bg-accent animate-pulse" />
                 Admissions Open · 2025 – 26
               </div>
               <h2 className="mt-5 font-display text-4xl font-bold leading-tight sm:text-5xl text-balance">
                 Begin your child's <span className="gradient-text-gold">brightest chapter.</span>
               </h2>
               <p className="mt-5 max-w-md text-white/85 leading-relaxed">
-                Limited seats per class to preserve our 12:1 ratio. Drop your details and our admissions team
-                will reach out within 24 hours — or chat with us instantly on WhatsApp.
+                Limited seats per class to preserve our 12:1 ratio. Hurry — early enrolments are filling up.
               </p>
+
+              {/* Countdown */}
+              <div className="mt-7">
+                <div className="text-xs font-semibold uppercase tracking-[0.18em] text-white/70">
+                  New academic year starts in
+                </div>
+                <div className="mt-3 grid grid-cols-4 gap-2 sm:gap-3 max-w-md">
+                  {([["Days", t.d], ["Hours", t.h], ["Mins", t.m], ["Secs", t.s]] as const).map(([label, val]) => (
+                    <div
+                      key={label}
+                      className="rounded-2xl bg-white/10 px-3 py-3 text-center backdrop-blur-md ring-1 ring-white/20"
+                    >
+                      <div className="font-display text-3xl font-bold text-white tabular-nums sm:text-4xl">
+                        {String(val).padStart(2, "0")}
+                      </div>
+                      <div className="mt-1 text-[10px] uppercase tracking-wider text-white/70">{label}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
 
               <ul className="mt-8 space-y-3 text-sm">
                 {[
