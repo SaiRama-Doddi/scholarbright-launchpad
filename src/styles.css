@@ -46,22 +46,22 @@
 :root {
   --radius: 1rem;
 
-  /* Royal blue / gold / cream palette */
-  --background: oklch(0.985 0.012 95);            /* soft cream white */
-  --foreground: oklch(0.22 0.08 265);             /* deep navy text */
-  --cream: oklch(0.97 0.025 88);
+  /* Brand colors — #373A98 royal blue, #F4B223 golden yellow, #FFFDF7 light cream */
+  --background: oklch(0.992 0.008 95);            /* #FFFDF7 light cream */
+  --foreground: oklch(0.22 0.09 268);             /* deep navy text */
+  --cream: oklch(0.985 0.012 90);
 
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.22 0.08 265);
+  --card: oklch(1 0 0);                           /* #FFFFFF */
+  --card-foreground: oklch(0.22 0.09 268);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.22 0.08 265);
+  --popover-foreground: oklch(0.22 0.09 268);
 
-  --primary: oklch(0.39 0.19 268);                /* royal blue */
-  --primary-foreground: oklch(0.985 0.01 95);
-  --primary-deep: oklch(0.28 0.17 268);
+  --primary: oklch(0.34 0.18 269);                /* #373A98 royal blue */
+  --primary-foreground: oklch(0.992 0.008 95);
+  --primary-deep: oklch(0.27 0.16 269);
 
-  --accent: oklch(0.83 0.17 88);                  /* golden yellow */
-  --accent-foreground: oklch(0.22 0.08 265);
+  --accent: oklch(0.79 0.16 78);                  /* #F4B223 golden yellow */
+  --accent-foreground: oklch(0.22 0.09 268);
 
   --secondary: oklch(0.95 0.03 90);
   --secondary-foreground: oklch(0.28 0.17 268);
