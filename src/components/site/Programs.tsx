@@ -1,3 +1,4 @@
+import { motion } from "motion/react";
 import { SectionEyebrow } from "./About";
 
 const programs = [
@@ -26,18 +27,20 @@ export function Programs() {
           </p>
         </div>
 
-        <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 auto-rows-fr">
           {programs.map((p, i) => (
-            <article
+            <motion.article
               key={p.name}
-              className={`hover-lift group relative overflow-hidden rounded-[2rem] bg-card p-7 shadow-[var(--shadow-soft)] ring-1 ring-border ${
-                i === 0 ? "lg:row-span-2 lg:p-9" : ""
-              }`}
+              initial={{ opacity: 0, y: 28 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{ duration: 0.5, delay: (i % 3) * 0.1, ease: [0.2, 0.8, 0.2, 1] }}
+              whileHover={{ y: -6 }}
+              className="group relative flex h-full flex-col overflow-hidden rounded-[2rem] bg-card p-7 shadow-[var(--shadow-soft)] ring-1 ring-border transition-shadow hover:shadow-[var(--shadow-glow)]"
             >
-              <div
-                className={`absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r ${p.color}`}
-              />
-              <div className="flex items-start justify-between gap-3">
+              <div className={`absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r ${p.color}`} />
+              <div aria-hidden className="absolute -top-12 -right-12 h-40 w-40 rounded-full bg-accent/10 blur-2xl transition group-hover:bg-accent/25" />
+              <div className="relative flex items-start justify-between gap-3">
                 <div>
                   <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-muted-foreground">
                     {p.age}
@@ -46,20 +49,47 @@ export function Programs() {
                     {p.name}
                   </h3>
                 </div>
-                <div
-                  className={`grid h-12 w-12 place-items-center rounded-2xl bg-gradient-to-br ${p.color} text-primary-deep font-display font-bold shadow-[var(--shadow-soft)]`}
-                >
+                <div className={`grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-gradient-to-br ${p.color} text-primary-deep font-display font-bold shadow-[var(--shadow-soft)]`}>
                   {p.name.charAt(0)}
                 </div>
               </div>
-              <p className={`mt-4 text-sm leading-relaxed text-foreground/75 ${i === 0 ? "lg:text-base" : ""}`}>
+              <p className="relative mt-4 text-sm leading-relaxed text-foreground/75">
                 {p.desc}
               </p>
-              <div className="mt-6 flex items-center gap-2 text-sm font-semibold text-primary transition group-hover:gap-3">
+              <div className="relative mt-auto pt-6 flex items-center gap-2 text-sm font-semibold text-primary transition-all group-hover:gap-3">
                 Learn more <span aria-hidden>→</span>
               </div>
-            </article>
+            </motion.article>
           ))}
+
+          {/* Elegant CTA tile fills the 6th slot — no more empty space */}
+          <motion.div
+            initial={{ opacity: 0, y: 28 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="relative flex h-full flex-col justify-between overflow-hidden rounded-[2rem] gradient-royal p-7 text-white shadow-[var(--shadow-glow)]"
+          >
+            <div aria-hidden className="absolute -bottom-16 -right-16 h-56 w-56 rounded-full bg-accent/30 blur-3xl" />
+            <div className="relative">
+              <span className="inline-flex items-center gap-2 rounded-full bg-white/15 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.22em] ring-1 ring-white/25">
+                <span className="h-1.5 w-1.5 rounded-full bg-accent animate-pulse" />
+                Admissions 2025–26
+              </span>
+              <h3 className="mt-4 font-display text-2xl font-bold leading-tight">
+                Not sure which program fits your little one?
+              </h3>
+              <p className="mt-2 text-sm text-white/80">
+                Our team will guide you to the perfect class with a friendly campus tour.
+              </p>
+            </div>
+            <a
+              href="#admissions"
+              className="relative mt-6 inline-flex w-fit items-center gap-2 rounded-full bg-accent px-5 py-2.5 text-sm font-semibold text-primary-deep shadow-[var(--shadow-gold)] transition hover:gap-3"
+            >
+              Book a visit <span aria-hidden>→</span>
+            </a>
+          </motion.div>
         </div>
       </div>
     </section>
