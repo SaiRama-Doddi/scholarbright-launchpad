@@ -11,6 +11,7 @@ import { Admissions } from "@/components/site/Admissions";
 import { Contact } from "@/components/site/Contact";
 import { Footer } from "@/components/site/Footer";
 import { WhatsAppFab } from "@/components/site/WhatsAppFab";
+import { ScrollToTop } from "@/components/site/ScrollToTop";
 import { FloatingDecor } from "@/components/site/FloatingDecor";
 import { Highlights } from "@/components/site/Highlights";
 import { AdmissionsBanner } from "@/components/site/AdmissionsBanner";
@@ -52,6 +53,7 @@ function Index() {
       <Contact />
       <Footer />
       <WhatsAppFab />
+      <ScrollToTop />
     </main>
   );
 }
