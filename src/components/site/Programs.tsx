@@ -57,9 +57,13 @@ export function Programs() {
               <p className="relative mt-4 text-sm leading-relaxed text-foreground/75">
                 {p.desc}
               </p>
-              <div className="relative mt-auto pt-6 flex items-center gap-2 text-sm font-semibold text-primary transition-all group-hover:gap-3">
+              <Link
+                to="/programs/$slug"
+                params={{ slug: p.slug }}
+                className="relative mt-auto pt-6 flex items-center gap-2 text-sm font-semibold text-primary transition-all group-hover:gap-3"
+              >
                 Learn more <span aria-hidden>→</span>
-              </div>
+              </Link>
             </motion.article>
           ))}
 
