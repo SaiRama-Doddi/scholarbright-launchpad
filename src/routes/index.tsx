@@ -12,6 +12,8 @@ import { Contact } from "@/components/site/Contact";
 import { Footer } from "@/components/site/Footer";
 import { WhatsAppFab } from "@/components/site/WhatsAppFab";
 import { FloatingDecor } from "@/components/site/FloatingDecor";
+import { Highlights } from "@/components/site/Highlights";
+import { AdmissionsBanner } from "@/components/site/AdmissionsBanner";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -38,10 +40,12 @@ function Index() {
       <FloatingDecor />
       <Navbar />
       <Hero />
+      <Highlights />
       <About />
       <Programs />
       <WhyChooseUs />
       <LearningEnvironment />
+      <AdmissionsBanner />
       <Gallery />
       <Testimonials />
       <Admissions />
