@@ -14,10 +14,11 @@ function diff() {
 }
 
 export function Admissions() {
-  const [t, setT] = useState(diff());
+  const [t, setT] = useState({ d: 0, h: 0, m: 0, s: 0 });
   const [sent, setSent] = useState(false);
 
   useEffect(() => {
+    setT(diff());
     const id = setInterval(() => setT(diff()), 1000);
     return () => clearInterval(id);
   }, []);
