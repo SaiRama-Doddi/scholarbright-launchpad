@@ -39,7 +39,7 @@ export function AdmissionsBanner() {
                 className="inline-block"
               >
                 <span className="inline-block rounded-full bg-accent px-5 py-1.5 font-display text-sm font-bold text-primary-deep shadow-[var(--shadow-gold)]">
-                  2025 – 26
+                  2026 - 27
                 </span>
                 <div className="mt-3 rounded-3xl bg-white px-7 py-5 shadow-2xl">
                   <div className="font-display text-4xl font-extrabold tracking-tight text-[#3b1d6e] sm:text-5xl">

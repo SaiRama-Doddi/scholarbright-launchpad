@@ -1,4 +1,4 @@
-import logoAsset from "@/assets/little.jfif";
+import logoAsset from "@/assets/little.png";
 
 export function Footer() {
   return (

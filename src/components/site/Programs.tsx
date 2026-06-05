@@ -79,7 +79,7 @@ export function Programs() {
             <div className="relative">
               <span className="inline-flex items-center gap-2 rounded-full bg-white/15 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.22em] ring-1 ring-white/25">
                 <span className="h-1.5 w-1.5 rounded-full bg-accent animate-pulse" />
-                Admissions 2025–26
+                Admissions 2026 - 27
               </span>
               <h3 className="mt-4 font-display text-2xl font-bold leading-tight">
                 Not sure which program fits your little one?

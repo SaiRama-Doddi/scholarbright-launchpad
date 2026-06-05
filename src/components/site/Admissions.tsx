@@ -56,7 +56,7 @@ export function Admissions() {
             <div>
               <div className="inline-flex items-center gap-2 rounded-full bg-white/15 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-white ring-1 ring-white/25">
                 <span className="h-2 w-2 rounded-full bg-accent animate-pulse" />
-                Admissions Open · 2025 – 26
+                Admissions Open · 2026 - 27
               </div>
               <h2 className="mt-5 font-display text-4xl font-bold leading-tight sm:text-5xl text-balance">
                 Begin your child's <span className="gradient-text-gold">brightest chapter.</span>

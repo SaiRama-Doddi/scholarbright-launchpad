@@ -22,12 +22,12 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Premium international preschool in Srikakulam — Day Care, Play Group, Nursery, Junior & Senior KG. Admissions Open 2025-26. Safe, digital, activity-based learning.",
+          "Premium international preschool in Srikakulam — Day Care, Play Group, Nursery, Junior & Senior KG. Admissions Open 2026-27. Safe, digital, activity-based learning.",
       },
       { property: "og:title", content: "Little Scholars International Preschool" },
       {
         property: "og:description",
-        content: "Inspiring Future Leaders — Admissions Open 2025-26 in Srikakulam.",
+        content: "Inspiring Future Leaders — Admissions Open 2026-27 in Srikakulam.",
       },
     ],
   }),

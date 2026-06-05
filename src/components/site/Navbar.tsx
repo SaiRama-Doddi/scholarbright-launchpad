@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import logoAsset from "@/assets/little.jfif";
+import logoAsset from "@/assets/little.png";
 
 const links = [
   { label: "About", href: "#about" },
@@ -29,7 +29,7 @@ export function Navbar() {
         }`}
       >
         <a href="#top" className="flex items-center gap-3">
-          <div className="grid h-14 w-14 place-items-center rounded-2xl bg-white shadow-[var(--shadow-soft)] ring-1 ring-border p-1.5">
+          <div className="grid h-20 w-20 place-items-center p-1">
             <img src={logoAsset} alt="Little Scholars" className="h-full w-full object-contain" />
           </div>
           <div className="hidden sm:block leading-tight">

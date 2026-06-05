@@ -1,5 +1,5 @@
 import heroImg from "@/assets/hero-children.jpg";
-import logoAsset from "@/assets/little.jfif";
+import logoAsset from "@/assets/little.png";
 
 export function Hero() {
   return (
@@ -19,7 +19,7 @@ export function Hero() {
               <span className="absolute inset-0 rounded-full bg-accent animate-pulse-ring" />
               <span className="relative h-2.5 w-2.5 rounded-full bg-accent" />
             </span>
-            Admissions Open · 2025 – 26
+            Admissions Open · 2026 - 27
           </div>
 
           <h1 className="mt-6 font-display text-5xl font-bold leading-[1.02] text-primary-deep sm:text-6xl lg:text-7xl text-balance">
