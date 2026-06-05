@@ -44,8 +44,8 @@ export function Testimonials() {
   const r = reviews[i];
 
   return (
-    <section className="section-pad relative overflow-hidden">
-      <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
+    <section className="section-pad relative">
+      <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
         <div className="absolute -top-20 right-1/4 h-80 w-80 rounded-full bg-accent/20 blur-3xl" />
         <div className="absolute bottom-0 left-10 h-80 w-80 rounded-full bg-primary/10 blur-3xl" />
       </div>
@@ -58,9 +58,9 @@ export function Testimonials() {
           </h2>
         </div>
 
-        <div className="relative mt-14">
-          <div className="relative overflow-hidden rounded-[2.25rem] bg-card p-8 sm:p-12 shadow-[var(--shadow-glow)] ring-1 ring-border">
-            <span className="absolute -top-6 left-10 grid h-14 w-14 place-items-center rounded-2xl gradient-gold font-display text-3xl font-bold text-primary-deep shadow-[var(--shadow-gold)]">
+        <div className="relative mt-16">
+          <div className="relative rounded-[2.25rem] bg-card p-8 pt-14 sm:p-12 sm:pt-16 shadow-[var(--shadow-glow)] ring-1 ring-border">
+            <span className="absolute -top-7 left-10 grid h-14 w-14 place-items-center rounded-2xl gradient-gold font-display text-3xl font-bold text-primary-deep shadow-[var(--shadow-gold)]">
               "
             </span>
             <AnimatePresence mode="wait">
