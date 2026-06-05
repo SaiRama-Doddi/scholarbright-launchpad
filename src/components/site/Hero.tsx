@@ -3,7 +3,7 @@ import logoAsset from "@/assets/little.png";
 
 export function Hero() {
   return (
-    <section id="top" className="relative isolate overflow-hidden pt-28 pb-8 lg:pt-36 lg:pb-12">
+    <section id="top" className="relative isolate overflow-hidden pt-24 pb-8 lg:pt-32 lg:pb-12">
       {/* background ornaments */}
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute -top-32 -left-32 h-[480px] w-[480px] rounded-full bg-primary/15 blur-3xl" />
