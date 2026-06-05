@@ -6,8 +6,8 @@ const mapsQuery = encodeURIComponent(address);
 
 export function Contact() {
   return (
-    <section id="contact" className="section-pad relative bg-cream">
-      <div className="mx-auto max-w-7xl px-4">
+    <section id="contact" className="section-pad relative bg-cream min-h-[70vh] lg:min-h-[75vh] flex items-center">
+      <div className="mx-auto max-w-7xl px-4 w-full">
         <div className="grid gap-10 lg:grid-cols-[1fr_1.2fr]">
           <div>
             <SectionEyebrow>Visit Us</SectionEyebrow>
