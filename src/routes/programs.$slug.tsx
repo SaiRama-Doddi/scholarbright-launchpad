@@ -213,7 +213,7 @@ export const Route = createFileRoute("/programs/$slug")({
 });
 
 function ProgramDetail() {
-  const { program: p } = Route.useLoaderData();
+  const { program: p } = Route.useLoaderData() as { program: Program };
 
   return (
     <main className="relative overflow-x-hidden bg-cream">
