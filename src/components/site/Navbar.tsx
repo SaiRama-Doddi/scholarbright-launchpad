@@ -22,6 +22,18 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  const handleMobileClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    setOpen(false);
+    const targetId = href.replace("#", "");
+    const element = document.getElementById(targetId);
+    if (element) {
+      setTimeout(() => {
+        element.scrollIntoView({ behavior: "smooth" });
+      }, 50);
+    }
+  };
+
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 w-full transition-all duration-500 ${
@@ -31,7 +43,15 @@ export function Navbar() {
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <a href="#top" className="flex items-center gap-3 group">
+        <a
+          href="#top"
+          onClick={(e) => {
+            e.preventDefault();
+            setOpen(false);
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
+          className="flex items-center gap-3 group"
+        >
           <div className="relative h-13 w-13 transition-transform duration-300 group-hover:scale-105">
             <img src={logoAsset} alt="Little Scholars" className="h-full w-full object-contain" />
           </div>
@@ -125,7 +145,7 @@ export function Navbar() {
                   transition={{ duration: 0.25, ease: "easeOut" }}
                 >
                   <a
-                    onClick={() => setOpen(false)}
+                    onClick={(e) => handleMobileClick(e, l.href)}
                     href={l.href}
                     className="block rounded-2xl px-4 py-2.5 text-base font-semibold text-primary-deep hover:bg-primary/5 transition-colors"
                   >
@@ -141,7 +161,7 @@ export function Navbar() {
                 className="pt-3"
               >
                 <a
-                  onClick={() => setOpen(false)}
+                  onClick={(e) => handleMobileClick(e, "#admissions")}
                   href="#admissions"
                   className="flex items-center justify-center rounded-full bg-primary py-3.5 text-sm font-bold uppercase tracking-wider text-white shadow-md transition hover:bg-primary-deep"
                 >
