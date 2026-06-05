@@ -1,5 +1,5 @@
 import heroImg from "@/assets/hero-children.jpg";
-import logoAsset from "@/assets/little-scholars-logo.png.asset.json";
+import logoAsset from "@/assets/little.jfif";
 
 export function Hero() {
   return (
@@ -97,8 +97,8 @@ export function Hero() {
             </div>
 
             {/* floating logo badge */}
-            <div className="absolute -top-6 -left-6 grid h-24 w-24 place-items-center rounded-3xl glass animate-float">
-              <img src={logoAsset.url} alt="" className="h-16 w-16 object-contain" />
+            <div className="absolute -top-8 -left-8 grid h-28 w-28 place-items-center rounded-[2rem] glass p-3 animate-float">
+              <img src={logoAsset} alt="" className="h-full w-full object-contain" />
             </div>
 
             {/* floating cap */}

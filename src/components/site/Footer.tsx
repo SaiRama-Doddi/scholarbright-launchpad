@@ -1,4 +1,4 @@
-import logoAsset from "@/assets/little-scholars-logo.png.asset.json";
+import logoAsset from "@/assets/little.jfif";
 
 export function Footer() {
   return (
@@ -12,8 +12,8 @@ export function Footer() {
         <div className="grid gap-10 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div>
             <div className="flex items-center gap-3">
-              <div className="grid h-12 w-12 place-items-center rounded-2xl bg-white">
-                <img src={logoAsset.url} alt="" className="h-9 w-9 object-contain" />
+              <div className="grid h-14 w-14 place-items-center rounded-2xl bg-white p-1.5">
+                <img src={logoAsset} alt="" className="h-full w-full object-contain" />
               </div>
               <div className="leading-tight">
                 <div className="font-display text-lg font-bold">Little Scholars</div>
