@@ -178,9 +178,9 @@ export function Hero() {
           </svg>
         </div>
 
-        <div className="w-full px-6 md:px-12 relative">
+        <div className="w-full px-6 md:px-12 relative overflow-hidden">
           {/* Stats grid */}
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
             {[
               { k: "5+", v: "Programs", icon: GraduationCap },
               { k: "100%", v: "Safe & CCTV Monitored Campus", icon: ShieldCheck },
@@ -189,13 +189,13 @@ export function Hero() {
             ].map((s, i) => {
               const Icon = s.icon;
               return (
-                <div key={i} className="flex items-center gap-4">
-                  <div className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-white text-primary shadow-[var(--shadow-soft)]">
-                    <Icon className="h-6 w-6 text-primary-deep" />
+                <div key={i} className="flex items-start gap-3 sm:gap-4">
+                  <div className="grid h-12 w-12 sm:h-14 sm:w-14 shrink-0 place-items-center rounded-2xl bg-white text-primary shadow-[var(--shadow-soft)]">
+                    <Icon className="h-5 w-5 sm:h-6 sm:w-6 text-primary-deep" />
                   </div>
-                  <div>
-                    <dt className="font-display text-2xl font-bold text-accent">{s.k}</dt>
-                    <dd className="mt-0.5 text-xs font-semibold leading-snug text-white/90">{s.v}</dd>
+                  <div className="min-w-0">
+                    <dt className="font-display text-xl sm:text-2xl font-bold text-accent">{s.k}</dt>
+                    <dd className="mt-0.5 text-[10px] sm:text-xs font-semibold leading-tight text-white/90 break-words">{s.v}</dd>
                   </div>
                 </div>
               );
