@@ -22,10 +22,12 @@ export function Navbar() {
   }, []);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 px-4 pt-4">
+    <header className="fixed inset-x-0 top-0 z-50">
       <nav
-        className={`mx-auto flex max-w-7xl items-center justify-between rounded-full px-4 py-2.5 transition-all duration-500 ${
-          scrolled ? "glass shadow-[var(--shadow-soft)]" : "bg-transparent"
+        className={`w-full flex items-center justify-between transition-all duration-500 ${
+          scrolled 
+            ? "glass border-b border-border/40 py-2.5 px-6 md:px-12 shadow-[var(--shadow-soft)]" 
+            : "bg-transparent py-3.5 px-6 md:px-12"
         }`}
       >
         <a href="#top" className="flex items-center gap-3">
@@ -43,7 +45,7 @@ export function Navbar() {
             <li key={l.href}>
               <a
                 href={l.href}
-                className="rounded-full px-4 py-2 text-sm font-medium text-foreground/80 transition hover:bg-primary/8 hover:text-primary-deep"
+                className="rounded-full px-4 py-2 text-sm font-semibold text-primary-deep/95 transition hover:bg-primary/8 hover:text-primary-deep"
               >
                 {l.label}
               </a>
@@ -54,7 +56,7 @@ export function Navbar() {
         <div className="flex items-center gap-2">
           <a
             href="#admissions"
-            className="hidden md:inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-soft)] transition hover:bg-primary-deep hover:shadow-[var(--shadow-glow)]"
+            className="hidden md:inline-flex items-center gap-2 rounded-full bg-primary-deep px-5 py-2.5 text-sm font-semibold text-white shadow-[var(--shadow-soft)] transition hover:bg-primary hover:shadow-[var(--shadow-glow)]"
           >
             Apply Now
             <span aria-hidden>→</span>
@@ -73,14 +75,14 @@ export function Navbar() {
       </nav>
 
       {open && (
-        <div className="mx-auto mt-2 max-w-7xl lg:hidden">
-          <ul className="glass rounded-3xl p-3">
+        <div className="w-full lg:hidden px-6 pb-4 bg-white/95 backdrop-blur-md border-b border-border/40 shadow-md">
+          <ul className="flex flex-col gap-1 pt-2">
             {links.map((l) => (
               <li key={l.href}>
                 <a
                   onClick={() => setOpen(false)}
                   href={l.href}
-                  className="block rounded-2xl px-4 py-3 text-sm font-medium text-foreground/80 hover:bg-primary/8"
+                  className="block rounded-xl px-4 py-3 text-sm font-semibold text-primary-deep hover:bg-primary/8"
                 >
                   {l.label}
                 </a>

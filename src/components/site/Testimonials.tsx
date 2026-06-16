@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { SectionEyebrow } from "./About";
+import { FloatingDecor } from "./FloatingDecor";
 
 const reviews = [
   {
@@ -44,13 +45,14 @@ export function Testimonials() {
   const r = reviews[i];
 
   return (
-    <section className="section-pad relative">
+    <section className="section-pad relative overflow-hidden">
+      <FloatingDecor section="testimonials" />
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
         <div className="absolute -top-20 right-1/4 h-80 w-80 rounded-full bg-accent/20 blur-3xl" />
         <div className="absolute bottom-0 left-10 h-80 w-80 rounded-full bg-primary/10 blur-3xl" />
       </div>
 
-      <div className="mx-auto max-w-5xl px-4">
+      <div className="mx-auto max-w-5xl px-4 relative z-10">
         <div className="mx-auto max-w-2xl text-center">
           <SectionEyebrow>Parents Speak</SectionEyebrow>
           <h2 className="mt-4 font-display text-4xl font-bold leading-tight text-primary-deep sm:text-5xl text-balance">

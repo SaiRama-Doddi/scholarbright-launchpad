@@ -1,4 +1,5 @@
 import { SectionEyebrow } from "./About";
+import { FloatingDecor } from "./FloatingDecor";
 
 const address =
   "Plot No: 14, Kalki Nagar, Near Kerala Building, Thotapalem Road, Srikakulam – 532005";
@@ -6,8 +7,9 @@ const mapsQuery = encodeURIComponent(address);
 
 export function Contact() {
   return (
-    <section id="contact" className="section-pad relative bg-cream">
-      <div className="mx-auto max-w-7xl px-4">
+    <section id="contact" className="section-pad relative bg-cream overflow-hidden">
+      <FloatingDecor section="contact" />
+      <div className="mx-auto max-w-7xl px-4 relative z-10">
         <div className="grid gap-10 lg:grid-cols-[1fr_1.2fr]">
           <div>
             <SectionEyebrow>Visit Us</SectionEyebrow>

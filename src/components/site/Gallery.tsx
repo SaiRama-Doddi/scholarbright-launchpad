@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { SectionEyebrow } from "./About";
+import { FloatingDecor } from "./FloatingDecor";
 import g1 from "@/assets/gallery-1.jpg";
 import g2 from "@/assets/gallery-2.jpg";
 import g3 from "@/assets/gallery-3.jpg";
@@ -37,7 +38,8 @@ export function Gallery() {
 
   return (
     <section id="gallery" className="section-pad relative overflow-hidden">
-      <div className="mx-auto max-w-7xl px-4">
+      <FloatingDecor section="gallery" />
+      <div className="mx-auto max-w-7xl px-4 relative z-10">
         <div className="flex flex-wrap items-end justify-between gap-6">
           <div className="max-w-2xl">
             <SectionEyebrow>Campus Life</SectionEyebrow>

@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { SectionEyebrow } from "./About";
+import { FloatingDecor } from "./FloatingDecor";
 
 const items = [
   { t: "Digital Smart Classrooms", d: "Interactive boards turn lessons into adventures.", icon: "▣" },
@@ -15,12 +16,13 @@ const items = [
 export function WhyChooseUs() {
   return (
     <section id="facilities" className="section-pad relative overflow-hidden">
+      <FloatingDecor section="why" />
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute top-20 left-1/4 h-72 w-72 rounded-full bg-primary/10 blur-3xl" />
         <div className="absolute bottom-20 right-1/4 h-72 w-72 rounded-full bg-accent/20 blur-3xl" />
       </div>
 
-      <div className="mx-auto max-w-7xl px-4">
+      <div className="mx-auto max-w-7xl px-4 relative z-10">
         <div className="mx-auto max-w-3xl text-center">
           <SectionEyebrow>Why Choose Us</SectionEyebrow>
           <h2 className="mt-4 font-display text-4xl font-bold leading-tight text-primary-deep sm:text-5xl text-balance">

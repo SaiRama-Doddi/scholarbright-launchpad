@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
 import learningImg from "@/assets/learning-environment.jpg";
 import { SectionEyebrow } from "./About";
+import { FloatingDecor } from "./FloatingDecor";
 
 const pillars = [
   { t: "Fun Learning", d: "Curiosity sparked through games, songs and stories.", icon: "✦" },
@@ -14,7 +15,8 @@ const pillars = [
 export function LearningEnvironment() {
   return (
     <section className="section-pad relative overflow-hidden bg-cream">
-      <div className="mx-auto max-w-7xl px-4">
+      <FloatingDecor section="learning" />
+      <div className="mx-auto max-w-7xl px-4 relative z-10">
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center lg:gap-16">
           {/* Image side */}
           <motion.div
@@ -38,9 +40,9 @@ export function LearningEnvironment() {
 
             {/* floating badge */}
             <div className="absolute -bottom-6 -right-4 w-56 rounded-3xl glass p-4 shadow-[var(--shadow-soft)] animate-float">
-              <div className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Class size</div>
-              <div className="mt-1 font-display text-3xl font-bold text-primary-deep">12 : 1</div>
-              <div className="text-xs text-foreground/70">Children per teacher</div>
+              <div className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Learning Style</div>
+              <div className="mt-1 font-display text-2xl font-bold text-primary-deep">Activity-Based</div>
+              <div className="text-xs text-foreground/70">Learning by doing</div>
             </div>
             <div className="absolute -top-5 -left-5 grid h-16 w-16 place-items-center rounded-2xl gradient-gold shadow-[var(--shadow-gold)] animate-float-rev">
               <span className="text-2xl">✏︎</span>

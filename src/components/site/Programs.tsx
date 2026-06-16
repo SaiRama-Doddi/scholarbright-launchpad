@@ -1,9 +1,10 @@
 import { motion } from "motion/react";
 import { Link } from "@tanstack/react-router";
 import { SectionEyebrow } from "./About";
+import { FloatingDecor } from "./FloatingDecor";
 
 const programs = [
-  { slug: "day-care", name: "Day Care", age: "8 months – 5 yrs", color: "from-amber-200 to-yellow-300", desc: "Safe, loving care all day long with structured play, naps and nutrition." },
+  { slug: "day-care", name: "Day Care", age: "1.5 – 5 yrs", color: "from-amber-200 to-yellow-300", desc: "Safe, loving care all day long with structured play, cozy naps and engaging activities." },
   { slug: "play-group", name: "Play Group", age: "1.5 – 2.5 yrs", color: "from-rose-200 to-pink-300", desc: "First steps into social learning — songs, sensory play and lots of giggles." },
   { slug: "nursery", name: "Nursery", age: "2.5 – 3.5 yrs", color: "from-sky-200 to-blue-300", desc: "Language, motor skills and early concepts through stories and exploration." },
   { slug: "junior-kg", name: "Junior KG", age: "3.5 – 4.5 yrs", color: "from-violet-200 to-purple-300", desc: "Letters, numbers and confidence — the joyful runway to formal school." },
@@ -13,11 +14,12 @@ const programs = [
 export function Programs() {
   return (
     <section id="programs" className="section-pad relative overflow-hidden bg-cream">
+      <FloatingDecor section="programs" />
       <div aria-hidden className="pointer-events-none absolute inset-0">
         <div className="absolute top-10 left-10 h-72 w-72 rounded-full bg-primary/8 blur-3xl" />
         <div className="absolute bottom-10 right-10 h-72 w-72 rounded-full bg-accent/15 blur-3xl" />
       </div>
-      <div className="relative mx-auto max-w-7xl px-4">
+      <div className="relative z-10 mx-auto max-w-7xl px-4">
         <div className="max-w-3xl">
           <SectionEyebrow>Our Programs</SectionEyebrow>
           <h2 className="mt-4 font-display text-4xl font-bold leading-tight text-primary-deep sm:text-5xl text-balance">

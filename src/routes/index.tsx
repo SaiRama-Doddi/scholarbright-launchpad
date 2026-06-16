@@ -11,8 +11,6 @@ import { Admissions } from "@/components/site/Admissions";
 import { Contact } from "@/components/site/Contact";
 import { Footer } from "@/components/site/Footer";
 import { WhatsAppFab } from "@/components/site/WhatsAppFab";
-import { FloatingDecor } from "@/components/site/FloatingDecor";
-import { Highlights } from "@/components/site/Highlights";
 import { AdmissionsBanner } from "@/components/site/AdmissionsBanner";
 
 export const Route = createFileRoute("/")({
@@ -37,10 +35,8 @@ export const Route = createFileRoute("/")({
 function Index() {
   return (
     <main className="relative overflow-x-hidden">
-      <FloatingDecor />
       <Navbar />
       <Hero />
-      <Highlights />
       <About />
       <Programs />
       <WhyChooseUs />

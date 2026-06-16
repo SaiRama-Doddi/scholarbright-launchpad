@@ -1,3 +1,5 @@
+import { FloatingDecor } from "./FloatingDecor";
+
 const pillars = [
   {
     title: "Passionate, Caring Staff",
@@ -18,8 +20,9 @@ const pillars = [
 
 export function About() {
   return (
-    <section id="about" className="section-pad relative">
-      <div className="mx-auto max-w-7xl px-4">
+    <section id="about" className="section-pad relative overflow-hidden">
+      <FloatingDecor section="about" />
+      <div className="mx-auto max-w-7xl px-4 relative z-10">
         <div className="grid gap-12 lg:grid-cols-[1fr_1.2fr] lg:items-end">
           <div>
             <SectionEyebrow>Our Story</SectionEyebrow>

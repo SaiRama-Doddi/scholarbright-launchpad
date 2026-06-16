@@ -1,7 +1,6 @@
 import { motion } from "motion/react";
 
 const stats = [
-  { v: "12:1", l: "Child : Teacher Ratio" },
   { v: "24/7", l: "CCTV Monitored" },
   { v: "100%", l: "AC Campus" },
   { v: "5★", l: "Parent Rated" },
@@ -16,7 +15,7 @@ export function Highlights() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-60px" }}
           transition={{ duration: 0.6 }}
-          className="grid grid-cols-2 gap-3 rounded-[2rem] bg-card p-4 shadow-[var(--shadow-soft)] ring-1 ring-border sm:grid-cols-4 sm:gap-0 sm:p-0"
+          className="grid grid-cols-1 gap-3 rounded-[2rem] bg-card p-4 shadow-[var(--shadow-soft)] ring-1 ring-border sm:grid-cols-3 sm:gap-0 sm:p-0"
         >
           {stats.map((s, i) => (
             <div

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { SectionEyebrow } from "./About";
+import { FloatingDecor } from "./FloatingDecor";
 
 // Target: next academic session start. Adjust as needed.
 const TARGET = new Date("2026-06-15T09:00:00+05:30").getTime();
@@ -38,7 +39,8 @@ export function Admissions() {
 
   return (
     <section id="admissions" className="section-pad relative overflow-hidden">
-      <div className="mx-auto max-w-7xl px-4">
+      <FloatingDecor section="admissions" />
+      <div className="mx-auto max-w-7xl px-4 relative z-10">
         <div className="relative overflow-hidden rounded-[2.5rem] gradient-royal p-8 sm:p-12 lg:p-16 text-white shadow-[var(--shadow-glow)]">
           <div aria-hidden className="pointer-events-none absolute inset-0">
             <div className="absolute -top-20 -right-20 h-96 w-96 rounded-full bg-accent/25 blur-3xl" />
@@ -63,7 +65,7 @@ export function Admissions() {
                 Begin your child's <span className="gradient-text-gold">brightest chapter.</span>
               </h2>
               <p className="mt-5 max-w-md text-white/85 leading-relaxed">
-                Limited seats per class to preserve our 12:1 ratio. Hurry — early enrolments are filling up.
+                Limited seats per class to ensure personal attention for every child. Hurry — early enrolments are filling up.
               </p>
 
               {/* Countdown */}
