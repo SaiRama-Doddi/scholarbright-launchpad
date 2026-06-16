@@ -97,30 +97,27 @@ export function Hero() {
         {/* right: visual */}
         <div className="relative animate-fade-up [animation-delay:120ms] hidden lg:flex justify-center items-center">
           <div className="relative w-full max-w-[620px] h-[420px] overflow-hidden rounded-[2rem] shadow-[0_12px_40px_rgba(0,0,0,0.08)] ring-1 ring-white/60">
-              {carouselImages.map((img, idx) => (
-                <img
-                  key={img}
-                  src={img}
-                  alt="Preschool children learning and playing"
-                  className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-1000 ${
-                    idx === imgIndex ? "opacity-100 z-10" : "opacity-0 z-0"
+            {carouselImages.map((img, idx) => (
+              <img
+                key={img}
+                src={img}
+                alt="Preschool children learning and playing"
+                className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-1000 ${
+                  idx === imgIndex ? "opacity-100 z-10" : "opacity-0 z-0"
+                }`}
+              />
+            ))}
+            <div className="absolute inset-0 bg-gradient-to-tr from-primary-deep/20 via-transparent to-transparent z-20" />
+            <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-30">
+              {carouselImages.map((_, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => setImgIndex(idx)}
+                  className={`h-1.5 w-1.5 rounded-full transition-all duration-300 ${
+                    idx === imgIndex ? "bg-white w-3" : "bg-white/50"
                   }`}
                 />
               ))}
-              <div className="absolute inset-0 bg-gradient-to-tr from-primary-deep/20 via-transparent to-transparent z-20" />
-              
-              {/* Dot Indicators */}
-              <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-30">
-                {carouselImages.map((_, idx) => (
-                  <button
-                    key={idx}
-                    onClick={() => setImgIndex(idx)}
-                    className={`h-1.5 w-1.5 rounded-full transition-all duration-300 ${
-                      idx === imgIndex ? "bg-white w-3" : "bg-white/50"
-                    }`}
-                  />
-                ))}
-              </div>
             </div>
 
             {/* floating logo badge */}
