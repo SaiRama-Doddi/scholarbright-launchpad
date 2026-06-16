@@ -61,8 +61,8 @@ export function Hero() {
           </div>
 
           <h1 className="mt-2 font-display text-4xl sm:text-5xl lg:text-6xl xl:text-[72px] font-bold leading-[1.15] text-primary-deep text-balance">
-            Little Scholars
-            <span className="whitespace-nowrap"> International Preschool</span>
+            <span className="whitespace-nowrap">Little Scholars</span>
+            <span className="block">International Preschool</span>
           </h1>
           <div className="mt-2 h-1.5 w-20 rounded-full bg-accent" />
 
