@@ -38,23 +38,23 @@ export function Navbar() {
     <header
       className={`fixed inset-x-0 top-0 z-50 w-full transition-all duration-500 ${
         scrolled
-          ? "bg-white/85 backdrop-blur-md border-b border-border/40 py-2.5 shadow-[var(--shadow-soft)]"
-          : "bg-transparent py-4"
+          ? "bg-white/90 backdrop-blur-md border-b border-border/20 h-[90px]"
+          : "bg-transparent h-[90px]"
       }`}
     >
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 md:px-12">
+      <nav className="mx-auto flex h-full max-w-[1440px] items-center justify-between px-6 md:px-12">
         <a href="#top" className="flex items-center gap-3">
-          <div className="grid h-16 w-16 place-items-center p-1 sm:h-20 sm:w-20">
+          <div className="grid h-16 w-16 place-items-center p-1">
             <img src={logoAsset} alt="Little Scholars" className="h-full w-full object-contain" />
           </div>
-          <div className="hidden sm:block leading-tight">
-            <div className="font-display text-[15px] font-bold text-primary-deep tracking-tight">Little Scholars</div>
-            <div className="text-[9px] uppercase tracking-[0.2em] text-muted-foreground font-semibold">International Preschool</div>
+          <div className="leading-tight">
+            <div className="font-display text-[16px] font-semibold text-[#081B7A] tracking-tight">Little Scholars</div>
+            <div className="text-[10px] uppercase tracking-[0.28em] text-[#081B7A]/70 font-semibold">International Preschool</div>
           </div>
         </a>
 
         {/* nav links */}
-        <ul className="hidden lg:flex items-center gap-1">
+        <ul className="hidden lg:flex items-center gap-[48px]">
           {links.map((l) => (
             <li key={l.href}>
               <a
@@ -72,10 +72,9 @@ export function Navbar() {
         <div className="flex items-center gap-3">
           <a
             href="#admissions"
-            className="hidden md:inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-soft)] transition hover:bg-primary-deep hover:shadow-[var(--shadow-glow)]"
+            className="hidden md:inline-flex h-[56px] w-[180px] items-center justify-center rounded-full bg-[#0B2286] text-[16px] font-semibold text-white shadow-[0_16px_40px_rgba(11,34,134,0.18)] transition hover:bg-[#091A72]"
           >
-            Apply Now
-            <span aria-hidden className="transition-transform duration-300 group-hover:translate-x-1">→</span>
+            Apply Now →
           </a>
           <button
             aria-label="Toggle menu"
