@@ -46,9 +46,9 @@ export function Hero() {
       <div className="absolute -top-32 -left-32 h-[480px] w-[480px] rounded-full bg-primary/10 blur-3xl" />
       <div className="absolute -top-20 -right-32 h-[420px] w-[420px] rounded-full bg-accent/15 blur-3xl" />
 
-      <div className="relative z-10 mx-auto grid h-[860px] w-full max-w-[1440px] grid-cols-1 gap-10 px-6 py-8 lg:grid-cols-[55%_45%] lg:items-center lg:px-12">
+      <div className="relative z-10 mx-auto grid h-[740px] w-full max-w-[1440px] grid-cols-1 gap-10 px-6 py-8 lg:grid-cols-[48%_52%] lg:items-center lg:px-12">
         {/* left: copy */}
-        <div className="relative animate-fade-up flex flex-col justify-center max-w-[650px]">
+        <div className="relative animate-fade-up flex flex-col justify-center max-w-[640px]">
           {/* Dotted airplane path SVG */}
           <svg viewBox="0 0 120 100" className="absolute -top-8 right-0 w-24 h-20 text-[#F2B632]/15 pointer-events-none select-none hidden xl:block" fill="none" stroke="currentColor" strokeWidth="1.5">
             <path d="M10,90 C40,70 20,20 60,30 C80,35 90,15 105,10" strokeDasharray="3 3" />
@@ -62,7 +62,7 @@ export function Hero() {
             ADMISSIONS OPEN • 2026 - 27
           </div>
 
-          <h1 className="mt-6 font-display text-[58px] leading-[0.95] tracking-[-0.125em] text-[#081B7A] sm:text-[72px] lg:text-[88px] font-[400]">
+          <h1 className="mt-6 font-display text-[56px] leading-[0.95] tracking-[-0.125em] text-[#081B7A] sm:text-[68px] lg:text-[84px] font-[400]">
             <span className="block whitespace-nowrap">Little Scholars</span>
             <span className="block whitespace-nowrap">International Preschool</span>
           </h1>
@@ -72,14 +72,14 @@ export function Hero() {
             NURTURING CURIOSITY. BUILDING CONFIDENCE. SHAPING TOMORROW.
           </p>
 
-          <p className="mt-6 max-w-[650px] text-[28px] leading-[1.8] text-[#667085]">
+          <p className="mt-6 max-w-[620px] text-[24px] leading-[1.8] text-[#667085]">
             A premium international preschool in Srikakulam where curious little minds discover, play and grow through activity-based learning in safe, joyful and digitally-enabled classrooms.
           </p>
 
           <div className="mt-10 flex flex-wrap items-center gap-6">
             <a
               href="#admissions"
-              className="inline-flex h-[72px] w-[290px] items-center justify-center gap-3 rounded-full bg-[#0B2286] text-[26px] font-semibold text-white shadow-[0_20px_60px_rgba(11,34,134,0.22)] transition hover:bg-[#091A72]"
+              className="inline-flex h-[68px] w-[300px] items-center justify-center gap-3 rounded-full bg-[#0B2286] text-[22px] font-semibold text-white shadow-[0_28px_80px_rgba(11,34,134,0.24)] transition hover:bg-[#091A72]"
             >
               <span className="grid h-12 w-12 place-items-center rounded-full bg-white text-[#0B2286] shadow-sm">
                 <Calendar className="h-5 w-5" />
@@ -90,7 +90,7 @@ export function Hero() {
               href="https://wa.me/919492848489"
               target="_blank"
               rel="noreferrer"
-              className="inline-flex h-[72px] w-[260px] items-center justify-center gap-3 rounded-full border border-[#E6E6E6] bg-white text-[24px] font-semibold text-[#0B2286] shadow-[0_16px_40px_rgba(0,0,0,0.08)] transition hover:bg-[#f7f7f7]"
+              className="inline-flex h-[68px] w-[260px] items-center justify-center gap-3 rounded-full border border-[#E6E6E6] bg-white text-[20px] font-semibold text-[#0B2286] shadow-[0_16px_40px_rgba(0,0,0,0.08)] transition hover:bg-[#f7f7f7]"
             >
               <span className="grid h-12 w-12 place-items-center rounded-full bg-[#ECFDF5] text-[#16A34A] shadow-sm">
                 <span className="text-xl">🟢</span>
@@ -102,7 +102,7 @@ export function Hero() {
 
         {/* right: visual */}
         <div className="relative animate-fade-up hidden lg:flex justify-center items-center">
-          <div className="relative w-[720px] h-[540px] overflow-hidden rounded-[48px] shadow-[0_30px_80px_rgba(0,0,0,0.12)]">
+          <div className="relative w-[820px] h-[640px] overflow-hidden rounded-[40px] shadow-[0_40px_100px_rgba(0,0,0,0.14)]">
             {carouselImages.map((img, idx) => (
               <img
                 key={img}
@@ -142,7 +142,7 @@ export function Hero() {
             </div>
 
             {/* testimonial card */}
-            <div className="absolute bottom-6 right-6 z-30 w-[360px] rounded-[28px] bg-white p-6 shadow-[0_20px_60px_rgba(0,0,0,0.1)]">
+            <div className="absolute bottom-8 right-8 z-30 w-[420px] rounded-[32px] bg-white p-6 shadow-[0_30px_80px_rgba(7,29,131,0.18)]">
               <div className="mb-4 flex items-center gap-3">
                 <div className="grid h-12 w-12 place-items-center rounded-full bg-[#081B7A] text-white">
                   <User className="h-5 w-5" />
@@ -152,7 +152,7 @@ export function Hero() {
                   <div className="text-[14px] font-medium text-[#667085]">Parent • Junior KG</div>
                 </div>
               </div>
-              <p className="text-[18px] leading-[1.6] text-[#10257A]">
+              <p className="text-[16px] leading-[1.6] text-[#10257A]">
                 “My daughter actually asks to go to school every morning. That says it all!”
               </p>
               <div className="mt-4 flex gap-1 text-[#F2B632] text-xl">★★★★★</div>
