@@ -11,6 +11,7 @@ import { Admissions } from "@/components/site/Admissions";
 import { Contact } from "@/components/site/Contact";
 import { Footer } from "@/components/site/Footer";
 import { WhatsAppFab } from "@/components/site/WhatsAppFab";
+import { ScrollToTop } from "@/components/site/ScrollToTop";
 import { AdmissionsBanner } from "@/components/site/AdmissionsBanner";
 
 export const Route = createFileRoute("/")({
@@ -48,6 +49,7 @@ function Index() {
       <Contact />
       <Footer />
       <WhatsAppFab />
+      <ScrollToTop />
     </main>
   );
 }

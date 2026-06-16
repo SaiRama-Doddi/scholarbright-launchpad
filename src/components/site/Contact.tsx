@@ -7,9 +7,9 @@ const mapsQuery = encodeURIComponent(address);
 
 export function Contact() {
   return (
-    <section id="contact" className="section-pad relative bg-cream overflow-hidden">
+    <section id="contact" className="section-pad relative bg-cream min-h-[70vh] lg:min-h-[75vh] flex items-center overflow-hidden">
       <FloatingDecor section="contact" />
-      <div className="mx-auto max-w-7xl px-4 relative z-10">
+      <div className="mx-auto max-w-7xl px-4 w-full relative z-10">
         <div className="grid gap-10 lg:grid-cols-[1fr_1.2fr]">
           <div>
             <SectionEyebrow>Visit Us</SectionEyebrow>
