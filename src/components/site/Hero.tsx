@@ -21,7 +21,7 @@ export function Hero() {
   }, []);
 
   return (
-    <section id="top" className="relative isolate overflow-hidden bg-cream min-h-screen lg:h-screen flex flex-col justify-between pt-28 lg:pt-36 pb-0">
+    <section id="top" className="relative isolate overflow-hidden bg-cream min-h-screen lg:min-h-[120vh] flex flex-col justify-between pt-28 lg:pt-36 pb-0">
       <FloatingDecor section="hero" />
       {/* Background decorations */}
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
