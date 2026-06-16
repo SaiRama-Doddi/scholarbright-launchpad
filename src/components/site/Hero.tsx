@@ -21,7 +21,7 @@ export function Hero() {
   }, []);
 
   return (
-    <section id="top" className="relative isolate overflow-hidden bg-gradient-to-r from-[#F8F7F4] via-white to-[#FFF9EE] h-screen flex flex-col pt-20 pb-0">
+    <section id="top" className="relative isolate overflow-hidden bg-gradient-to-r from-[#F8F7F4] via-white to-[#FFF9EE] min-h-[calc(100vh-90px)] flex flex-col pt-20 pb-8">
       <FloatingDecor section="hero" />
       {/* Background decorations */}
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
@@ -44,9 +44,9 @@ export function Hero() {
         <div className="absolute -top-20 -right-32 h-[420px] w-[420px] rounded-full bg-accent/15 blur-3xl" />
       </div>
 
-      <div className="flex-1 grid gap-6 lg:gap-8 px-6 md:px-12 lg:grid-cols-[55%_45%] lg:items-center relative z-10 max-w-[1400px] mx-auto w-full">
+      <div className="flex-1 min-h-0 grid gap-6 lg:gap-20 px-6 md:px-12 py-10 lg:grid-cols-[55%_45%] lg:items-center relative z-10 max-w-[1400px] mx-auto w-full">
         {/* left: copy */}
-        <div className="relative animate-fade-up flex flex-col justify-center">
+        <div className="relative animate-fade-up flex flex-col justify-center max-w-[650px]">
           {/* Dotted airplane path SVG */}
           <svg viewBox="0 0 120 100" className="absolute -top-8 right-0 w-24 h-20 text-accent/15 pointer-events-none select-none hidden xl:block" fill="none" stroke="currentColor" strokeWidth="1.5">
             <path d="M10,90 C40,70 20,20 60,30 C80,35 90,15 105,10" strokeDasharray="3 3" />
@@ -95,9 +95,8 @@ export function Hero() {
         </div>
 
         {/* right: visual */}
-        <div className="relative animate-fade-up [animation-delay:120ms] hidden lg:block">
-          <div className="relative">
-            <div className="relative overflow-hidden rounded-[2rem] shadow-[0_12px_40px_rgba(0,0,0,0.08)] ring-1 ring-white/60 h-full min-h-[300px] max-h-[500px]">
+        <div className="relative animate-fade-up [animation-delay:120ms] hidden lg:flex justify-center items-center">
+          <div className="relative w-full max-w-[620px] h-[420px] overflow-hidden rounded-[2rem] shadow-[0_12px_40px_rgba(0,0,0,0.08)] ring-1 ring-white/60">
               {carouselImages.map((img, idx) => (
                 <img
                   key={img}
@@ -140,7 +139,7 @@ export function Hero() {
             </div>
 
             {/* testimonial card */}
-            <div className="absolute -bottom-8 sm:-bottom-10 right-2 sm:right-3 z-30 w-60 sm:w-64 rounded-2xl bg-white p-3 sm:p-4 shadow-[0_12px_40px_rgba(0,0,0,0.08)] animate-float">
+            <div className="absolute bottom-6 right-2 sm:right-3 z-30 w-60 sm:w-64 rounded-2xl bg-white p-3 sm:p-4 shadow-[0_12px_40px_rgba(0,0,0,0.08)] animate-float">
               <div className="flex items-center gap-2.5">
                 <div className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-primary-deep text-white">
                   <User className="h-4 w-4" />
@@ -159,26 +158,10 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Bottom wave container with stats */}
-      <div className="absolute bottom-0 left-0 right-0 bg-primary-deep text-white">
-        {/* SVG Wave */}
-        <div className="absolute inset-x-0 top-0 -translate-y-full pointer-events-none overflow-hidden h-12 lg:h-20">
-          <svg
-            viewBox="0 0 1440 120"
-            fill="none"
-            preserveAspectRatio="none"
-            className="w-full h-full"
-          >
-            <path
-              d="M0,80 C320,160 720,0 1120,80 C1280,110 1360,110 1440,80 L1440,120 L0,120 Z"
-              fill="var(--primary-deep)"
-            />
-          </svg>
-        </div>
-
-        <div className="w-full px-6 md:px-12 relative py-6 lg:py-8 max-w-[1400px] mx-auto">
-          {/* Stats grid */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-6">
+      {/* Bottom stats ribbon */}
+      <div className="mt-10 bg-[#111B8C] border-t-[4px] border-[#F4B400] text-white">
+        <div className="w-full px-6 md:px-12 py-4 lg:py-0 max-w-[1400px] mx-auto h-[140px] flex items-center">
+          <div className="grid w-full grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-6 h-full">
             {[
               { k: "5+", v: "Programs", icon: GraduationCap },
               { k: "100%", v: "Safe & CCTV Monitored Campus", icon: ShieldCheck },
