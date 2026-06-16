@@ -97,9 +97,9 @@ export function Hero() {
         </div>
 
         {/* right: visual */}
-        <div className="relative animate-fade-up [animation-delay:120ms]">
+        <div className="relative animate-fade-up [animation-delay:120ms] pb-16 sm:pb-24">
           <div className="relative">
-            <div className="relative overflow-hidden rounded-[2.25rem] shadow-[var(--shadow-glow)] ring-1 ring-white/60 h-[300px] w-full sm:h-[350px] lg:h-[350px]">
+            <div className="relative overflow-hidden rounded-[2.25rem] shadow-[var(--shadow-glow)] ring-1 ring-white/60 h-[300px] w-full sm:h-[380px] lg:h-[420px]">
               {carouselImages.map((img, idx) => (
                 <img
                   key={img}
@@ -127,29 +127,29 @@ export function Hero() {
             </div>
 
             {/* floating logo badge */}
-            <div className="absolute -top-4 -left-4 sm:-top-8 sm:-left-8 z-30 grid h-16 w-16 sm:h-24 sm:w-24 md:h-28 md:w-28 place-items-center rounded-[1.5rem] sm:rounded-[2rem] glass p-2 sm:p-3 animate-float">
+            <div className="absolute top-4 left-4 sm:top-6 sm:left-6 z-30 grid h-16 w-16 sm:h-24 sm:w-24 md:h-28 md:w-28 place-items-center rounded-[1.5rem] sm:rounded-[2rem] glass p-2 sm:p-3 animate-float">
               <img src={logoAsset} alt="" className="h-full w-full object-contain" />
             </div>
 
             {/* floating cap */}
-            <div className="absolute -top-2 right-6 sm:-top-4 sm:right-12 z-30 grid h-10 w-10 sm:h-12 sm:w-12 md:h-14 md:w-14 place-items-center rounded-xl sm:rounded-2xl gradient-gold shadow-[var(--shadow-gold)] animate-float-rev">
-              <CapIcon className="h-5.5 w-5.5 sm:h-7 sm:w-7 text-primary-deep" />
+            <div className="absolute top-4 right-4 sm:top-6 sm:right-6 z-30 grid h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16 place-items-center rounded-xl sm:rounded-2xl gradient-gold shadow-[var(--shadow-gold)] animate-float-rev">
+              <CapIcon className="h-6 w-6 sm:h-7 sm:w-7 text-primary-deep" />
             </div>
 
             {/* floating stars */}
-            <div className="absolute bottom-6 -left-4 sm:bottom-10 sm:-left-8 z-30 grid h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16 place-items-center rounded-xl sm:rounded-2xl glass animate-float-rev">
+            <div className="absolute bottom-20 sm:bottom-24 left-2 sm:left-4 z-30 grid h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16 place-items-center rounded-xl sm:rounded-2xl glass animate-float-rev">
               <StarIcon className="h-6 w-6 sm:h-8 sm:w-8 text-accent" />
             </div>
 
             {/* testimonial card */}
-            <div className="absolute -bottom-12 right-4 z-30 w-72 rounded-[2rem] bg-white p-5 shadow-[var(--shadow-glow)] animate-float">
+            <div className="absolute -bottom-10 sm:-bottom-12 right-2 sm:right-4 z-30 w-64 sm:w-72 rounded-[2rem] bg-white p-4 sm:p-5 shadow-[var(--shadow-glow)] animate-float">
               <div className="flex items-center gap-3">
-                <div className="grid h-10 w-10 place-items-center rounded-full bg-primary-deep text-white">
+                <div className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-primary-deep text-white">
                   <User className="h-5 w-5" />
                 </div>
-                <div>
-                  <div className="text-sm font-bold text-primary-deep">Priya A.</div>
-                  <div className="text-[11px] font-semibold text-muted-foreground">Parent • Junior KG</div>
+                <div className="min-w-0">
+                  <div className="text-sm font-bold text-primary-deep truncate">Priya A.</div>
+                  <div className="text-[11px] font-semibold text-muted-foreground truncate">Parent • Junior KG</div>
                 </div>
               </div>
               <p className="mt-3 text-xs leading-relaxed text-foreground/80">
