@@ -35,13 +35,16 @@ export function Navbar() {
   };
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 px-4 pt-4">
-      <nav
-        className={`mx-auto flex max-w-7xl items-center justify-between rounded-full px-4 py-2.5 transition-all duration-500 ${scrolled ? "glass shadow-[var(--shadow-soft)]" : "bg-transparent"
-          }`}
-      >
+    <header
+      className={`fixed inset-x-0 top-0 z-50 w-full transition-all duration-500 ${
+        scrolled
+          ? "bg-white/85 backdrop-blur-md border-b border-border/40 py-2.5 shadow-[var(--shadow-soft)]"
+          : "bg-transparent py-4"
+      }`}
+    >
+      <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 md:px-12">
         <a href="#top" className="flex items-center gap-3">
-          <div className="grid h-20 w-20 place-items-center p-1">
+          <div className="grid h-16 w-16 place-items-center p-1 sm:h-20 sm:w-20">
             <img src={logoAsset} alt="Little Scholars" className="h-full w-full object-contain" />
           </div>
           <div className="hidden sm:block leading-tight">
@@ -82,8 +85,9 @@ export function Navbar() {
             <div className="relative h-5 w-5">
               {/* Closed State: Waffle grid of 9 dots */}
               <div
-                className={`absolute inset-0 grid grid-cols-3 gap-[3px] p-[2px] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${open ? "scale-0 opacity-0 rotate-90" : "scale-100 opacity-100"
-                  }`}
+                className={`absolute inset-0 grid grid-cols-3 gap-[3px] p-[2px] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+                  open ? "scale-0 opacity-0 rotate-90" : "scale-100 opacity-100"
+                }`}
               >
                 {[...Array(9)].map((_, i) => (
                   <span key={i} className="h-1.2 w-1.2 rounded-full bg-primary-deep" />
@@ -91,8 +95,9 @@ export function Navbar() {
               </div>
               {/* Open State: Elegant Thin Close Icon */}
               <div
-                className={`absolute inset-0 flex items-center justify-center transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${open ? "scale-100 opacity-100 rotate-0" : "scale-0 opacity-0 -rotate-90"
-                  }`}
+                className={`absolute inset-0 flex items-center justify-center transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+                  open ? "scale-100 opacity-100 rotate-0" : "scale-0 opacity-0 -rotate-90"
+                }`}
               >
                 <span className="absolute h-0.5 w-4.5 rounded-full bg-primary-deep rotate-45" />
                 <span className="absolute h-0.5 w-4.5 rounded-full bg-primary-deep -rotate-45" />
@@ -101,23 +106,64 @@ export function Navbar() {
           </button>
         </div>
       </nav>
-      {open && (
-        <div className="mx-auto mt-2 max-w-7xl lg:hidden">
-          <ul className="glass rounded-3xl p-3">
-            {links.map((l) => (
-              <li key={l.href}>
-                <a
-                  onClick={() => setOpen(false)}
-                  href={l.href}
-                  className="block rounded-2xl px-4 py-3 text-sm font-medium text-foreground/80 hover:bg-primary/8"
+
+      {/* mobile menu overlay */}
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+            className="mx-auto mt-2 max-w-7xl lg:hidden overflow-hidden px-6"
+          >
+            <motion.ul
+              initial="closed"
+              animate="open"
+              exit="closed"
+              variants={{
+                open: { transition: { staggerChildren: 0.04 } },
+                closed: { transition: { staggerChildren: 0.03, staggerDirection: -1 } },
+              }}
+              className="glass rounded-3xl p-3 space-y-1"
+            >
+              {links.map((l) => (
+                <motion.li
+                  key={l.href}
+                  variants={{
+                    open: { opacity: 1, x: 0 },
+                    closed: { opacity: 0, x: -12 },
+                  }}
+                  transition={{ duration: 0.25, ease: "easeOut" }}
                 >
-                  {l.label}
+                  <a
+                    onClick={(e) => handleMobileClick(e, l.href)}
+                    href={l.href}
+                    className="block rounded-2xl px-4 py-3 text-sm font-medium text-foreground/80 hover:bg-primary/8 transition-colors"
+                  >
+                    {l.label}
+                  </a>
+                </motion.li>
+              ))}
+              <motion.li
+                variants={{
+                  open: { opacity: 1, x: 0 },
+                  closed: { opacity: 0, x: -12 },
+                }}
+                className="pt-2 md:hidden"
+              >
+                <a
+                  onClick={(e) => handleMobileClick(e, "#admissions")}
+                  href="#admissions"
+                  className="flex items-center justify-center rounded-full bg-primary py-3 text-sm font-semibold text-primary-foreground shadow-md transition hover:bg-primary-deep"
+                >
+                  Apply Now
                 </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
+              </motion.li>
+            </motion.ul>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 }
