@@ -41,6 +41,34 @@
   --shadow-soft: 0 10px 30px -12px color-mix(in oklab, var(--primary) 20%, transparent);
   --shadow-glow: 0 30px 80px -20px color-mix(in oklab, var(--primary) 35%, transparent);
   --shadow-gold: 0 20px 50px -12px color-mix(in oklab, var(--accent) 45%, transparent);
+
+  --animate-float: float-slow 7s ease-in-out infinite;
+  --animate-float-rev: float-slower 9s ease-in-out infinite;
+  --animate-fade-up: fade-up 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  --animate-pulse-ring: pulse-ring 2.4s ease-out infinite;
+  --animate-marquee: marquee 40s linear infinite;
+
+  @keyframes float-slow {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-18px) rotate(4deg); }
+  }
+  @keyframes float-slower {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(14px) rotate(-5deg); }
+  }
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes pulse-ring {
+    0% { box-shadow: 0 0 0 0 color-mix(in oklab, var(--accent) 55%, transparent); }
+    70% { box-shadow: 0 0 0 18px color-mix(in oklab, var(--accent) 0%, transparent); }
+    100% { box-shadow: 0 0 0 0 color-mix(in oklab, var(--accent) 0%, transparent); }
+  }
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
 }
 
 :root {
@@ -140,36 +168,4 @@
   padding-block: clamp(1rem, 2vw, 1.5rem);
 }
 
-/* ---------- Animations ---------- */
 
-@keyframes float-slow {
-  0%, 100% { transform: translateY(0) rotate(0deg); }
-  50% { transform: translateY(-18px) rotate(4deg); }
-}
-@keyframes float-slower {
-  0%, 100% { transform: translateY(0) rotate(0deg); }
-  50% { transform: translateY(14px) rotate(-5deg); }
-}
-@keyframes fade-up {
-  from { opacity: 0; transform: translateY(24px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-@keyframes shimmer {
-  0% { background-position: -200% 0; }
-  100% { background-position: 200% 0; }
-}
-@keyframes pulse-ring {
-  0% { box-shadow: 0 0 0 0 color-mix(in oklab, var(--accent) 55%, transparent); }
-  70% { box-shadow: 0 0 0 18px color-mix(in oklab, var(--accent) 0%, transparent); }
-  100% { box-shadow: 0 0 0 0 color-mix(in oklab, var(--accent) 0%, transparent); }
-}
-@keyframes marquee {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
-}
-
-.animate-float { animation: float-slow 7s ease-in-out infinite; }
-.animate-float-rev { animation: float-slower 9s ease-in-out infinite; }
-.animate-fade-up { animation: fade-up 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) both; }
-.animate-pulse-ring { animation: pulse-ring 2.4s ease-out infinite; }
-.animate-marquee { animation: marquee 40s linear infinite; }

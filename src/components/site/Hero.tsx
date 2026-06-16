@@ -21,7 +21,7 @@ export function Hero() {
   }, []);
 
   return (
-    <section id="top" className="relative isolate overflow-hidden bg-cream min-h-screen lg:h-screen flex flex-col justify-between pt-16 pb-0">
+    <section id="top" className="relative isolate overflow-hidden bg-cream min-h-screen lg:h-screen flex flex-col justify-between pt-28 lg:pt-36 pb-0">
       <FloatingDecor section="hero" />
       {/* Background decorations */}
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
@@ -127,18 +127,18 @@ export function Hero() {
             </div>
 
             {/* floating logo badge */}
-            <div className="absolute -top-8 -left-8 z-30 grid h-28 w-28 place-items-center rounded-[2rem] glass p-3 animate-float">
+            <div className="absolute -top-4 -left-4 sm:-top-8 sm:-left-8 z-30 grid h-16 w-16 sm:h-24 sm:w-24 md:h-28 md:w-28 place-items-center rounded-[1.5rem] sm:rounded-[2rem] glass p-2 sm:p-3 animate-float">
               <img src={logoAsset} alt="" className="h-full w-full object-contain" />
             </div>
 
             {/* floating cap */}
-            <div className="absolute -top-4 right-12 z-30 grid h-14 w-14 place-items-center rounded-2xl gradient-gold shadow-[var(--shadow-gold)] animate-float-rev">
-              <CapIcon className="h-7 w-7 text-primary-deep" />
+            <div className="absolute -top-2 right-6 sm:-top-4 sm:right-12 z-30 grid h-10 w-10 sm:h-12 sm:w-12 md:h-14 md:w-14 place-items-center rounded-xl sm:rounded-2xl gradient-gold shadow-[var(--shadow-gold)] animate-float-rev">
+              <CapIcon className="h-5.5 w-5.5 sm:h-7 sm:w-7 text-primary-deep" />
             </div>
 
             {/* floating stars */}
-            <div className="absolute bottom-10 -left-8 z-30 grid h-16 w-16 place-items-center rounded-2xl glass animate-float-rev">
-              <StarIcon className="h-8 w-8 text-accent" />
+            <div className="absolute bottom-6 -left-4 sm:bottom-10 sm:-left-8 z-30 grid h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16 place-items-center rounded-xl sm:rounded-2xl glass animate-float-rev">
+              <StarIcon className="h-6 w-6 sm:h-8 sm:w-8 text-accent" />
             </div>
 
             {/* testimonial card */}
