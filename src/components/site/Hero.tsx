@@ -57,7 +57,7 @@ export function Hero() {
             </g>
           </svg>
 
-          <div className="inline-flex items-center gap-2 rounded-full border border-[#F1C857] bg-[#FFFDF8] px-7 py-3 text-[16px] font-semibold uppercase tracking-[0.08em] text-[#081B7A]">
+          <div className="inline-flex items-center gap-2 admissions-pill text-[#081B7A]">
             <span className="text-lg">⭐</span>
             ADMISSIONS OPEN • 2026 - 27
           </div>
@@ -102,13 +102,13 @@ export function Hero() {
 
         {/* right: visual */}
         <div className="relative animate-fade-up hidden lg:flex justify-center items-center">
-          <div className="relative w-[820px] h-[640px] overflow-hidden rounded-[40px] shadow-[0_40px_100px_rgba(0,0,0,0.14)]">
+          <div className="relative w-[820px] h-[640px] hero-visual">
             {carouselImages.map((img, idx) => (
               <img
                 key={img}
                 src={img}
                 alt="Preschool children learning and playing"
-                className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-1000 ${
+                className={`absolute inset-0 h-full w-full hero-image transition-opacity duration-1000 ${
                   idx === imgIndex ? "opacity-100 z-10" : "opacity-0 z-0"
                 }`}
               />
@@ -142,7 +142,7 @@ export function Hero() {
             </div>
 
             {/* testimonial card */}
-            <div className="absolute bottom-8 right-8 z-30 w-[420px] rounded-[32px] bg-white p-6 shadow-[0_30px_80px_rgba(7,29,131,0.18)]">
+            <div className="absolute bottom-8 right-8 z-30 w-[420px] testimonial-card bg-white p-6">
               <div className="mb-4 flex items-center gap-3">
                 <div className="grid h-12 w-12 place-items-center rounded-full bg-[#081B7A] text-white">
                   <User className="h-5 w-5" />
