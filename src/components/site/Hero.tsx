@@ -27,24 +27,24 @@ export function Hero() {
         <div className="absolute inset-y-0 left-0 w-1/2 bg-[radial-gradient(circle_at_top_left,_rgba(242,182,50,0.12),_transparent_42%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(13,35,134,0.08),_transparent_30%)]" />
       </div>
-        {/* Soft leaf branch on left */}
-        <svg viewBox="0 0 120 400" className="absolute left-0 top-20 h-[350px] w-24 text-accent/10 pointer-events-none select-none hidden 2xl:block" fill="currentColor">
-          <path d="M0,50 Q40,150 10,250 T30,400" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
-          <path d="M10,80 C25,70 45,75 50,90 C45,105 25,100 10,80 Z" />
-          <path d="M18,140 C35,130 55,135 60,150 C55,165 35,160 18,140 Z" />
-          <path d="M15,210 C32,200 52,205 57,220 C52,235 32,230 15,210 Z" />
-          <path d="M11,280 C26,270 41,275 46,290 C41,305 26,300 11,280 Z" />
-          <path d="M17,350 C32,340 47,345 52,360 C47,375 32,370 17,350 Z" />
-          <path d="M5,110 C-5,100 -25,105 -30,120 C-25,135 -5,130 5,110 Z" />
-          <path d="M12,175 C2,165 -18,170 -23,185 C-18,200 2,195 12,175 Z" />
-          <path d="M11,245 C1,235 -19,240 -24,255 C-19,270 1,265 11,245 Z" />
-          <path d="M16,315 C6,305 -14,310 -19,325 C-14,340 6,335 16,315 Z" />
-        </svg>
 
-        {/* Floating background blobs */}
-        <div className="absolute -top-32 -left-32 h-[480px] w-[480px] rounded-full bg-primary/10 blur-3xl" />
-        <div className="absolute -top-20 -right-32 h-[420px] w-[420px] rounded-full bg-accent/15 blur-3xl" />
-      </div>
+      {/* Soft leaf branch on left */}
+      <svg viewBox="0 0 120 400" className="absolute left-0 top-20 h-[350px] w-24 text-accent/10 pointer-events-none select-none hidden 2xl:block" fill="currentColor">
+        <path d="M0,50 Q40,150 10,250 T30,400" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
+        <path d="M10,80 C25,70 45,75 50,90 C45,105 25,100 10,80 Z" />
+        <path d="M18,140 C35,130 55,135 60,150 C55,165 35,160 18,140 Z" />
+        <path d="M15,210 C32,200 52,205 57,220 C52,235 32,230 15,210 Z" />
+        <path d="M11,280 C26,270 41,275 46,290 C41,305 26,300 11,280 Z" />
+        <path d="M17,350 C32,340 47,345 52,360 C47,375 32,370 17,350 Z" />
+        <path d="M5,110 C-5,100 -25,105 -30,120 C-25,135 -5,130 5,110 Z" />
+        <path d="M12,175 C2,165 -18,170 -23,185 C-18,200 2,195 12,175 Z" />
+        <path d="M11,245 C1,235 -19,240 -24,255 C-19,270 1,265 11,245 Z" />
+        <path d="M16,315 C6,305 -14,310 -19,325 C-14,340 6,335 16,315 Z" />
+      </svg>
+
+      {/* Floating background blobs */}
+      <div className="absolute -top-32 -left-32 h-[480px] w-[480px] rounded-full bg-primary/10 blur-3xl" />
+      <div className="absolute -top-20 -right-32 h-[420px] w-[420px] rounded-full bg-accent/15 blur-3xl" />
 
       <div className="relative z-10 mx-auto grid h-[860px] w-full max-w-[1440px] grid-cols-1 gap-10 px-6 py-8 lg:grid-cols-[55%_45%] lg:items-center lg:px-12">
         {/* left: copy */}
