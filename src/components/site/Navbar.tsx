@@ -60,12 +60,14 @@ export function Navbar() {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 w-full transition-all duration-500 ${
-        scrolled
+        open
+          ? "bg-white border-b border-border/20 shadow-lg h-auto pb-6"
+          : scrolled
           ? "bg-white/90 backdrop-blur-md border-b border-border/20 h-[90px]"
           : "bg-transparent h-[90px]"
       }`}
     >
-      <nav className="mx-auto flex h-full max-w-[1440px] items-center justify-between px-6 md:px-12">
+      <nav className="mx-auto flex h-[90px] max-w-[1440px] items-center justify-between px-6 md:px-12">
         <a href="#top" className="flex items-center gap-3">
           <div className="grid h-16 w-16 place-items-center p-1">
             <img src={logoAsset} alt="Little Scholars" className="h-full w-full object-contain" />

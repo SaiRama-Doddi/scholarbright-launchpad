@@ -2,6 +2,7 @@ import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { Navbar } from "@/components/site/Navbar";
 import { Footer } from "@/components/site/Footer";
 import { WhatsAppFab } from "@/components/site/WhatsAppFab";
+import { FloatingDecor } from "@/components/site/FloatingDecor";
 import {
   Heart,
   ShieldCheck,
@@ -79,7 +80,7 @@ const PROGRAMS: Record<string, Program> = {
       { time: "9:30 – 11:00", activity: "Circle time, songs & sensory play" },
       { time: "11:00 – 12:30", activity: "Outdoor / indoor activity rotation" },
       { time: "12:30 – 1:30", activity: "Lunch & story time" },
-      { time: "1:30 – 3:00", activity: "Nap time & quiet play" },
+      { time: "1:30 – 3:00", activity: "Nap time" },
       { time: "3:00 – 3:30", activity: "Afternoon snack & pick-up" },
     ],
     outcomes: [
@@ -337,6 +338,7 @@ function ProgramDetail() {
 
       {/* Hero */}
       <section className="relative overflow-hidden pt-28 pb-16 sm:pt-36 sm:pb-20">
+        <FloatingDecor section="hero" />
         <div aria-hidden className="pointer-events-none absolute inset-0">
           <div className="absolute -top-24 -right-24 h-96 w-96 rounded-full bg-primary/10 blur-3xl" />
           <div className="absolute -bottom-24 -left-24 h-96 w-96 rounded-full bg-accent/20 blur-3xl" />
@@ -431,7 +433,8 @@ function ProgramDetail() {
       </section>
 
       {/* Highlights */}
-      <section className="relative py-16 bg-white">
+      <section className="relative py-16 bg-white overflow-hidden">
+        <FloatingDecor section="gallery" />
         <div className="mx-auto max-w-7xl px-6 md:px-12 relative z-10">
           <div className="mx-auto max-w-3xl text-center">
             <span className="inline-flex items-center gap-2 rounded-full bg-primary/8 px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.22em] text-primary-deep">
@@ -468,7 +471,8 @@ function ProgramDetail() {
       </section>
 
       {/* Daily schedule */}
-      <section className="relative py-16 bg-cream">
+      <section className="relative py-16 bg-cream overflow-hidden">
+        <FloatingDecor section="learning" />
         <div className="mx-auto max-w-7xl px-6 md:px-12 relative z-10">
           <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
             
@@ -517,15 +521,7 @@ function ProgramDetail() {
 
       {/* Saturday Special Section */}
       <section className="relative py-20 bg-[#FAF9F5] overflow-hidden">
-        {/* Decorative background characters similar to the mockup */}
-        <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 opacity-30 select-none">
-          <div className="absolute left-[8%] top-[15%] text-6xl font-display font-extrabold text-[#F59E0B]/10 rotate-[-12deg]">A</div>
-          <div className="absolute right-[10%] top-[20%] text-6xl font-display font-extrabold text-[#3B82F6]/10 rotate-[15deg]">1</div>
-          <div className="absolute left-[5%] bottom-[20%] text-6xl font-display font-extrabold text-[#EF4444]/10 rotate-[-8deg]">B</div>
-          <div className="absolute right-[8%] bottom-[15%] text-6xl font-display font-extrabold text-[#10B981]/10 rotate-[22deg]">2</div>
-          <div className="absolute left-[50%] top-[10%] text-4xl font-display font-extrabold text-[#8B5CF6]/10 rotate-[5deg]">B</div>
-          <div className="absolute left-[35%] bottom-[8%] text-5xl font-display font-extrabold text-[#EC4899]/10 rotate-[-18deg]">C</div>
-        </div>
+        <FloatingDecor section="testimonials" />
 
         <div className="mx-auto max-w-7xl px-6 md:px-12 relative z-10">
           <div className="mx-auto max-w-3xl text-center mb-14">

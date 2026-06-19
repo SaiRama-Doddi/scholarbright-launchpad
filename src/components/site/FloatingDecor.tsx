@@ -104,7 +104,7 @@ function CartoonCloudIcon({ className = "" }: { className?: string }) {
   );
 }
 
-type ItemType = "cap" | "pencil" | "eraser" | "book" | "star" | "teddy" | "balloon" | "cloud";
+type ItemType = "cap" | "book" | "star";
 
 interface DecorItem {
   type: ItemType;
@@ -119,45 +119,51 @@ interface DecorItem {
 // Configured with extremely small, delicate sizes and high transparency for subtle integration
 const config: Record<string, DecorItem[]> = {
   hero: [
-    { type: "cap", top: "15%", left: "4%", size: "w-6 h-6 md:w-8 h-8", opacity: "opacity-[0.14] md:opacity-[0.22]", delay: 0 },
-    { type: "pencil", top: "45%", right: "5%", size: "w-5.5 h-5.5 md:w-7 h-7", opacity: "opacity-[0.16] md:opacity-[0.24]", delay: 0.5 },
-    { type: "star", top: "75%", left: "5%", size: "w-6 h-6 md:w-8 h-8", opacity: "opacity-[0.14] md:opacity-[0.22]", delay: 1.0 },
+    { type: "cap", top: "15%", left: "4%", size: "w-6 h-6 md:w-8 h-8", opacity: "opacity-[0.09] md:opacity-[0.15]", delay: 0 },
+    { type: "book", top: "45%", right: "5%", size: "w-6 h-6 md:w-8 h-8", opacity: "opacity-[0.10] md:opacity-[0.16]", delay: 0.5 },
+    { type: "star", top: "75%", left: "5%", size: "w-6 h-6 md:w-8 h-8", opacity: "opacity-[0.08] md:opacity-[0.14]", delay: 1.0 },
+    { type: "cap", top: "85%", right: "8%", size: "w-6 h-6 md:w-8 h-8", opacity: "opacity-[0.09] md:opacity-[0.15]", delay: 1.5 },
   ],
   about: [
-    { type: "book", top: "20%", right: "6%", size: "w-6 h-6 md:w-8 h-8", opacity: "opacity-[0.14] md:opacity-[0.22]", delay: 0.2 },
-    { type: "eraser", top: "55%", left: "5%", size: "w-5.5 h-5.5 md:w-7 h-7", opacity: "opacity-[0.16] md:opacity-[0.24]", delay: 0.7 },
-    { type: "cloud", top: "80%", right: "7%", size: "w-6 h-6 md:w-8 h-8", opacity: "opacity-[0.12] md:opacity-[0.2]", delay: 1.2 },
+    { type: "book", top: "20%", right: "6%", size: "w-6 h-6 md:w-8 h-8", opacity: "opacity-[0.10] md:opacity-[0.16]", delay: 0.2 },
+    { type: "star", top: "55%", left: "5%", size: "w-6 h-6 md:w-8 h-8", opacity: "opacity-[0.09] md:opacity-[0.15]", delay: 0.7 },
+    { type: "cap", top: "80%", right: "7%", size: "w-6 h-6 md:w-8 h-8", opacity: "opacity-[0.08] md:opacity-[0.14]", delay: 1.2 },
   ],
   programs: [
-    { type: "balloon", top: "15%", left: "6%", size: "w-6 h-6 md:w-8 h-8", opacity: "opacity-[0.14] md:opacity-[0.22]", delay: 0.4 },
-    { type: "cap", top: "50%", right: "6%", size: "w-6 h-6 md:w-8 h-8", opacity: "opacity-[0.14] md:opacity-[0.22]", delay: 0.9 },
-    { type: "book", top: "80%", left: "5%", size: "w-6 h-6 md:w-8 h-8", opacity: "opacity-[0.14] md:opacity-[0.22]", delay: 1.4 },
+    { type: "star", top: "15%", left: "6%", size: "w-6 h-6 md:w-8 h-8", opacity: "opacity-[0.09] md:opacity-[0.15]", delay: 0.4 },
+    { type: "cap", top: "50%", right: "6%", size: "w-6 h-6 md:w-8 h-8", opacity: "opacity-[0.10] md:opacity-[0.16]", delay: 0.9 },
+    { type: "book", top: "80%", left: "5%", size: "w-6 h-6 md:w-8 h-8", opacity: "opacity-[0.08] md:opacity-[0.14]", delay: 1.4 },
   ],
   why: [
-    { type: "pencil", top: "20%", right: "7%", size: "w-5.5 h-5.5 md:w-7 h-7", opacity: "opacity-[0.16] md:opacity-[0.24]", delay: 0.1 },
-    { type: "teddy", top: "55%", left: "6%", size: "w-6 h-6 md:w-8 h-8", opacity: "opacity-[0.12] md:opacity-[0.2]", delay: 0.6 },
-    { type: "eraser", top: "80%", right: "6%", size: "w-5.5 h-5.5 md:w-7 h-7", opacity: "opacity-[0.16] md:opacity-[0.24]", delay: 1.1 },
+    { type: "cap", top: "20%", right: "7%", size: "w-6 h-6 md:w-8 h-8", opacity: "opacity-[0.09] md:opacity-[0.15]", delay: 0.1 },
+    { type: "book", top: "55%", left: "6%", size: "w-6 h-6 md:w-8 h-8", opacity: "opacity-[0.10] md:opacity-[0.16]", delay: 0.6 },
+    { type: "star", top: "80%", right: "6%", size: "w-6 h-6 md:w-8 h-8", opacity: "opacity-[0.08] md:opacity-[0.14]", delay: 1.1 },
+    { type: "book", top: "90%", left: "4%", size: "w-6 h-6 md:w-8 h-8", opacity: "opacity-[0.09] md:opacity-[0.15]", delay: 1.6 },
   ],
   learning: [
-    { type: "book", top: "15%", left: "5%", size: "w-6 h-6 md:w-8 h-8", opacity: "opacity-[0.14] md:opacity-[0.22]", delay: 0.3 },
-    { type: "cloud", top: "45%", right: "6%", size: "w-6 h-6 md:w-8 h-8", opacity: "opacity-[0.12] md:opacity-[0.2]", delay: 0.8 },
-    { type: "star", top: "75%", left: "6%", size: "w-6 h-6 md:w-8 h-8", opacity: "opacity-[0.14] md:opacity-[0.22]", delay: 1.3 },
+    { type: "book", top: "15%", left: "5%", size: "w-6 h-6 md:w-8 h-8", opacity: "opacity-[0.10] md:opacity-[0.16]", delay: 0.3 },
+    { type: "cap", top: "45%", right: "6%", size: "w-6 h-6 md:w-8 h-8", opacity: "opacity-[0.08] md:opacity-[0.14]", delay: 0.8 },
+    { type: "star", top: "75%", left: "6%", size: "w-6 h-6 md:w-8 h-8", opacity: "opacity-[0.09] md:opacity-[0.15]", delay: 1.3 },
   ],
   gallery: [
-    { type: "cap", top: "20%", left: "5%", size: "w-6 h-6 md:w-8 h-8", opacity: "opacity-[0.14] md:opacity-[0.22]", delay: 0.2 },
-    { type: "pencil", top: "70%", right: "6%", size: "w-5.5 h-5.5 md:w-7 h-7", opacity: "opacity-[0.16] md:opacity-[0.24]", delay: 0.8 },
+    { type: "cap", top: "20%", left: "5%", size: "w-6 h-6 md:w-8 h-8", opacity: "opacity-[0.09] md:opacity-[0.15]", delay: 0.2 },
+    { type: "star", top: "45%", right: "6%", size: "w-6 h-6 md:w-8 h-8", opacity: "opacity-[0.10] md:opacity-[0.16]", delay: 0.5 },
+    { type: "book", top: "70%", left: "6%", size: "w-6 h-6 md:w-8 h-8", opacity: "opacity-[0.08] md:opacity-[0.14]", delay: 0.8 },
   ],
   testimonials: [
-    { type: "balloon", top: "25%", right: "7%", size: "w-6 h-6 md:w-8 h-8", opacity: "opacity-[0.14] md:opacity-[0.22]", delay: 0.5 },
-    { type: "teddy", top: "75%", left: "5%", size: "w-6 h-6 md:w-8 h-8", opacity: "opacity-[0.12] md:opacity-[0.2]", delay: 1.0 },
+    { type: "star", top: "25%", right: "7%", size: "w-6 h-6 md:w-8 h-8", opacity: "opacity-[0.08] md:opacity-[0.14]", delay: 0.5 },
+    { type: "cap", top: "50%", left: "5%", size: "w-6 h-6 md:w-8 h-8", opacity: "opacity-[0.09] md:opacity-[0.15]", delay: 0.8 },
+    { type: "book", top: "75%", right: "5%", size: "w-6 h-6 md:w-8 h-8", opacity: "opacity-[0.10] md:opacity-[0.16]", delay: 1.0 },
   ],
   admissions: [
-    { type: "pencil", top: "25%", left: "7%", size: "w-5.5 h-5.5 md:w-7 h-7", opacity: "opacity-[0.16] md:opacity-[0.24]", delay: 0.3 },
-    { type: "book", top: "65%", right: "7%", size: "w-6 h-6 md:w-8 h-8", opacity: "opacity-[0.14] md:opacity-[0.22]", delay: 0.9 },
+    { type: "star", top: "25%", left: "7%", size: "w-6 h-6 md:w-8 h-8", opacity: "opacity-[0.08] md:opacity-[0.14]", delay: 0.3 },
+    { type: "book", top: "65%", right: "7%", size: "w-6 h-6 md:w-8 h-8", opacity: "opacity-[0.10] md:opacity-[0.16]", delay: 0.9 },
+    { type: "cap", top: "85%", left: "5%", size: "w-6 h-6 md:w-8 h-8", opacity: "opacity-[0.09] md:opacity-[0.15]", delay: 1.2 },
   ],
   contact: [
-    { type: "eraser", top: "25%", right: "6%", size: "w-5.5 h-5.5 md:w-7 h-7", opacity: "opacity-[0.16] md:opacity-[0.24]", delay: 0.4 },
-    { type: "cloud", top: "70%", left: "6%", size: "w-6 h-6 md:w-8 h-8", opacity: "opacity-[0.12] md:opacity-[0.2]", delay: 0.9 },
+    { type: "book", top: "25%", right: "6%", size: "w-6 h-6 md:w-8 h-8", opacity: "opacity-[0.10] md:opacity-[0.16]", delay: 0.4 },
+    { type: "star", top: "50%", left: "6%", size: "w-6 h-6 md:w-8 h-8", opacity: "opacity-[0.09] md:opacity-[0.15]", delay: 0.7 },
+    { type: "cap", top: "75%", right: "7%", size: "w-6 h-6 md:w-8 h-8", opacity: "opacity-[0.08] md:opacity-[0.14]", delay: 1.0 },
   ],
 };
 
@@ -165,20 +171,10 @@ function renderIcon(type: ItemType, className: string) {
   switch (type) {
     case "cap":
       return <ScholarCapIcon className={className} />;
-    case "pencil":
-      return <PencilIcon className={className} />;
-    case "eraser":
-      return <EraserIcon className={className} />;
     case "book":
       return <BookIcon className={className} />;
     case "star":
       return <CartoonStarIcon className={className} />;
-    case "teddy":
-      return <CartoonTeddyIcon className={className} />;
-    case "balloon":
-      return <CartoonBalloonIcon className={className} />;
-    case "cloud":
-      return <CartoonCloudIcon className={className} />;
   }
 }
 
@@ -197,25 +193,25 @@ export function FloatingDecor({ section }: { section: keyof typeof config }) {
             right: it.right,
           }}
           animate={{
-            y: [0, -25, 0],
-            x: [0, 12, -12, 0],
-            rotate: [0, 360],
+            y: [0, -18, 0],
+            x: [0, 8, -8, 0],
+            rotate: [-12, 12, -12],
           }}
           transition={{
             y: {
-              duration: 10 + (i % 3) * 3,
+              duration: 6 + (i % 3) * 3,
               repeat: Infinity,
               ease: "easeInOut",
             },
             x: {
-              duration: 12 + (i % 3) * 4,
+              duration: 7 + (i % 3) * 2.5,
               repeat: Infinity,
               ease: "easeInOut",
             },
             rotate: {
-              duration: 35 + (i % 2) * 15,
+              duration: 8 + (i % 2) * 4,
               repeat: Infinity,
-              ease: "linear",
+              ease: "easeInOut",
             },
             delay: it.delay,
           }}
