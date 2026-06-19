@@ -3,6 +3,14 @@ import { Link } from "@tanstack/react-router";
 import { SectionEyebrow } from "./About";
 import { FloatingDecor } from "./FloatingDecor";
 
+import daycareIcon from "@/assets/program_daycare.webp";
+import playgroupIcon from "@/assets/program_playgroup.webp";
+import nurseryIcon from "@/assets/program_nursery.webp";
+import juniorkgIcon from "@/assets/program_juniorkg.webp";
+import seniorkgIcon from "@/assets/program_seniorkg.webp";
+
+const programIcons = [daycareIcon, playgroupIcon, nurseryIcon, juniorkgIcon, seniorkgIcon];
+
 const programs = [
   { slug: "day-care", name: "Day Care", age: "1.5 – 5 yrs", color: "from-amber-200 to-yellow-300", desc: "Safe, loving care all day long with structured play, cozy naps and engaging activities." },
   { slug: "play-group", name: "Play Group", age: "1.5 – 2.5 yrs", color: "from-rose-200 to-pink-300", desc: "First steps into social learning — songs, sensory play and lots of giggles." },
@@ -52,8 +60,12 @@ export function Programs() {
                     {p.name}
                   </h3>
                 </div>
-                <div className={`grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-gradient-to-br ${p.color} text-primary-deep font-display font-bold shadow-[var(--shadow-soft)]`}>
-                  {p.name.charAt(0)}
+                <div className={`grid h-16 w-16 shrink-0 place-items-center rounded-2xl bg-white border border-[#EEF2FF] p-1 shadow-[var(--shadow-soft)] transition-transform duration-300 group-hover:scale-105 overflow-hidden`}>
+                  <img
+                    src={programIcons[i]}
+                    alt={p.name}
+                    className="w-full h-full object-contain rounded-xl"
+                  />
                 </div>
               </div>
               <p className="relative mt-4 text-sm leading-relaxed text-foreground/75">

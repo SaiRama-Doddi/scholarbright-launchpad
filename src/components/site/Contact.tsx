@@ -45,7 +45,7 @@ export function Contact() {
               <InfoRow
                 icon="⏱"
                 title="School Hours"
-                lines={["Mon – Sat · 9:00 AM – 5:00 PM", "Day Care · 8:00 AM – 7:00 PM"]}
+                lines={["Preschool · Mon – Sat · 9:00 AM – 3:30 PM", "Day Care · Mon – Sat · 9:00 AM – 3:30 PM"]}
               />
             </div>
           </div>

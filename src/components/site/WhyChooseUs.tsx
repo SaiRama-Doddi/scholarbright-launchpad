@@ -387,11 +387,11 @@ export function WhyChooseUs() {
 
         {/* Top Left: Teddy Bear, ABC blocks, Ring stacking toy */}
         <div 
-          className="absolute top-[9rem] left-12 lg:left-16 xl:left-28 2xl:left-40 w-[11rem] xl:w-[13rem] 2xl:w-[14.5rem] hidden xl:block transition-all duration-300 mix-blend-multiply"
+          className="absolute top-[5rem] sm:top-[9rem] -left-6 sm:left-4 lg:left-16 xl:left-28 2xl:left-40 w-[6.5rem] sm:w-[9rem] xl:w-[13rem] 2xl:w-[14.5rem] transition-all duration-300 mix-blend-multiply"
           style={{ mixBlendMode: "multiply" }}
         >
           {/* Sun placed right above teddy bear */}
-          <div className="absolute top-[-5rem] left-[2.5rem]">
+          <div className="absolute -top-10 sm:-top-20 left-4 sm:left-10 scale-75 sm:scale-100">
             <SunDecor />
           </div>
           <img 
@@ -404,11 +404,11 @@ export function WhyChooseUs() {
 
         {/* Top Right: Blue school bag, Pencil holder, Globe */}
         <div 
-          className="absolute top-[9rem] right-12 lg:right-16 xl:right-28 2xl:right-40 w-[12rem] xl:w-[14rem] 2xl:w-[15.5rem] hidden xl:block transition-all duration-300 mix-blend-multiply"
+          className="absolute top-[5rem] sm:top-[9rem] -right-8 sm:right-4 lg:right-16 xl:right-28 2xl:right-40 w-[7.5rem] sm:w-[10rem] xl:w-[14rem] 2xl:w-[15.5rem] transition-all duration-300 mix-blend-multiply"
           style={{ mixBlendMode: "multiply" }}
         >
           {/* Paper Airplane placed right above backpack */}
-          <div className="absolute top-[-5rem] right-[2.5rem]">
+          <div className="absolute -top-10 sm:-top-20 right-4 sm:right-10 scale-75 sm:scale-100 origin-top-right">
             <AirplaneDecor />
           </div>
           <img 

@@ -21,7 +21,7 @@ export function Hero() {
   }, []);
 
   return (
-    <section id="top" className="relative isolate overflow-hidden bg-gradient-to-r from-[#F8F7F4] via-white to-[#FFF9EE] pt-[115px] pb-36 lg:pb-52">
+    <section id="top" className="relative isolate overflow-hidden bg-gradient-to-r from-[#F8F7F4] via-white to-[#FFF9EE] pt-[115px] pb-[280px] sm:pb-[240px] lg:pb-52">
       <FloatingDecor section="hero" />
       {/* Background decorations */}
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
@@ -74,21 +74,21 @@ export function Hero() {
             A premium international preschool in Srikakulam where curious little minds discover, play and grow through activity-based learning in safe, joyful and digitally-enabled classrooms.
           </p>
 
-          <div className="mt-3 flex flex-wrap items-center gap-2.5 sm:gap-3">
+          <div className="mt-6 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full sm:w-auto">
             <a
               href="#admissions"
-              className="inline-flex items-center gap-2 rounded-full bg-primary-deep px-5 sm:px-6 py-2.5 sm:py-3 text-xs sm:text-sm font-semibold text-white shadow-[0_12px_40px_rgba(0,0,0,0.08)] hover:shadow-lg transition-all duration-300"
+              className="inline-flex items-center justify-center gap-2.5 rounded-full bg-primary-deep px-6 py-3 text-sm font-bold text-white shadow-[0_12px_40px_rgba(0,0,0,0.08)] hover:shadow-lg transition-all duration-300 w-full sm:w-auto text-center"
             >
-              <Calendar className="h-4 w-4" />
+              <Calendar className="h-4.5 w-4.5" />
               Book Campus Visit
             </a>
             <a
               href="https://wa.me/919492848489"
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-border bg-white px-5 sm:px-6 py-2.5 sm:py-3 text-xs sm:text-sm font-semibold text-primary-deep shadow-[0_12px_40px_rgba(0,0,0,0.08)] hover:bg-white transition-all duration-300"
+              className="inline-flex items-center justify-center gap-2.5 rounded-full border border-border bg-white px-6 py-3 text-sm font-bold text-primary-deep shadow-[0_12px_40px_rgba(0,0,0,0.08)] hover:bg-slate-50 transition-all duration-300 w-full sm:w-auto text-center"
             >
-              <WhatsAppIcon className="h-4 w-4 text-emerald-500" />
+              <WhatsAppIcon className="h-4.5 w-4.5 text-emerald-500" />
               Chat WhatsApp
             </a>
           </div>

@@ -33,7 +33,7 @@ export function Admissions() {
     const message = String(form.get("message") || "");
     const rawText = `Hi! I'd like to enquire about admission.\n\nName: ${name}\nPhone: ${phone}\nProgram: ${program}\nMessage: ${message}`;
     const text = encodeURIComponent(rawText);
-    window.open(`https://wa.me/919492848489?text=${text}`, "_blank", "noopener");
+    window.location.href = `https://wa.me/919492848489?text=${text}`;
     setSent(true);
   };
 
