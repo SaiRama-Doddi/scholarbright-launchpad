@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+import { FloatingDecor } from "./FloatingDecor";
 
 const features = [
   "Passionate, loving and caring staff",
@@ -12,6 +13,7 @@ const features = [
 export function AdmissionsBanner() {
   return (
     <section className="relative section-pad overflow-hidden">
+      <FloatingDecor section="admissions" />
       <div className="mx-auto max-w-7xl px-4">
         <div className="relative overflow-hidden rounded-[2.5rem] bg-[#3b1d6e] p-8 sm:p-12 lg:p-16 text-white shadow-[var(--shadow-glow)]">
           <div aria-hidden className="pointer-events-none absolute inset-0 opacity-90">

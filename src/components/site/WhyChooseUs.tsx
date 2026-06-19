@@ -5,6 +5,7 @@ import mockupSun from "@/assets/mockup-sun.png";
 import mockupAirplane from "@/assets/mockup-airplane.png";
 import mockupTrain from "@/assets/mockup-train.png";
 import mockupBlocks from "@/assets/mockup-blocks.png";
+import { FloatingDecor } from "./FloatingDecor";
 
 import mockupIcon1 from "@/assets/mockup-icon-1.png";
 import mockupIcon2 from "@/assets/mockup-icon-2.png";
@@ -359,6 +360,7 @@ export function WhyChooseUs() {
       id="facilities" 
       className="relative overflow-hidden bg-gradient-to-br from-[#F8FAFF] to-[#FFF9F4] min-h-[900px] lg:h-[1020px] py-16 lg:py-24 flex flex-col justify-between"
     >
+      <FloatingDecor section="why" />
       {/* Background/Floating Decorations */}
       <div aria-hidden className="pointer-events-none absolute inset-0 z-0 select-none overflow-hidden">
         {/* Soft clouds */}
@@ -366,10 +368,10 @@ export function WhyChooseUs() {
         <div className="absolute top-[18rem] right-[25%] w-24 h-12 bg-white/60 rounded-full blur-[1px] shadow-sm opacity-50" />
         
         {/* Confetti / sparkles / circles */}
-        <circle cx="10%" cy="30%" r="6" className="absolute w-3 h-3 rounded-full bg-[#FFB800]/30" />
-        <circle cx="85%" cy="25%" r="8" className="absolute w-4 h-4 rounded-full bg-[#FF5C8A]/20" />
-        <circle cx="75%" cy="85%" r="6" className="absolute w-3 h-3 rounded-full bg-[#53C46B]/25" />
-        <circle cx="20%" cy="75%" r="7" className="absolute w-3.5 h-3.5 rounded-full bg-[#8B5CF6]/20" />
+        <div className="absolute w-3 h-3 rounded-full bg-[#FFB800]/30" style={{ left: "10%", top: "30%" }} />
+        <div className="absolute w-4 h-4 rounded-full bg-[#FF5C8A]/20" style={{ left: "85%", top: "25%" }} />
+        <div className="absolute w-3 h-3 rounded-full bg-[#53C46B]/25" style={{ left: "75%", top: "85%" }} />
+        <div className="absolute w-3.5 h-3.5 rounded-full bg-[#8B5CF6]/20" style={{ left: "20%", top: "75%" }} />
 
         {/* Floating Stars */}
         <span className="absolute top-[12rem] left-[40%] text-yellow-400 text-lg opacity-60 animate-bounce">⭐</span>

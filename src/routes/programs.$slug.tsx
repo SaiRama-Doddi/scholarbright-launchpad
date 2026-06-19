@@ -635,6 +635,7 @@ function ProgramDetail() {
 
       {/* Outcomes */}
       <section className="relative py-20 bg-white">
+        <FloatingDecor section="programs" />
         <div className="mx-auto max-w-7xl px-6 md:px-12 relative z-10">
           <div className="mx-auto max-w-3xl text-center">
             <span className="inline-flex items-center gap-2 rounded-full bg-primary/8 px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.22em] text-primary-deep">
