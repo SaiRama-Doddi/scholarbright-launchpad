@@ -21,199 +21,183 @@ export function Hero() {
   }, []);
 
   return (
-    <section id="top" className="relative isolate overflow-hidden bg-[#FCFBF7]">
+    <section id="top" className="relative isolate overflow-hidden bg-gradient-to-r from-[#F8F7F4] via-white to-[#FFF9EE] h-screen flex flex-col pt-20 pb-0">
       <FloatingDecor section="hero" />
+      {/* Background decorations */}
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-        <div className="absolute inset-y-0 left-0 w-1/2 bg-[radial-gradient(circle_at_top_left,_rgba(242,182,50,0.12),_transparent_42%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(13,35,134,0.08),_transparent_30%)]" />
+        {/* Soft leaf branch on left */}
+        <svg viewBox="0 0 120 400" className="absolute left-0 top-20 h-[350px] w-24 text-accent/10 pointer-events-none select-none hidden 2xl:block" fill="currentColor">
+          <path d="M0,50 Q40,150 10,250 T30,400" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
+          <path d="M10,80 C25,70 45,75 50,90 C45,105 25,100 10,80 Z" />
+          <path d="M18,140 C35,130 55,135 60,150 C55,165 35,160 18,140 Z" />
+          <path d="M15,210 C32,200 52,205 57,220 C52,235 32,230 15,210 Z" />
+          <path d="M11,280 C26,270 41,275 46,290 C41,305 26,300 11,280 Z" />
+          <path d="M17,350 C32,340 47,345 52,360 C47,375 32,370 17,350 Z" />
+          <path d="M5,110 C-5,100 -25,105 -30,120 C-25,135 -5,130 5,110 Z" />
+          <path d="M12,175 C2,165 -18,170 -23,185 C-18,200 2,195 12,175 Z" />
+          <path d="M11,245 C1,235 -19,240 -24,255 C-19,270 1,265 11,245 Z" />
+          <path d="M16,315 C6,305 -14,310 -19,325 C-14,340 6,335 16,315 Z" />
+        </svg>
+
+        {/* Floating background blobs */}
+        <div className="absolute -top-32 -left-32 h-[480px] w-[480px] rounded-full bg-primary/10 blur-3xl" />
+        <div className="absolute -top-20 -right-32 h-[420px] w-[420px] rounded-full bg-accent/15 blur-3xl" />
       </div>
 
-      {/* Soft leaf branch on left */}
-      <svg viewBox="0 0 120 400" className="absolute left-0 top-20 h-[350px] w-24 text-accent/10 pointer-events-none select-none hidden 2xl:block" fill="currentColor">
-        <path d="M0,50 Q40,150 10,250 T30,400" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
-        <path d="M10,80 C25,70 45,75 50,90 C45,105 25,100 10,80 Z" />
-        <path d="M18,140 C35,130 55,135 60,150 C55,165 35,160 18,140 Z" />
-        <path d="M15,210 C32,200 52,205 57,220 C52,235 32,230 15,210 Z" />
-        <path d="M11,280 C26,270 41,275 46,290 C41,305 26,300 11,280 Z" />
-        <path d="M17,350 C32,340 47,345 52,360 C47,375 32,370 17,350 Z" />
-        <path d="M5,110 C-5,100 -25,105 -30,120 C-25,135 -5,130 5,110 Z" />
-        <path d="M12,175 C2,165 -18,170 -23,185 C-18,200 2,195 12,175 Z" />
-        <path d="M11,245 C1,235 -19,240 -24,255 C-19,270 1,265 11,245 Z" />
-        <path d="M16,315 C6,305 -14,310 -19,325 C-14,340 6,335 16,315 Z" />
-      </svg>
-
-      {/* Floating background blobs */}
-      <div className="absolute -top-32 -left-32 h-[480px] w-[480px] rounded-full bg-primary/10 blur-3xl" />
-      <div className="absolute -top-20 -right-32 h-[420px] w-[420px] rounded-full bg-accent/15 blur-3xl" />
-
-      <div className="relative z-10 mx-auto grid h-[740px] w-full max-w-[1440px] grid-cols-1 gap-10 px-6 py-8 lg:grid-cols-[48%_52%] lg:items-center lg:px-12">
+      <div className="flex-1 grid gap-6 lg:gap-8 px-6 md:px-12 lg:grid-cols-[55%_45%] lg:items-center relative z-10 max-w-[1400px] mx-auto w-full">
         {/* left: copy */}
-        <div className="relative animate-fade-up flex flex-col justify-center max-w-[640px]">
+        <div className="relative animate-fade-up flex flex-col justify-center">
           {/* Dotted airplane path SVG */}
-          <svg viewBox="0 0 120 100" className="absolute -top-8 right-0 w-24 h-20 text-[#F2B632]/15 pointer-events-none select-none hidden xl:block" fill="none" stroke="currentColor" strokeWidth="1.5">
+          <svg viewBox="0 0 120 100" className="absolute -top-8 right-0 w-24 h-20 text-accent/15 pointer-events-none select-none hidden xl:block" fill="none" stroke="currentColor" strokeWidth="1.5">
             <path d="M10,90 C40,70 20,20 60,30 C80,35 90,15 105,10" strokeDasharray="3 3" />
             <g transform="translate(105, 10) rotate(-15)">
               <path d="M0,0 L-12,8 L-8,2 L-14,0 L0,0" fill="currentColor" stroke="currentColor" strokeWidth="1" />
             </g>
           </svg>
 
-          <div className="inline-flex items-center gap-2 admissions-pill text-[#081B7A]">
-            <span className="text-lg">⭐</span>
-            ADMISSIONS OPEN • 2026 - 27
+          <div className="inline-flex items-center gap-2 rounded-full border border-accent/40 bg-accent/8 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.15em] text-primary-deep w-fit">
+            <Star className="h-3 w-3 fill-accent text-accent" />
+            Admissions Open · 2026 - 27
           </div>
 
-          <h1 className="mt-6 font-display text-[56px] leading-[0.95] tracking-[-0.125em] text-[#081B7A] sm:text-[68px] lg:text-[84px] font-[400]">
-            <span className="block whitespace-nowrap">Little Scholars</span>
-            <span className="block whitespace-nowrap">International Preschool</span>
+          <h1 className="mt-2 font-display text-4xl sm:text-5xl lg:text-6xl xl:text-[72px] font-bold leading-[1.15] text-primary-deep text-balance">
+            Little Scholars <br className="hidden sm:inline" />
+            International Preschool
           </h1>
-          <div className="mt-6 h-1.5 w-24 rounded-full bg-[#F2B632]" />
+          <div className="mt-2 h-1.5 w-20 rounded-full bg-accent" />
 
-          <p className="mt-6 text-[18px] uppercase tracking-[0.125em] font-semibold text-[#10257A]">
-            NURTURING CURIOSITY. BUILDING CONFIDENCE. SHAPING TOMORROW.
+          <p className="mt-2 font-sans text-[8px] font-extrabold uppercase tracking-[0.12em] text-primary-deep/80 sm:text-[9px] lg:text-xs">
+            Nurturing Curiosity. Building Confidence. Shaping Tomorrow.
           </p>
 
-          <p className="mt-6 max-w-[620px] text-[24px] leading-[1.8] text-[#667085]">
+          <p className="mt-2.5 max-w-md text-xs leading-relaxed text-foreground/70 sm:text-sm lg:text-base">
             A premium international preschool in Srikakulam where curious little minds discover, play and grow through activity-based learning in safe, joyful and digitally-enabled classrooms.
           </p>
 
-          <div className="mt-10 flex flex-wrap items-center gap-6">
+          <div className="mt-3 flex flex-wrap items-center gap-2.5 sm:gap-3">
             <a
               href="#admissions"
-              className="inline-flex h-[68px] w-[300px] items-center justify-center gap-3 rounded-full bg-[#0B2286] text-[22px] font-semibold text-white shadow-[0_28px_80px_rgba(11,34,134,0.24)] transition hover:bg-[#091A72]"
+              className="inline-flex items-center gap-2 rounded-full bg-primary-deep px-5 sm:px-6 py-2.5 sm:py-3 text-xs sm:text-sm font-semibold text-white shadow-[0_12px_40px_rgba(0,0,0,0.08)] hover:shadow-lg transition-all duration-300"
             >
-              <span className="grid h-12 w-12 place-items-center rounded-full bg-white text-[#0B2286] shadow-sm">
-                <Calendar className="h-5 w-5" />
-              </span>
-              Book a Campus Visit
+              <Calendar className="h-4 w-4" />
+              Book Campus Visit
             </a>
             <a
               href="https://wa.me/919492848489"
               target="_blank"
               rel="noreferrer"
-              className="inline-flex h-[68px] w-[260px] items-center justify-center gap-3 rounded-full border border-[#E6E6E6] bg-white text-[20px] font-semibold text-[#0B2286] shadow-[0_16px_40px_rgba(0,0,0,0.08)] transition hover:bg-[#f7f7f7]"
+              className="inline-flex items-center gap-2 rounded-full border border-border bg-white px-5 sm:px-6 py-2.5 sm:py-3 text-xs sm:text-sm font-semibold text-primary-deep shadow-[0_12px_40px_rgba(0,0,0,0.08)] hover:bg-white transition-all duration-300"
             >
-              <span className="grid h-12 w-12 place-items-center rounded-full bg-[#ECFDF5] text-[#16A34A] shadow-sm">
-                <span className="text-xl">🟢</span>
-              </span>
-              Chat on WhatsApp
+              <WhatsAppIcon className="h-4 w-4 text-emerald-500" />
+              Chat WhatsApp
             </a>
           </div>
         </div>
 
         {/* right: visual */}
-        <div className="relative animate-fade-up hidden lg:flex justify-center items-center">
-          <div className="relative w-[820px] h-[640px] hero-visual">
-            {carouselImages.map((img, idx) => (
-              <img
-                key={img}
-                src={img}
-                alt="Preschool children learning and playing"
-                className={`absolute inset-0 h-full w-full hero-image transition-opacity duration-1000 ${
-                  idx === imgIndex ? "opacity-100 z-10" : "opacity-0 z-0"
-                }`}
-              />
-            ))}
-            <div className="absolute inset-0 bg-gradient-to-tr from-[#081B7A]/10 via-transparent to-transparent z-20" />
-            <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-30">
-              {carouselImages.map((_, idx) => (
-                <button
-                  key={idx}
-                  onClick={() => setImgIndex(idx)}
-                  className={`h-1.5 w-1.5 rounded-full transition-all duration-300 ${
-                    idx === imgIndex ? "bg-white w-3" : "bg-white/50"
+        <div className="relative animate-fade-up [animation-delay:120ms] hidden lg:block">
+          <div className="relative">
+            <div className="relative overflow-hidden rounded-[2rem] shadow-[0_12px_40px_rgba(0,0,0,0.08)] ring-1 ring-white/60 h-full min-h-[300px] max-h-[500px]">
+              {carouselImages.map((img, idx) => (
+                <img
+                  key={img}
+                  src={img}
+                  alt="Preschool children learning and playing"
+                  className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-1000 ${
+                    idx === imgIndex ? "opacity-100 z-10" : "opacity-0 z-0"
                   }`}
                 />
               ))}
+              <div className="absolute inset-0 bg-gradient-to-tr from-primary-deep/20 via-transparent to-transparent z-20" />
+              
+              {/* Dot Indicators */}
+              <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-30">
+                {carouselImages.map((_, idx) => (
+                  <button
+                    key={idx}
+                    onClick={() => setImgIndex(idx)}
+                    className={`h-1.5 w-1.5 rounded-full transition-all duration-300 ${
+                      idx === imgIndex ? "bg-white w-3" : "bg-white/50"
+                    }`}
+                  />
+                ))}
+              </div>
             </div>
 
             {/* floating logo badge */}
-            <div className="absolute top-6 left-6 z-30 grid h-16 w-16 place-items-center rounded-[28px] bg-white shadow-[0_20px_40px_rgba(0,0,0,0.12)]">
+            <div className="absolute top-3 left-3 z-30 grid h-16 w-16 sm:h-20 sm:w-20 md:h-24 md:w-24 place-items-center rounded-[1.25rem] glass p-2 animate-float shadow-[0_12px_40px_rgba(0,0,0,0.08)]">
               <img src={logoAsset} alt="" className="h-full w-full object-contain" />
             </div>
 
             {/* floating cap */}
-            <div className="absolute top-6 right-6 z-30 grid h-14 w-14 place-items-center rounded-[22px] bg-[#F2B632] text-[#081B7A] shadow-[0_20px_40px_rgba(0,0,0,0.12)]">
+            <div className="absolute top-3 right-3 z-30 grid h-10 w-10 sm:h-12 sm:w-12 md:h-14 md:w-14 place-items-center rounded-lg gradient-gold shadow-[0_12px_40px_rgba(0,0,0,0.1)] animate-float-rev">
               <CapIcon className="h-5 w-5 sm:h-6 sm:w-6 text-primary-deep" />
             </div>
 
-            {/* floating star badge */}
-            <div className="absolute bottom-6 left-6 z-30 grid h-14 w-14 place-items-center rounded-[22px] bg-white shadow-[0_20px_40px_rgba(0,0,0,0.12)]">
-              <span className="text-xl text-[#F2B632]">⭐</span>
+            {/* floating stars */}
+            <div className="absolute bottom-16 left-2 z-30 grid h-10 w-10 sm:h-12 sm:w-12 md:h-14 md:w-14 place-items-center rounded-lg glass shadow-[0_12px_40px_rgba(0,0,0,0.08)] animate-float-rev">
+              <StarIcon className="h-5 w-5 sm:h-6 sm:w-6 text-accent" />
             </div>
 
             {/* testimonial card */}
-            <div className="absolute bottom-8 right-8 z-30 w-[420px] testimonial-card bg-white p-6">
-              <div className="mb-4 flex items-center gap-3">
-                <div className="grid h-12 w-12 place-items-center rounded-full bg-[#081B7A] text-white">
-                  <User className="h-5 w-5" />
+            <div className="absolute -bottom-8 sm:-bottom-10 right-2 sm:right-3 z-30 w-60 sm:w-64 rounded-2xl bg-white p-3 sm:p-4 shadow-[0_12px_40px_rgba(0,0,0,0.08)] animate-float">
+              <div className="flex items-center gap-2.5">
+                <div className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-primary-deep text-white">
+                  <User className="h-4 w-4" />
                 </div>
                 <div className="min-w-0">
-                  <div className="text-[18px] font-semibold text-[#081B7A]">Priya A.</div>
-                  <div className="text-[14px] font-medium text-[#667085]">Parent • Junior KG</div>
+                  <div className="text-xs font-bold text-primary-deep truncate">Priya A.</div>
+                  <div className="text-[10px] font-semibold text-muted-foreground truncate">Parent • Junior KG</div>
                 </div>
               </div>
-              <p className="text-[16px] leading-[1.6] text-[#10257A]">
-                “My daughter actually asks to go to school every morning. That says it all!”
+              <p className="mt-2 text-[11px] leading-snug text-foreground/75">
+                "My daughter actually asks to go to school every morning. That says it all!"
               </p>
-              <div className="mt-4 flex gap-1 text-[#F2B632] text-xl">★★★★★</div>
+              <div className="mt-1.5 text-xs text-accent">★★★★★</div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Bottom stats ribbon */}
-      <div className="relative bg-[#071D83] text-white">
-        {/* Wave curve */}
-        <div className="absolute inset-x-0 top-0 h-24 overflow-hidden">
-          <svg viewBox="0 0 1440 140" className="h-full w-full" preserveAspectRatio="none">
-            <path d="M0,140 Q360,40 720,100 T1440,60 L1440,140 L0,140 Z" fill="#071D83" />
+      {/* Bottom wave container with stats */}
+      <div className="absolute bottom-0 left-0 right-0 bg-primary-deep text-white">
+        {/* SVG Wave */}
+        <div className="absolute inset-x-0 top-0 -translate-y-full pointer-events-none overflow-hidden h-12 lg:h-20">
+          <svg
+            viewBox="0 0 1440 120"
+            fill="none"
+            preserveAspectRatio="none"
+            className="w-full h-full"
+          >
+            <path
+              d="M0,80 C320,160 720,0 1120,80 C1280,110 1360,110 1440,80 L1440,120 L0,120 Z"
+              fill="var(--primary-deep)"
+            />
           </svg>
         </div>
-        
-        {/* Border at top */}
-        <div className="absolute inset-x-0 top-20 border-t-[4px] border-[#F2B632]" />
-        
-        {/* Content */}
-        <div className="relative mx-auto max-w-[1440px] px-6 md:px-12 py-12">
-          <div className="flex items-center justify-between gap-8">
-            {/* Stats grid */}
-            <div className="flex-1 grid grid-cols-1 lg:grid-cols-4 gap-6 lg:gap-8">
-              {[
-                { icon: "🎓", title: "5+", desc: "Programs" },
-                { icon: "🛡️", title: "100%", desc: "Safe & CCTV\nMonitored Campus" },
-                { icon: "👥", title: "Expert", desc: "Trained & Caring\nFaculty" },
-                { icon: "🌐", title: "Global", desc: "Curriculum &\nInternational Standards" },
-              ].map((item, index) => (
-                <div key={item.title} className={`flex items-center gap-4 ${index > 0 && index < 4 ? "border-l border-[#F2B632]/30 pl-6" : ""}`}>
-                  <div className="grid h-20 w-20 flex-shrink-0 place-items-center rounded-3xl bg-white text-[40px] shadow-[0_16px_40px_rgba(0,0,0,0.16)]">
-                    {item.icon}
+
+        <div className="w-full px-6 md:px-12 relative py-6 lg:py-8 max-w-[1400px] mx-auto">
+          {/* Stats grid */}
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-6">
+            {[
+              { k: "5+", v: "Programs", icon: GraduationCap },
+              { k: "100%", v: "Safe & CCTV Monitored Campus", icon: ShieldCheck },
+              { k: "Expert", v: "Trained & Caring Faculty", icon: Users },
+              { k: "Global", v: "Curriculum & International Standards", icon: Globe },
+            ].map((s, i) => {
+              const Icon = s.icon;
+              return (
+                <div key={i} className="flex items-start gap-2 lg:gap-3">
+                  <div className="grid h-10 w-10 lg:h-12 lg:w-12 shrink-0 place-items-center rounded-lg lg:rounded-xl bg-white shadow-[0_12px_40px_rgba(0,0,0,0.08)]">
+                    <Icon className="h-5 w-5 lg:h-6 lg:w-6 text-primary-deep" />
                   </div>
                   <div className="min-w-0">
-                    <dt className="font-display text-[36px] font-normal text-[#F2B632] leading-[1]">{item.title}</dt>
-                    <dd className="mt-1 text-[16px] font-medium leading-[1.4] text-white/95 whitespace-pre-line">{item.desc}</dd>
+                    <dt className="font-display text-base lg:text-xl font-bold text-accent">{s.k}</dt>
+                    <dd className="text-[10px] lg:text-xs font-semibold leading-tight text-white/90">{s.v}</dd>
                   </div>
                 </div>
-              ))}
-            </div>
-            
-            {/* Testimonial card */}
-            <div className="hidden lg:block flex-shrink-0 w-80">
-              <div className="rounded-[28px] bg-white p-6 shadow-[0_20px_60px_rgba(0,0,0,0.16)]">
-                <div className="mb-4 flex items-center gap-3">
-                  <div className="grid h-12 w-12 place-items-center rounded-full bg-[#081B7A] text-white text-lg">
-                    👤
-                  </div>
-                  <div className="min-w-0">
-                    <div className="text-[16px] font-semibold text-[#081B7A]">Priya A.</div>
-                    <div className="text-[13px] font-medium text-[#667085]">Parent • Junior KG</div>
-                  </div>
-                </div>
-                <p className="text-[15px] leading-[1.6] text-[#10257A]">
-                  "My daughter actually asks to go to school every morning. That says it all!"
-                </p>
-                <div className="mt-4 flex gap-0.5 text-[#F2B632] text-base">★★★★★</div>
-              </div>
-            </div>
+              );
+            })}
           </div>
         </div>
       </div>
