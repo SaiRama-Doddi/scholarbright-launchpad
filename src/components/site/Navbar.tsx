@@ -14,12 +14,35 @@ const links = [
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 15);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 15);
+      
+      const scrollPosition = window.scrollY + 160;
+      
+      for (const link of links) {
+        const id = link.href.replace("#", "");
+        const el = document.getElementById(id);
+        if (el) {
+          const top = el.offsetTop;
+          const height = el.offsetHeight;
+          if (scrollPosition >= top && scrollPosition < top + height) {
+            setActiveSection(link.href);
+            return;
+          }
+        }
+      }
+      
+      if (window.scrollY < 100) {
+        setActiveSection("");
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const handleMobileClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
@@ -54,15 +77,18 @@ export function Navbar() {
         </a>
 
         {/* nav links */}
-        <ul className="hidden lg:flex items-center gap-[48px]">
+        <ul className="hidden lg:flex items-center gap-[24px]">
           {links.map((l) => (
             <li key={l.href}>
               <a
                 href={l.href}
-                className="rounded-full px-4 py-2 text-sm font-medium text-foreground/80 transition hover:bg-primary/8 hover:text-primary-deep"
+                className={`rounded-full px-4 py-2 text-sm font-semibold transition-all duration-300 ${
+                  activeSection === l.href
+                    ? "bg-[#0B2286]/8 text-[#0B2286]"
+                    : "text-foreground/80 hover:bg-primary/8 hover:text-primary-deep"
+                }`}
               >
-                <span className="relative z-10">{l.label}</span>
-                <span className="absolute inset-0 scale-75 rounded-full bg-primary/6 opacity-0 transition-all duration-300 hover:scale-100 hover:opacity-100" />
+                {l.label}
               </a>
             </li>
           ))}
@@ -138,7 +164,11 @@ export function Navbar() {
                   <a
                     onClick={(e) => handleMobileClick(e, l.href)}
                     href={l.href}
-                    className="block rounded-2xl px-4 py-3 text-sm font-medium text-foreground/80 hover:bg-primary/8 transition-colors"
+                    className={`block rounded-2xl px-4 py-3 text-sm font-semibold transition-colors ${
+                      activeSection === l.href
+                        ? "bg-[#0B2286]/8 text-[#0B2286]"
+                        : "text-foreground/80 hover:bg-primary/8 hover:text-primary-deep"
+                    }`}
                   >
                     {l.label}
                   </a>

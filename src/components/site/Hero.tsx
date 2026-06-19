@@ -21,7 +21,7 @@ export function Hero() {
   }, []);
 
   return (
-    <section id="top" className="relative isolate overflow-hidden bg-gradient-to-r from-[#F8F7F4] via-white to-[#FFF9EE] h-screen flex flex-col pt-20 pb-0">
+    <section id="top" className="relative isolate overflow-hidden bg-gradient-to-r from-[#F8F7F4] via-white to-[#FFF9EE] pt-[115px] pb-36 lg:pb-52">
       <FloatingDecor section="hero" />
       {/* Background decorations */}
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
@@ -44,7 +44,7 @@ export function Hero() {
         <div className="absolute -top-20 -right-32 h-[420px] w-[420px] rounded-full bg-accent/15 blur-3xl" />
       </div>
 
-      <div className="flex-1 grid gap-6 lg:gap-8 px-6 md:px-12 lg:grid-cols-[55%_45%] lg:items-center relative z-10 max-w-[1400px] mx-auto w-full">
+      <div className="grid gap-6 lg:gap-8 px-6 md:px-12 lg:grid-cols-[55%_45%] lg:items-start relative z-10 max-w-[1400px] mx-auto w-full">
         {/* left: copy */}
         <div className="relative animate-fade-up flex flex-col justify-center">
           {/* Dotted airplane path SVG */}
@@ -97,7 +97,7 @@ export function Hero() {
         {/* right: visual */}
         <div className="relative animate-fade-up [animation-delay:120ms] hidden lg:block">
           <div className="relative">
-            <div className="relative overflow-hidden rounded-[2rem] shadow-[0_12px_40px_rgba(0,0,0,0.08)] ring-1 ring-white/60 h-full min-h-[300px] max-h-[500px]">
+            <div className="relative overflow-hidden rounded-[2rem] shadow-[0_12px_40px_rgba(0,0,0,0.08)] ring-1 ring-white/60 h-[390px] min-h-[300px] max-h-[500px]">
               {carouselImages.map((img, idx) => (
                 <img
                   key={img}
@@ -176,7 +176,7 @@ export function Hero() {
           </svg>
         </div>
 
-        <div className="w-full px-6 md:px-12 relative py-6 lg:py-8 max-w-[1400px] mx-auto">
+        <div className="w-full px-6 md:px-12 relative py-3 lg:py-4 max-w-[1400px] mx-auto">
           {/* Stats grid */}
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-6">
             {[
@@ -192,8 +192,8 @@ export function Hero() {
                     <Icon className="h-5 w-5 lg:h-6 lg:w-6 text-primary-deep" />
                   </div>
                   <div className="min-w-0">
-                    <dt className="font-display text-base lg:text-xl font-bold text-accent">{s.k}</dt>
-                    <dd className="text-[10px] lg:text-xs font-semibold leading-tight text-white/90">{s.v}</dd>
+                    <dt className="font-display text-lg lg:text-2xl font-bold text-accent">{s.k}</dt>
+                    <dd className="text-xs lg:text-sm font-semibold leading-tight text-white/95 mt-0.5">{s.v}</dd>
                   </div>
                 </div>
               );
