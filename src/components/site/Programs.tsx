@@ -14,7 +14,7 @@ const programIcons = [daycareIcon, playgroupIcon, nurseryIcon, juniorkgIcon, sen
 const programs = [
   { slug: "day-care", name: "Day Care", age: "1.5 – 5 yrs", color: "from-amber-200 to-yellow-300", desc: "Safe, loving care all day long with structured play, cozy naps and engaging activities." },
   { slug: "play-group", name: "Play Group", age: "1.5 – 2.5 yrs", color: "from-rose-200 to-pink-300", desc: "First steps into social learning — songs, sensory play and lots of giggles." },
-  { slug: "nursery", name: "Nursery", age: "2.5 – 3.5 yrs", color: "from-sky-200 to-blue-300", desc: "Language, motor skills and early concepts through stories and exploration." },
+  { slug: "nursery", name: "Nursery", age: "3 – 4 yrs", color: "from-sky-200 to-blue-300", desc: "Language, motor skills and early concepts through stories and exploration." },
   { slug: "junior-kg", name: "Junior KG", age: "3.5 – 4.5 yrs", color: "from-violet-200 to-purple-300", desc: "Letters, numbers and confidence — the joyful runway to formal school." },
   { slug: "senior-kg", name: "Senior KG", age: "4.5 – 5.5 yrs", color: "from-emerald-200 to-teal-300", desc: "Reading, writing and reasoning — ready for big school, the LSIP way." },
 ];

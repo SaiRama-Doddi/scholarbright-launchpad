@@ -128,7 +128,7 @@ const PROGRAMS: Record<string, Program> = {
   nursery: {
     slug: "nursery",
     name: "Nursery",
-    age: "2.5 – 3.5 yrs",
+    age: "3 – 4 yrs",
     tagline: "Language, motor skills & early concepts.",
     color: "from-sky-200 to-blue-300",
     overview:
@@ -731,7 +731,7 @@ function ProgramDetail() {
 
           <div className="grid gap-8 lg:grid-cols-2 lg:items-stretch">
             {/* Box 1: Spiritual & Cultural Learning */}
-            <div className="relative overflow-hidden rounded-[2.5rem] bg-[#FEFDFB] p-8 sm:p-10 ring-1 ring-amber-100/80 shadow-[var(--shadow-soft)] hover:shadow-md transition-shadow duration-300 flex flex-col justify-between">
+            <div className="relative overflow-hidden rounded-[2.5rem] bg-[#FEFDFB] p-8 sm:p-10 ring-1 ring-amber-100/80 shadow-[var(--shadow-soft)] hover:shadow-md transition-shadow duration-300 flex flex-col">
               <div>
                 <div className="flex items-center gap-3.5 mb-8">
                   {/* Bell Icon Wrapper */}
@@ -761,7 +761,8 @@ function ProgramDetail() {
                 <ul className="mt-6 space-y-4">
                   {[
                     "Sanskrit Slokas Recitation",
-                    "Hanuman Chalisa Chanting"
+                    "Hanuman Chalisa Chanting",
+                    "Devotional Stories"
                   ].map((item, idx) => (
                     <li key={idx} className="flex items-center gap-3.5 text-sm font-semibold text-amber-900 bg-amber-50/40 rounded-2xl p-3 border border-amber-100/30">
                       <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-amber-100 text-amber-600 text-xs">🌸</span>
@@ -770,17 +771,10 @@ function ProgramDetail() {
                   ))}
                 </ul>
               </div>
-
-              <div className="mt-10 pt-6 border-t border-amber-100/50 flex items-center justify-between">
-                <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-amber-600">
-                  Connecting Kids With Roots
-                </span>
-                <span className="text-amber-500 font-bold text-base">→</span>
-              </div>
             </div>
 
             {/* Box 2: Creative & Cognitive Activities */}
-            <div className="relative overflow-hidden rounded-[2.5rem] bg-[#F7F9FC] p-8 sm:p-10 ring-1 ring-blue-100/80 shadow-[var(--shadow-soft)] hover:shadow-md transition-shadow duration-300 flex flex-col justify-between">
+            <div className="relative overflow-hidden rounded-[2.5rem] bg-[#F7F9FC] p-8 sm:p-10 ring-1 ring-blue-100/80 shadow-[var(--shadow-soft)] hover:shadow-md transition-shadow duration-300 flex flex-col">
               <div>
                 <div className="flex items-center gap-3.5 mb-8">
                   <div className="grid h-12 w-12 place-items-center rounded-2xl bg-blue-100 text-blue-600 shadow-sm">
@@ -813,13 +807,6 @@ function ProgramDetail() {
                     </div>
                   ))}
                 </div>
-              </div>
-
-              <div className="mt-10 pt-6 border-t border-slate-200/50 flex items-center justify-between">
-                <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#4A5568]">
-                  Holistic Saturday Curriculum
-                </span>
-                <span className="text-blue-500 font-bold text-base">★</span>
               </div>
             </div>
           </div>

@@ -15,6 +15,8 @@ import mockupIcon5 from "@/assets/mockup-icon-5.png";
 import mockupIcon6 from "@/assets/mockup-icon-6.png";
 import mockupIcon7 from "@/assets/mockup-icon-7.png";
 import mockupIcon8 from "@/assets/mockup-icon-8.png";
+import playgroundIcon from "@/assets/playground-icon.png";
+
 
 // --- Background Decorative Components ---
 
@@ -344,9 +346,9 @@ const items = [
     accentColor: "from-rose-400 to-transparent",
   },
   {
-    t: "Nutritious Meals",
-    d: "Balanced menus crafted with paediatric guidance.",
-    img: mockupIcon8,
+    t: "Spacious Playground",
+    d: "Secure outdoor play zone designed for active fun and motor skills.",
+    img: playgroundIcon,
     numColor: "text-teal-100/70",
     badgeBg: "bg-teal-50",
     badgeBorder: "border-teal-100",
