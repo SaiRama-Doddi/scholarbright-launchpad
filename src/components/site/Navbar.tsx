@@ -3,12 +3,12 @@ import { motion, AnimatePresence } from "motion/react";
 import logoAsset from "@/assets/little.png";
 
 const links = [
-  { label: "About", href: "#about" },
-  { label: "Programs", href: "#programs" },
-  { label: "Facilities", href: "#facilities" },
-  { label: "Gallery", href: "#gallery" },
-  { label: "Admissions", href: "#admissions" },
-  { label: "Contact", href: "#contact" },
+  { label: "About", href: "/#about" },
+  { label: "Programs", href: "/#programs" },
+  { label: "Facilities", href: "/#facilities" },
+  { label: "Gallery", href: "/#gallery" },
+  { label: "Admissions", href: "/#admissions" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 export function Navbar() {
@@ -23,7 +23,7 @@ export function Navbar() {
       const scrollPosition = window.scrollY + 160;
       
       for (const link of links) {
-        const id = link.href.replace("#", "");
+        const id = link.href.split("#")[1];
         const el = document.getElementById(id);
         if (el) {
           const top = el.offsetTop;
@@ -46,14 +46,16 @@ export function Navbar() {
   }, []);
 
   const handleMobileClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    e.preventDefault();
-    setOpen(false);
-    const targetId = href.replace("#", "");
+    const targetId = href.split("#")[1];
     const element = document.getElementById(targetId);
     if (element) {
+      e.preventDefault();
+      setOpen(false);
       setTimeout(() => {
         element.scrollIntoView({ behavior: "smooth" });
       }, 50);
+    } else {
+      setOpen(false);
     }
   };
 
@@ -68,14 +70,15 @@ export function Navbar() {
       }`}
     >
       <nav className="mx-auto flex h-[90px] max-w-[1440px] items-center justify-between px-6 md:px-12">
-        <a href="#top" className="flex items-center gap-3">
+        <a href="/" className="flex items-center gap-3">
           <div className="grid h-16 w-16 place-items-center p-1">
             <img src={logoAsset} alt="Little Scholars" className="h-full w-full object-contain" />
           </div>
-          <div className="leading-tight">
-            <div className="font-display text-[16px] font-semibold text-[#081B7A] tracking-tight">Little Scholars</div>
-            <div className="text-[10px] uppercase tracking-[0.28em] text-[#081B7A]/70 font-semibold">International Preschool</div>
-          </div>
+          <img 
+            src="/logo-title.png" 
+            alt="Little Scholars International Preschool" 
+            className="h-14 md:h-[70px] w-auto object-contain" 
+          />
         </a>
 
         {/* nav links */}
@@ -99,7 +102,7 @@ export function Navbar() {
         {/* actions & mobile button */}
         <div className="flex items-center gap-3">
           <a
-            href="#admissions"
+            href="/#admissions"
             className="hidden md:inline-flex h-[56px] w-[180px] items-center justify-center rounded-full bg-[#0B2286] text-[16px] font-semibold text-white shadow-[0_16px_40px_rgba(11,34,134,0.18)] transition hover:bg-[#091A72]"
           >
             Apply Now →
@@ -184,8 +187,8 @@ export function Navbar() {
                 className="pt-2 md:hidden"
               >
                 <a
-                  onClick={(e) => handleMobileClick(e, "#admissions")}
-                  href="#admissions"
+                  onClick={(e) => handleMobileClick(e, "/#admissions")}
+                  href="/#admissions"
                   className="flex items-center justify-center rounded-full bg-primary py-3 text-sm font-semibold text-primary-foreground shadow-md transition hover:bg-primary-deep"
                 >
                   Apply Now

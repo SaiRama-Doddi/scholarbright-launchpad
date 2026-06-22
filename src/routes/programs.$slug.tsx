@@ -28,7 +28,14 @@ import {
   FlaskConical,
   Shield,
   Trophy,
-  ArrowLeft
+  ArrowLeft,
+  BookOpen,
+  Leaf,
+  Apple,
+  Box,
+  Sun,
+  Pencil,
+  Home
 } from "lucide-react";
 
 import g1 from "@/assets/gallery-1.jpg";
@@ -38,11 +45,9 @@ import g4 from "@/assets/gallery-4.jpg";
 import g5 from "@/assets/gallery-5.jpg";
 import g6 from "@/assets/gallery-6.jpg";
 
-interface HighlightItem {
-  title: string;
-  desc: string;
-  icon: string;
-}
+import teddyBearToys from "@/assets/teddy-bear-toys.png";
+import mockupSun from "@/assets/mockup-sun.png";
+import mockupAirplane from "@/assets/mockup-airplane-trans.png";
 
 interface Program {
   slug: string;
@@ -53,7 +58,7 @@ interface Program {
   overview: string;
   img: string;
   highlights: HighlightItem[];
-  daily: { time: string; activity: string }[];
+  daily: { time: string; title: string; desc: string; icon: string }[];
   outcomes: string[];
 }
 
@@ -76,12 +81,12 @@ const PROGRAMS: Record<string, Program> = {
       { title: "Flexible half-day / full-day slots", desc: "Timings that adapt to your family's needs.", icon: "clock" },
     ],
     daily: [
-      { time: "9:00 – 9:30", activity: "Welcome, free play & breakfast" },
-      { time: "9:30 – 11:00", activity: "Circle time, songs & sensory play" },
-      { time: "11:00 – 12:30", activity: "Outdoor / indoor activity rotation" },
-      { time: "12:30 – 1:30", activity: "Lunch & story time" },
-      { time: "1:30 – 3:00", activity: "Nap time" },
-      { time: "3:00 – 3:30", activity: "Afternoon snack & pick-up" },
+      { time: "9:00 – 9:30 AM", title: "Arrival & Breakfast", desc: "Welcoming children with warm greetings and healthy breakfast.", icon: "utensils" },
+      { time: "9:30 – 11:00 AM", title: "Circle Time & Sensory Play", desc: "Engaging songs, stories, and sensory learning experiences.", icon: "music" },
+      { time: "11:00 – 12:30 PM", title: "Activity Rotation", desc: "Fun rotations of indoor games and outdoor play.", icon: "activity" },
+      { time: "12:30 – 1:30 PM", title: "Lunch & Story Time", desc: "Hygienic lunch followed by creative, winding-down stories.", icon: "utensils" },
+      { time: "1:30 – 3:00 PM", title: "Nap Time", desc: "Cozy rest in clean, quiet, AC nap rooms.", icon: "moon" },
+      { time: "3:00 – 3:30 PM", title: "Afternoon Snack & Dispersal", desc: "Light refreshments and preparing for parent pick-up.", icon: "home" },
     ],
     outcomes: [
       "Builds independence & social confidence",
@@ -107,12 +112,12 @@ const PROGRAMS: Record<string, Program> = {
       { title: "Buddy system for new joiners", desc: "Ensuring every child feels welcomed and happy.", icon: "heart" },
     ],
     daily: [
-      { time: "9:00 – 9:45", activity: "Welcome & creative free play" },
-      { time: "9:45 – 10:15", activity: "Circle time, music & rhymes" },
-      { time: "10:15 – 11:00", activity: "Hands-on sensory activity" },
-      { time: "11:00 – 11:30", activity: "Healthy snack break" },
-      { time: "11:30 – 12:15", activity: "Outdoor play & interactive games" },
-      { time: "12:15 – 12:30", activity: "Creative block building & goodbye" },
+      { time: "9:00 – 9:45 AM", title: "Welcome & Creative Free Play", desc: "Children explore, imagine and settle in.", icon: "palette" },
+      { time: "9:45 – 10:15 AM", title: "Circle Time, Music & Rhymes", desc: "Songs, stories and fun group activities.", icon: "music" },
+      { time: "10:15 – 11:00 AM", title: "Hands-on Sensory Activity", desc: "Exploring textures, colors and creativity.", icon: "hand" },
+      { time: "11:00 – 11:30 AM", title: "Healthy Snack Break", desc: "Nutritious snacks to refuel and refresh.", icon: "apple" },
+      { time: "11:30 – 12:15 PM", title: "Outdoor Play & Interactive Games", desc: "Active play, teamwork and motor skills.", icon: "slide" },
+      { time: "12:15 – 12:30 PM", title: "Creative Block Building & Goodbye", desc: "Build, share and end the day with smiles.", icon: "blocks" },
     ],
     outcomes: [
       "Confident separation from parent",
@@ -138,12 +143,12 @@ const PROGRAMS: Record<string, Program> = {
       { title: "Field trips & theme weeks", desc: "Real-world experiences to expand young horizons.", icon: "compass" },
     ],
     daily: [
-      { time: "9:00 – 9:20", activity: "Assembly & prayer" },
-      { time: "9:20 – 10:00", activity: "Literacy / phonics" },
-      { time: "10:00 – 10:30", activity: "Snack break" },
-      { time: "10:30 – 11:15", activity: "Numeracy & concept time" },
-      { time: "11:15 – 12:00", activity: "Art, music or outdoor" },
-      { time: "12:00 – 12:30", activity: "Circle time & dispersal" },
+      { time: "9:00 – 9:20 AM", title: "Assembly & Prayer", desc: "Starting the day with positive affirmations and prayers.", icon: "prayer" },
+      { time: "9:20 – 10:00 AM", title: "Literacy & Phonics", desc: "Fun letter recognition, sounds, and language games.", icon: "book" },
+      { time: "10:00 – 10:30 AM", title: "Snack Break", desc: "Fueling up with healthy snacks and social time.", icon: "apple" },
+      { time: "10:30 – 11:15 AM", title: "Numeracy & Concepts", desc: "Hands-on math activities with shapes and numbers.", icon: "blocks" },
+      { time: "11:15 – 12:00 PM", title: "Art & Creative Expression", desc: "Exploring colors, rhythms, and music.", icon: "palette" },
+      { time: "12:00 – 12:30 PM", title: "Circle Time & Goodbye", desc: "Sharing highlights of the day and saying goodbye.", icon: "goodbye" },
     ],
     outcomes: [
       "Reads 50+ sight words & basic phonics",
@@ -169,15 +174,15 @@ const PROGRAMS: Record<string, Program> = {
       { title: "Yoga, dance & sports", desc: "Active play for physical fitness and focus.", icon: "activity" },
     ],
     daily: [
-      { time: "9:00 – 9:20", activity: "Morning assembly & circle time" },
-      { time: "9:20 – 10:10", activity: "English literacy & phonics" },
-      { time: "10:10 – 10:40", activity: "Healthy snack break & outdoor play" },
-      { time: "10:40 – 11:30", activity: "Mathematics concepts & writing" },
-      { time: "11:30 – 12:30", activity: "Environmental Studies (EVS) & Science" },
-      { time: "12:30 – 1:30", activity: "Lunch break & stories" },
-      { time: "1:30 – 2:30", activity: "Creative arts & music/movement" },
-      { time: "2:30 – 3:15", activity: "Physical development & active games" },
-      { time: "3:15 – 3:30", activity: "Reflection & home dispersal" },
+      { time: "9:00 – 9:20 AM", title: "Assembly & Circle Time", desc: "Group discussion, theme of the day, and morning prayer.", icon: "sun" },
+      { time: "9:20 – 10:10 AM", title: "English Literacy & Phonics", desc: "Phonics-based reading, sight words, and letter writing.", icon: "book" },
+      { time: "10:10 – 10:40 AM", title: "Snack & Outdoor Play", desc: "Active playground time and healthy snacking.", icon: "slide" },
+      { time: "10:40 – 11:30 AM", title: "Math Concepts & Writing", desc: "Exploring numbers, writing patterns, and early calculations.", icon: "math" },
+      { time: "11:30 – 12:30 PM", title: "EVS & Science Projects", desc: "Interactive science themes, nature, and surroundings.", icon: "flask" },
+      { time: "12:30 – 1:30 PM", title: "Lunch Break & Stories", desc: "Freshly prepared lunch and calming storytelling sessions.", icon: "utensils" },
+      { time: "1:30 – 2:30 PM", title: "Creative Arts & Movement", desc: "Music, dance, and hands-on crafts.", icon: "palette" },
+      { time: "2:30 – 3:15 PM", title: "Physical Development", desc: "Active sports, yoga, and coordination exercises.", icon: "activity" },
+      { time: "3:15 – 3:30 PM", title: "Reflection & Dispersal", desc: "Recalling the day's lessons and packing bags.", icon: "home" },
     ],
     outcomes: [
       "Reads 3- & 4-letter words confidently",
@@ -203,15 +208,15 @@ const PROGRAMS: Record<string, Program> = {
       { title: "Big-school transition program", desc: "Prepping for primary school academic rigor.", icon: "users" },
     ],
     daily: [
-      { time: "9:00 – 9:20", activity: "Morning assembly & daily news" },
-      { time: "9:20 – 10:15", activity: "English reading & comprehension" },
-      { time: "10:15 – 10:45", activity: "Healthy snack break & outdoor play" },
-      { time: "10:45 – 11:40", activity: "Mathematics reasoning" },
-      { time: "11:40 – 12:30", activity: "EVS & STEM hands-on lab" },
-      { time: "12:30 – 1:30", activity: "Lunch break & quiet time" },
-      { time: "1:30 – 2:30", activity: "Hindi / regional language writing" },
-      { time: "2:30 – 3:15", activity: "Sports, yoga & leadership games" },
-      { time: "3:15 – 3:30", activity: "Reflection, checklist & dispersal" },
+      { time: "9:00 – 9:20 AM", title: "Morning Assembly & News", desc: "Singing national anthem, prayers, and sharing daily updates.", icon: "sun" },
+      { time: "9:20 – 10:15 AM", title: "English Reading & Comprehension", desc: "Story analysis, cursive writing, and sentence structures.", icon: "book" },
+      { time: "10:15 – 10:45 AM", title: "Snack Break & Outdoor Play", desc: "Outdoor coordination games and healthy snack break.", icon: "slide" },
+      { time: "10:45 – 11:40 AM", title: "Mathematics Reasoning", desc: "Problem solving, mathematical logical reasoning and geometry.", icon: "math" },
+      { time: "11:40 – 12:30 PM", title: "EVS & STEM Hands-on Lab", desc: "Performing simple science experiments and STEM construction.", icon: "flask" },
+      { time: "12:30 – 1:30 PM", title: "Lunch Break & Quiet Time", desc: "Eating lunch together and quiet reading sessions.", icon: "utensils" },
+      { time: "1:30 – 2:30 PM", title: "Language Writing", desc: "Introduction to cursive writing and regional languages.", icon: "pencil" },
+      { time: "2:30 – 3:15 PM", title: "Sports & Leadership", desc: "Team sports, yoga poses, and confidence-building games.", icon: "trophy" },
+      { time: "3:15 – 3:30 PM", title: "Reflection & Dispersal", desc: "Self-reflection, checklist review, and home dispersal.", icon: "home" },
     ],
     outcomes: [
       "Reads short stories independently",
@@ -329,6 +334,60 @@ export const Route = createFileRoute("/programs/$slug")({
   component: ProgramDetail,
 });
 
+function RainbowDecor() {
+  return (
+    <svg viewBox="0 0 120 70" className="w-20 h-12 opacity-80 animate-float" style={{ animationDuration: "14s" }} fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M10 60 A 50 50 0 0 1 110 60" stroke="#FF8DA1" strokeWidth="5" strokeLinecap="round" />
+      <path d="M22 60 A 38 38 0 0 1 98 60" stroke="#FFD269" strokeWidth="5" strokeLinecap="round" />
+      <path d="M34 60 A 26 26 0 0 1 86 60" stroke="#7FE492" strokeWidth="5" strokeLinecap="round" />
+      <path d="M46 60 A 14 14 0 0 1 74 60" stroke="#87C4FF" strokeWidth="5" strokeLinecap="round" />
+      <circle cx="10" cy="60" r="5" fill="#FFFFFF" />
+      <circle cx="110" cy="60" r="5" fill="#FFFFFF" />
+    </svg>
+  );
+}
+
+function getTimelineStyles(iconName: string) {
+  switch (iconName) {
+    case "palette":
+      return { bg: "bg-indigo-50 border-indigo-100", text: "text-indigo-600", icon: Palette };
+    case "music":
+      return { bg: "bg-amber-50 border-amber-100", text: "text-amber-600", icon: Music };
+    case "hand":
+    case "smile":
+      return { bg: "bg-emerald-50 border-emerald-100", text: "text-emerald-600", icon: Smile };
+    case "apple":
+    case "snacks":
+    case "utensils":
+      return { bg: "bg-rose-50 border-rose-100", text: "text-rose-600", icon: Apple };
+    case "slide":
+    case "outdoor":
+    case "activity":
+      return { bg: "bg-violet-50 border-violet-100", text: "text-violet-600", icon: Activity };
+    case "blocks":
+    case "building":
+      return { bg: "bg-sky-50 border-sky-100", text: "text-sky-600", icon: Box };
+    case "calculator":
+    case "math":
+      return { bg: "bg-teal-50 border-teal-100", text: "text-teal-600", icon: Calculator };
+    case "sleep":
+    case "nap":
+    case "moon":
+      return { bg: "bg-blue-50 border-blue-100", text: "text-blue-600", icon: Moon };
+    case "sun":
+    case "prayer":
+    case "assembly":
+      return { bg: "bg-yellow-50 border-yellow-100", text: "text-yellow-600", icon: Sun };
+    case "pencil":
+      return { bg: "bg-orange-50 border-orange-100", text: "text-orange-600", icon: Pencil };
+    case "home":
+    case "goodbye":
+      return { bg: "bg-slate-50 border-slate-100", text: "text-slate-600", icon: Home };
+    default:
+      return { bg: "bg-primary/5 border-primary/10", text: "text-primary-deep", icon: Sparkles };
+  }
+}
+
 function ProgramDetail() {
   const { program: p } = Route.useLoaderData() as { program: Program };
 
@@ -337,7 +396,7 @@ function ProgramDetail() {
       <Navbar />
 
       {/* Hero */}
-      <section className="relative overflow-hidden pt-28 pb-16 sm:pt-36 sm:pb-20">
+      <section className="relative overflow-hidden pt-20 pb-10 sm:pt-[105px] sm:pb-12">
         <FloatingDecor section="hero" />
         <div aria-hidden className="pointer-events-none absolute inset-0">
           <div className="absolute -top-24 -right-24 h-96 w-96 rounded-full bg-primary/10 blur-3xl" />
@@ -433,7 +492,7 @@ function ProgramDetail() {
       </section>
 
       {/* Highlights */}
-      <section className="relative py-16 bg-white overflow-hidden">
+      <section className="relative py-10 sm:py-12 bg-white overflow-hidden">
         <FloatingDecor section="gallery" />
         <div className="mx-auto max-w-7xl px-6 md:px-12 relative z-10">
           <div className="mx-auto max-w-3xl text-center">
@@ -471,56 +530,190 @@ function ProgramDetail() {
       </section>
 
       {/* Daily schedule */}
-      <section className="relative py-16 bg-cream overflow-hidden">
+      <section className="relative py-12 sm:py-16 bg-cream overflow-hidden">
         <FloatingDecor section="learning" />
-        <div className="mx-auto max-w-7xl px-6 md:px-12 relative z-10">
-          <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
+        <div className="relative z-10 w-full">
+          <div className="grid gap-8 lg:grid-cols-12 lg:items-stretch">
             
-            {/* Left Column title and outline letters */}
-            <div className="relative lg:sticky lg:top-24">
-              <h2 className="font-display text-4xl font-extrabold leading-tight text-primary-deep sm:text-5xl">
-                A day in <br className="hidden lg:inline" />
-                the life
-              </h2>
-              <div className="mt-3 h-1.5 w-20 rounded-full bg-accent" />
-              
-              {/* Outline toy blocks decoration (A B C) */}
-              <div className="relative mt-12 h-36 w-full opacity-35 select-none pointer-events-none hidden lg:block">
-                <div className="absolute left-4 top-2 grid h-12 w-12 place-items-center rounded-xl border border-primary-deep text-lg font-extrabold text-primary-deep rotate-[-8deg]">A</div>
-                <div className="absolute left-16 top-10 grid h-12 w-12 place-items-center rounded-xl border border-primary-deep text-lg font-extrabold text-primary-deep rotate-[12deg]">B</div>
-                <div className="absolute left-8 top-20 grid h-12 w-12 place-items-center rounded-xl border border-primary-deep text-lg font-extrabold text-primary-deep rotate-[-15deg]">C</div>
-                <StarIcon className="absolute left-28 top-4 h-4.5 w-4.5 text-accent" />
-                <StarIcon className="absolute left-32 top-16 h-3.5 w-3.5 text-accent" />
+            {/* Left Column title and decorations */}
+            <div className="lg:col-span-5 relative flex flex-col justify-between pb-12 lg:pb-0 min-h-[350px] lg:min-h-0 schedule-left-col">
+              <div>
+                {/* Decorative Badge */}
+                <div className="inline-flex items-center gap-2 rounded-full bg-primary/8 px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.22em] text-primary-deep w-fit">
+                  <BookOpen className="h-4 w-4 text-primary" />
+                  Play • Learn • Grow
+                </div>
+
+                <h2 className="mt-6 font-display text-5xl sm:text-[60px] font-extrabold leading-[1.1] text-primary-deep">
+                  A day in <br />
+                  <span className="text-accent">the life</span>
+                </h2>
+                <div className="mt-4 h-1.5 w-20 rounded-full bg-accent" />
+                
+                <p className="mt-6 text-sm sm:text-base text-foreground/70 max-w-sm font-semibold leading-relaxed">
+                  Thoughtfully designed activities that spark curiosity, build confidence, and make every moment meaningful.
+                </p>
+
+                {/* 3 columns of attributes */}
+                <div className="mt-8 grid grid-cols-3 gap-4 border-t border-border/60 pt-6 max-w-md">
+                  <div className="flex flex-col items-center text-center">
+                    <div className="grid h-12 w-12 place-items-center rounded-2xl bg-blue-50 text-blue-600 shadow-sm border border-blue-100/30">
+                      <Users className="h-6 w-6" />
+                    </div>
+                    <span className="mt-2.5 text-[9px] sm:text-[10px] font-bold text-primary-deep leading-tight">
+                      Safe & Nurturing<br />Environment
+                    </span>
+                  </div>
+                  <div className="flex flex-col items-center text-center">
+                    <div className="grid h-12 w-12 place-items-center rounded-2xl bg-amber-50 text-amber-600 shadow-sm border border-amber-100/30">
+                      <Heart className="h-6 w-6 fill-amber-600/10" />
+                    </div>
+                    <span className="mt-2.5 text-[9px] sm:text-[10px] font-bold text-primary-deep leading-tight">
+                      Holistic Learning<br />Approach
+                    </span>
+                  </div>
+                  <div className="flex flex-col items-center text-center">
+                    <div className="grid h-12 w-12 place-items-center rounded-2xl bg-emerald-50 text-emerald-600 shadow-sm border border-emerald-100/30">
+                      <Leaf className="h-6 w-6" />
+                    </div>
+                    <span className="mt-2.5 text-[9px] sm:text-[10px] font-bold text-primary-deep leading-tight">
+                      Play-based<br />Activities
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Wavy hill/blob at bottom-left */}
+              <div className="absolute bottom-0 -left-20 w-80 h-28 -z-10 pointer-events-none select-none hidden lg:block text-indigo-100/35">
+                <svg viewBox="0 0 100 40" className="w-full h-full fill-current" preserveAspectRatio="none">
+                  <path d="M0,40 Q30,10 60,30 T100,20 L100,40 Z" />
+                </svg>
+              </div>
+
+              {/* Decorative toy blocks decoration at bottom-left */}
+              <div className="absolute bottom-0 -left-12 w-64 h-auto opacity-95 pointer-events-none select-none hidden lg:block mix-blend-multiply z-10">
+                <img src={teddyBearToys} alt="Toys" className="w-full h-auto object-contain" />
+              </div>
+
+              {/* Floating paper airplane */}
+              <div className="absolute top-[20%] right-[-5%] w-24 h-auto opacity-70 hidden xl:block animate-float pointer-events-none select-none z-10">
+                <img src={mockupAirplane} alt="Paper Airplane" className="w-full h-auto object-contain" />
               </div>
             </div>
 
-            {/* Right Column timeline card */}
-            <div className="overflow-hidden rounded-[2.5rem] bg-white p-6 sm:p-8 shadow-[var(--shadow-glow)] ring-1 ring-border">
-              <div className="divide-y divide-border/60">
-                {p.daily.map((d) => (
-                  <div key={d.time} className="flex items-center gap-5 py-5 first:pt-0 last:pb-0">
-                    <div className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-primary-deep text-white shadow-sm">
-                      <Clock className="h-4.5 w-4.5" />
+            {/* Right Column timeline card wrapper & card */}
+            <div className="px-6 md:px-12 lg:px-0 lg:col-span-7 flex flex-col justify-stretch">
+              <div className="schedule-right-card relative overflow-hidden flex flex-col justify-between h-full">
+                
+              <div>
+                {/* Card Header */}
+                <div className="relative flex items-center justify-between border-b border-border/60 pb-6 mb-6">
+                  <div className="flex items-center gap-4">
+                    <div className="grid h-12 w-12 place-items-center rounded-full bg-[#0B2286] text-white shadow-sm">
+                      <Clock className="h-6 w-6" />
                     </div>
-                    <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-6 flex-1">
-                      <span className="font-display text-base font-extrabold text-primary-deep tracking-wide sm:w-36 whitespace-nowrap">
-                        {d.time}
-                      </span>
-                      <span className="text-sm font-semibold text-foreground/75 leading-relaxed">
-                        {d.activity}
-                      </span>
+                    <div>
+                      <h3 className="font-display text-xl font-bold text-[#0B2286]">
+                        Today's Schedule
+                      </h3>
+                      <p className="text-xs font-semibold text-foreground/50">
+                        A perfect blend of learning, play & growth
+                      </p>
                     </div>
                   </div>
-                ))}
+                  
+                  {/* Rainbow & Sun Illustration on top-right */}
+                  <div className="hidden sm:flex items-center gap-1.5 select-none pointer-events-none">
+                    <RainbowDecor />
+                    <img src={mockupSun} alt="Sun" className="w-12 h-12 animate-float object-contain" />
+                  </div>
+                </div>
+
+                {/* Timeline Rows */}
+                <div className="relative divide-y divide-border/20">
+                  {p.daily.map((d, i) => {
+                    const style = getTimelineStyles(d.icon);
+                    const Icon = style.icon;
+                    return (
+                      <div key={i} className="flex items-start gap-4 sm:gap-6 py-5 first:pt-0 last:pb-0 relative group">
+                        
+                        {/* Time Column */}
+                        <div className="w-24 sm:w-28 shrink-0 pt-2 text-xs sm:text-sm font-bold text-primary-deep whitespace-nowrap">
+                          {d.time}
+                        </div>
+
+                        {/* Icon & Connection Line Column */}
+                        <div className="relative flex flex-col items-center justify-center shrink-0 w-12 h-12">
+                          {/* Connecting Line (hidden for the last item) */}
+                          {i < p.daily.length - 1 && (
+                            <div className="absolute top-10 bottom-[-30px] w-[2px] border-l-2 border-dashed border-slate-200/80 -z-10" />
+                          )}
+                          {/* Circle Icon */}
+                          <div className={`grid h-10 w-10 place-items-center rounded-full ${style.bg} ${style.text} border shadow-sm transition-transform duration-300 group-hover:scale-105`}>
+                            <Icon className="h-5 w-5" />
+                          </div>
+                        </div>
+
+                        {/* Content Column */}
+                        <div className="flex-1 pt-1.5">
+                          <h4 className="font-display text-sm sm:text-base font-bold text-primary-deep leading-snug">
+                            {d.title}
+                          </h4>
+                          {d.desc && (
+                            <p className="mt-1 text-xs text-foreground/60 leading-relaxed">
+                              {d.desc}
+                            </p>
+                          )}
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
               </div>
+
+              {/* Card Footer Banner */}
+              <div className="mt-8 bg-indigo-50/70 border border-indigo-100/40 rounded-2xl p-4 flex items-center justify-between overflow-hidden relative">
+                <div className="flex items-center gap-3 relative z-10">
+                  <div className="grid h-8 w-8 place-items-center rounded-full bg-[#0B2286] text-white shadow-sm">
+                    <Heart className="h-4.5 w-4.5 fill-white" />
+                  </div>
+                  <span className="text-xs font-bold text-primary-deep">
+                    Every moment is a step towards a brighter tomorrow.
+                  </span>
+                </div>
+                {/* Waving kids drawing */}
+                <div className="absolute right-4 bottom-0 opacity-20 pointer-events-none select-none hidden md:block">
+                  <svg viewBox="0 0 120 40" className="h-10 w-28 text-indigo-600" fill="none" stroke="currentColor" strokeWidth="1.5">
+                    <circle cx="20" cy="28" r="8" />
+                    <path d="M16 26 Q20 28 24 26" />
+                    <circle cx="18" cy="24" r="0.75" fill="currentColor" />
+                    <circle cx="22" cy="24" r="0.75" fill="currentColor" />
+                    <path d="M10 32 C8 28 4 28 2 30" />
+                    
+                    <circle cx="60" cy="24" r="8" />
+                    <path d="M56 22 Q60 24 64 22" />
+                    <circle cx="58" cy="20" r="0.75" fill="currentColor" />
+                    <circle cx="62" cy="20" r="0.75" fill="currentColor" />
+                    <path d="M50 30 Q54 28 58 30" />
+                    
+                    <circle cx="100" cy="28" r="8" />
+                    <path d="M96 26 Q100 28 104 26" />
+                    <circle cx="98" cy="24" r="0.75" fill="currentColor" />
+                    <circle cx="102" cy="24" r="0.75" fill="currentColor" />
+                    <path d="M110 32 C112 28 116 28 118 30" />
+                  </svg>
+                </div>
+              </div>
+
             </div>
+          </div>
 
           </div>
         </div>
       </section>
 
       {/* Saturday Special Section */}
-      <section className="relative py-20 bg-[#FAF9F5] overflow-hidden">
+      <section className="relative py-12 sm:py-14 bg-[#FAF9F5] overflow-hidden">
         <FloatingDecor section="testimonials" />
 
         <div className="mx-auto max-w-7xl px-6 md:px-12 relative z-10">
@@ -634,7 +827,7 @@ function ProgramDetail() {
       </section>
 
       {/* Outcomes */}
-      <section className="relative py-20 bg-white">
+      <section className="relative py-12 sm:py-14 bg-white">
         <FloatingDecor section="programs" />
         <div className="mx-auto max-w-7xl px-6 md:px-12 relative z-10">
           <div className="mx-auto max-w-3xl text-center">
@@ -694,7 +887,7 @@ function ProgramDetail() {
       </section>
 
       {/* CTA */}
-      <section className="relative pb-24 bg-cream">
+      <section className="relative pb-12 sm:pb-16 bg-cream">
         <div className="mx-auto max-w-5xl px-6 relative z-10">
           <div className="relative overflow-hidden rounded-[2.5rem] gradient-royal p-8 sm:p-12 text-white shadow-[var(--shadow-glow)] ring-1 ring-white/10">
             <div aria-hidden className="pointer-events-none absolute inset-0">

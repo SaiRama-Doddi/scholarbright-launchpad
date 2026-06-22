@@ -213,5 +213,47 @@
   .testimonial-card { width: auto; margin: 0 auto; }
 }
 
+/* ---------- Daily Schedule Split Screen Grid & Card (Full Bleed on Desktop) ---------- */
+.schedule-left-col {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+@media (min-width: 768px) {
+  .schedule-left-col {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+@media (min-width: 1024px) {
+  .schedule-left-col {
+    padding-left: max(3rem, calc((100vw - 1280px) / 2 + 3rem));
+    padding-right: 2rem;
+  }
+}
+
+.schedule-right-card {
+  background-color: white;
+  box-shadow: var(--shadow-glow);
+  border: 1px solid var(--border);
+  border-radius: 2.5rem;
+  padding: 1.5rem;
+}
+@media (min-width: 640px) {
+  .schedule-right-card {
+    padding: 2rem;
+  }
+}
+@media (min-width: 1024px) {
+  .schedule-right-card {
+    border-right: none;
+    border-radius: 2.5rem 0 0 2.5rem;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    padding-left: 2.5rem;
+    padding-right: max(3rem, calc((100vw - 1280px) / 2 + 3rem));
+  }
+}
+
+
 
 
