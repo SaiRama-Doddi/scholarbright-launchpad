@@ -24,16 +24,27 @@ export function Admissions() {
     return () => clearInterval(id);
   }, []);
 
+  useEffect(() => {
+    if (sent) {
+      const id = setTimeout(() => setSent(false), 5000);
+      return () => clearTimeout(id);
+    }
+  }, [sent]);
+
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const form = new FormData(e.currentTarget);
+    const target = e.currentTarget;
+    const form = new FormData(target);
     const name = String(form.get("name") || "");
     const phone = String(form.get("phone") || "");
     const program = String(form.get("program") || "");
     const message = String(form.get("message") || "");
     const rawText = `Hi! I'd like to enquire about admission.\n\nName: ${name}\nPhone: ${phone}\nProgram: ${program}\nMessage: ${message}`;
     const text = encodeURIComponent(rawText);
-    window.location.href = `https://wa.me/919492848489?text=${text}`;
+
+    window.open(`https://wa.me/919492848489?text=${text}`, "_blank");
+
+    target.reset();
     setSent(true);
   };
 
@@ -65,7 +76,8 @@ export function Admissions() {
                 Begin your child's <span className="gradient-text-gold">brightest chapter.</span>
               </h2>
               <p className="mt-5 max-w-md text-white/85 leading-relaxed">
-                Limited seats per class to ensure personal attention for every child. Hurry — early enrolments are filling up.
+                Limited seats per class to ensure personal attention for every child. Hurry — early
+                enrolments are filling up.
               </p>
 
               {/* Countdown */}
@@ -74,7 +86,14 @@ export function Admissions() {
                   New academic year starts in
                 </div>
                 <div className="mt-3 grid grid-cols-4 gap-2 sm:gap-3 max-w-md">
-                  {([["Days", t.d], ["Hours", t.h], ["Mins", t.m], ["Secs", t.s]] as const).map(([label, val]) => (
+                  {(
+                    [
+                      ["Days", t.d],
+                      ["Hours", t.h],
+                      ["Mins", t.m],
+                      ["Secs", t.s],
+                    ] as const
+                  ).map(([label, val]) => (
                     <div
                       key={label}
                       className="rounded-2xl bg-white/10 px-3 py-3 text-center backdrop-blur-md ring-1 ring-white/20"
@@ -82,7 +101,9 @@ export function Admissions() {
                       <div className="font-display text-3xl font-bold text-white tabular-nums sm:text-4xl">
                         {String(val).padStart(2, "0")}
                       </div>
-                      <div className="mt-1 text-[10px] uppercase tracking-wider text-white/70">{label}</div>
+                      <div className="mt-1 text-[10px] uppercase tracking-wider text-white/70">
+                        {label}
+                      </div>
                     </div>
                   ))}
                 </div>
@@ -95,7 +116,9 @@ export function Admissions() {
                   "Fee structure & early-bird discounts",
                 ].map((b) => (
                   <li key={b} className="flex items-center gap-3 text-white/90">
-                    <span className="grid h-6 w-6 place-items-center rounded-full bg-accent text-primary-deep text-xs font-bold">✓</span>
+                    <span className="grid h-6 w-6 place-items-center rounded-full bg-accent text-primary-deep text-xs font-bold">
+                      ✓
+                    </span>
                     {b}
                   </li>
                 ))}
@@ -111,7 +134,13 @@ export function Admissions() {
 
               <div className="mt-5 grid gap-4">
                 <Field label="Parent's Name" name="name" required placeholder="Your full name" />
-                <Field label="Phone Number" name="phone" required type="tel" placeholder="+91 ..." />
+                <Field
+                  label="Phone Number"
+                  name="phone"
+                  required
+                  type="tel"
+                  placeholder="+91 ..."
+                />
                 <div>
                   <label className="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-primary-deep">
                     Program of interest
@@ -131,7 +160,10 @@ export function Admissions() {
                 </div>
                 <div>
                   <label className="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-primary-deep">
-                    Message <span className="text-muted-foreground font-normal normal-case">(optional)</span>
+                    Message{" "}
+                    <span className="text-muted-foreground font-normal normal-case">
+                      (optional)
+                    </span>
                   </label>
                   <textarea
                     name="message"
@@ -159,9 +191,17 @@ export function Admissions() {
 }
 
 function Field({
-  label, name, type = "text", placeholder, required,
+  label,
+  name,
+  type = "text",
+  placeholder,
+  required,
 }: {
-  label: string; name: string; type?: string; placeholder?: string; required?: boolean;
+  label: string;
+  name: string;
+  type?: string;
+  placeholder?: string;
+  required?: boolean;
 }) {
   return (
     <div>

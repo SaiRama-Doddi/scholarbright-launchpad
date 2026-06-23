@@ -30,9 +30,19 @@ function ScholarCapIcon({ uniqueId, className = "" }: IconProps) {
       {/* Cap Top Diamond */}
       <path d="M50 18 L92 38 L50 58 L8 38 Z" fill={`url(#${capGrad})`} />
       {/* Cap Bottom Band */}
-      <path d="M24 45.5 V63 C24 72 35.6 77 50 77 C64.4 77 76 72 76 63 V45.5 C70 51 60 54.5 50 54.5 C40 54.5 30 51 24 45.5 Z" fill={`url(#${capDark})`} />
+      <path
+        d="M24 45.5 V63 C24 72 35.6 77 50 77 C64.4 77 76 72 76 63 V45.5 C70 51 60 54.5 50 54.5 C40 54.5 30 51 24 45.5 Z"
+        fill={`url(#${capDark})`}
+      />
       {/* Tassel */}
-      <path d="M50 38 L88 50 V68 L84 62 L88 50" stroke={`url(#${tasselGrad})`} strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+      <path
+        d="M50 38 L88 50 V68 L84 62 L88 50"
+        stroke={`url(#${tasselGrad})`}
+        strokeWidth="3"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        fill="none"
+      />
       <path d="M82 61 L86 73 L90 61 Z" fill={`url(#${tasselGrad})`} />
     </svg>
   );
@@ -59,7 +69,10 @@ function BookIcon({ uniqueId, className = "" }: IconProps) {
         </linearGradient>
       </defs>
       {/* Book Cover (behind pages) */}
-      <path d="M12 73C27 73 45 78 50 80C55 78 73 73 88 73V27C73 27 55 32 50 34C45 32 27 27 12 27Z" fill={`url(#${coverGrad})`} />
+      <path
+        d="M12 73C27 73 45 78 50 80C55 78 73 73 88 73V27C73 27 55 32 50 34C45 32 27 27 12 27Z"
+        fill={`url(#${coverGrad})`}
+      />
       {/* Left Page Shadow */}
       <path d="M15 70C28 70 45 74 50 76V30C45 28 28 24 15 24Z" fill={`url(#${pageShadow})`} />
       {/* Right Page Shadow */}
@@ -110,67 +123,183 @@ function CartoonStarIcon({ uniqueId, className = "" }: IconProps) {
 function SectionDashedPaths({ section }: { section: string }) {
   if (section === "hero") {
     return (
-      <svg className="absolute inset-0 w-full h-full pointer-events-none text-accent/20" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <svg
+        className="absolute inset-0 w-full h-full pointer-events-none text-accent/20"
+        xmlns="http://www.w3.org/2000/svg"
+        preserveAspectRatio="none"
+      >
         {/* Path 1: Top-Left to Middle-Left */}
-        <path d="M 5% 18% C 15% 28%, 20% 8%, 32% 12% C 40% 15%, 45% 30%, 50% 22%" fill="none" stroke="currentColor" strokeWidth="1.5" strokeDasharray="5 5" />
+        <path
+          d="M 5% 18% C 15% 28%, 20% 8%, 32% 12% C 40% 15%, 45% 30%, 50% 22%"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          strokeDasharray="5 5"
+        />
         {/* Path 2: Middle-Left to Bottom-Left to Bottom-Center */}
-        <path d="M 10% 40% C 5% 60%, 15% 85%, 28% 80% C 35% 78%, 42% 65%, 48% 70%" fill="none" stroke="currentColor" strokeWidth="1.5" strokeDasharray="5 5" />
+        <path
+          d="M 10% 40% C 5% 60%, 15% 85%, 28% 80% C 35% 78%, 42% 65%, 48% 70%"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          strokeDasharray="5 5"
+        />
         {/* Path 3: Top-Middle to Top-Right */}
-        <path d="M 38% 12% C 45% 18%, 55% 5%, 65% 15% C 75% 25%, 85% 15%, 92% 18%" fill="none" stroke="currentColor" strokeWidth="1.5" strokeDasharray="5 5" />
+        <path
+          d="M 38% 12% C 45% 18%, 55% 5%, 65% 15% C 75% 25%, 85% 15%, 92% 18%"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          strokeDasharray="5 5"
+        />
         {/* Path 4: Bottom-Middle to wave */}
-        <path d="M 28% 82% C 35% 88%, 42% 75%, 50% 90%" fill="none" stroke="currentColor" strokeWidth="1.5" strokeDasharray="5 5" />
+        <path
+          d="M 28% 82% C 35% 88%, 42% 75%, 50% 90%"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          strokeDasharray="5 5"
+        />
       </svg>
     );
   }
   if (section === "about") {
     return (
-      <svg className="absolute inset-0 w-full h-full pointer-events-none text-primary/10" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-        <path d="M 10% 20% C 30% 40%, 70% 10%, 90% 30%" fill="none" stroke="currentColor" strokeWidth="1.5" strokeDasharray="5 5" />
-        <path d="M 5% 70% C 25% 60%, 55% 85%, 85% 75%" fill="none" stroke="currentColor" strokeWidth="1.5" strokeDasharray="5 5" />
+      <svg
+        className="absolute inset-0 w-full h-full pointer-events-none text-primary/10"
+        xmlns="http://www.w3.org/2000/svg"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="M 10% 20% C 30% 40%, 70% 10%, 90% 30%"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          strokeDasharray="5 5"
+        />
+        <path
+          d="M 5% 70% C 25% 60%, 55% 85%, 85% 75%"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          strokeDasharray="5 5"
+        />
       </svg>
     );
   }
   if (section === "programs") {
     return (
-      <svg className="absolute inset-0 w-full h-full pointer-events-none text-accent/15" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-        <path d="M 90% 15% C 70% 35%, 80% 65%, 50% 50% C 20% 35%, 30% 80%, 10% 75%" fill="none" stroke="currentColor" strokeWidth="1.5" strokeDasharray="5 5" />
+      <svg
+        className="absolute inset-0 w-full h-full pointer-events-none text-accent/15"
+        xmlns="http://www.w3.org/2000/svg"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="M 90% 15% C 70% 35%, 80% 65%, 50% 50% C 20% 35%, 30% 80%, 10% 75%"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          strokeDasharray="5 5"
+        />
       </svg>
     );
   }
   if (section === "why") {
     return (
-      <svg className="absolute inset-0 w-full h-full pointer-events-none text-primary/10" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-        <path d="M 15% 15% C 45% 25%, 35% 55%, 65% 45% C 95% 35%, 85% 85%, 50% 80%" fill="none" stroke="currentColor" strokeWidth="1.5" strokeDasharray="5 5" />
+      <svg
+        className="absolute inset-0 w-full h-full pointer-events-none text-primary/10"
+        xmlns="http://www.w3.org/2000/svg"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="M 15% 15% C 45% 25%, 35% 55%, 65% 45% C 95% 35%, 85% 85%, 50% 80%"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          strokeDasharray="5 5"
+        />
       </svg>
     );
   }
   if (section === "learning") {
     return (
-      <svg className="absolute inset-0 w-full h-full pointer-events-none text-accent/15" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-        <path d="M 5% 20% C 35% 10%, 65% 30%, 95% 15%" fill="none" stroke="currentColor" strokeWidth="1.5" strokeDasharray="5 5" />
-        <path d="M 10% 80% C 40% 70%, 50% 90%, 90% 75%" fill="none" stroke="currentColor" strokeWidth="1.5" strokeDasharray="5 5" />
+      <svg
+        className="absolute inset-0 w-full h-full pointer-events-none text-accent/15"
+        xmlns="http://www.w3.org/2000/svg"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="M 5% 20% C 35% 10%, 65% 30%, 95% 15%"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          strokeDasharray="5 5"
+        />
+        <path
+          d="M 10% 80% C 40% 70%, 50% 90%, 90% 75%"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          strokeDasharray="5 5"
+        />
       </svg>
     );
   }
   if (section === "testimonials") {
     return (
-      <svg className="absolute inset-0 w-full h-full pointer-events-none text-primary/10" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-        <path d="M 85% 15% C 55% 25%, 65% 55%, 35% 45% C 5% 35%, 15% 85%, 50% 80%" fill="none" stroke="currentColor" strokeWidth="1.5" strokeDasharray="5 5" />
+      <svg
+        className="absolute inset-0 w-full h-full pointer-events-none text-primary/10"
+        xmlns="http://www.w3.org/2000/svg"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="M 85% 15% C 55% 25%, 65% 55%, 35% 45% C 5% 35%, 15% 85%, 50% 80%"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          strokeDasharray="5 5"
+        />
       </svg>
     );
   }
   if (section === "admissions") {
     return (
-      <svg className="absolute inset-0 w-full h-full pointer-events-none text-accent/20" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-        <path d="M 5% 25% C 25% 15%, 45% 35%, 95% 20%" fill="none" stroke="currentColor" strokeWidth="1.5" strokeDasharray="5 5" />
-        <path d="M 10% 75% C 45% 85%, 65% 65%, 90% 80%" fill="none" stroke="currentColor" strokeWidth="1.5" strokeDasharray="5 5" />
+      <svg
+        className="absolute inset-0 w-full h-full pointer-events-none text-accent/20"
+        xmlns="http://www.w3.org/2000/svg"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="M 5% 25% C 25% 15%, 45% 35%, 95% 20%"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          strokeDasharray="5 5"
+        />
+        <path
+          d="M 10% 75% C 45% 85%, 65% 65%, 90% 80%"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          strokeDasharray="5 5"
+        />
       </svg>
     );
   }
   if (section === "contact") {
     return (
-      <svg className="absolute inset-0 w-full h-full pointer-events-none text-primary/10" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-        <path d="M 90% 20% C 60% 40%, 40% 10%, 10% 30%" fill="none" stroke="currentColor" strokeWidth="1.5" strokeDasharray="5 5" />
+      <svg
+        className="absolute inset-0 w-full h-full pointer-events-none text-primary/10"
+        xmlns="http://www.w3.org/2000/svg"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="M 90% 20% C 60% 40%, 40% 10%, 10% 30%"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          strokeDasharray="5 5"
+        />
       </svg>
     );
   }
@@ -192,60 +321,326 @@ interface DecorItem {
 // Configured with slightly larger sizes matching the mockup visual hierarchy
 const config: Record<string, DecorItem[]> = {
   hero: [
-    { type: "cap", top: "12%", left: "4%", size: "w-10 h-10 md:w-16 h-16", opacity: "opacity-25 md:opacity-40", delay: 0 },
-    { type: "star", top: "10%", left: "10%", size: "w-6 h-6 md:w-8 h-8", opacity: "opacity-35 md:opacity-55", delay: 0.5 },
-    { type: "book", top: "22%", left: "25%", size: "w-9 h-9 md:w-14 h-14", opacity: "opacity-25 md:opacity-40", delay: 1.0 },
-    { type: "star", top: "6%", left: "38%", size: "w-6 h-6 md:w-8 h-8", opacity: "opacity-35 md:opacity-55", delay: 1.5 },
-    { type: "cap", top: "8%", right: "6%", size: "w-10 h-10 md:w-16 h-16", opacity: "opacity-25 md:opacity-40", delay: 2.0 },
-    { type: "star", top: "14%", right: "10%", size: "w-6 h-6 md:w-8 h-8", opacity: "opacity-35 md:opacity-55", delay: 2.5 },
-    { type: "book", top: "28%", right: "22%", size: "w-9 h-9 md:w-14 h-14", opacity: "opacity-25 md:opacity-40", delay: 3.0 },
-    { type: "star", top: "34%", right: "25%", size: "w-6 h-6 md:w-8 h-8", opacity: "opacity-35 md:opacity-55", delay: 3.5 },
-    { type: "star", top: "76%", left: "4%", size: "w-8 h-8 md:w-10 h-10", opacity: "opacity-35 md:opacity-55", delay: 4.0 },
-    { type: "cap", top: "84%", left: "28%", size: "w-12 h-12 md:w-18 h-18", opacity: "opacity-25 md:opacity-40", delay: 4.5 },
-    { type: "book", top: "82%", left: "45%", size: "w-9 h-9 md:w-14 h-14", opacity: "opacity-25 md:opacity-40", delay: 5.0 },
-    { type: "star", top: "86%", left: "35%", size: "w-6 h-6 md:w-8 h-8", opacity: "opacity-35 md:opacity-55", delay: 5.5 },
-    { type: "cap", top: "72%", right: "5%", size: "w-10 h-10 md:w-16 h-16", opacity: "opacity-25 md:opacity-40", delay: 6.0 },
+    {
+      type: "cap",
+      top: "12%",
+      left: "4%",
+      size: "w-10 h-10 md:w-16 h-16",
+      opacity: "opacity-25 md:opacity-40",
+      delay: 0,
+    },
+    {
+      type: "star",
+      top: "10%",
+      left: "10%",
+      size: "w-6 h-6 md:w-8 h-8",
+      opacity: "opacity-35 md:opacity-55",
+      delay: 0.5,
+    },
+    {
+      type: "book",
+      top: "22%",
+      left: "25%",
+      size: "w-9 h-9 md:w-14 h-14",
+      opacity: "opacity-25 md:opacity-40",
+      delay: 1.0,
+    },
+    {
+      type: "star",
+      top: "6%",
+      left: "38%",
+      size: "w-6 h-6 md:w-8 h-8",
+      opacity: "opacity-35 md:opacity-55",
+      delay: 1.5,
+    },
+    {
+      type: "cap",
+      top: "8%",
+      right: "6%",
+      size: "w-10 h-10 md:w-16 h-16",
+      opacity: "opacity-25 md:opacity-40",
+      delay: 2.0,
+    },
+    {
+      type: "star",
+      top: "14%",
+      right: "10%",
+      size: "w-6 h-6 md:w-8 h-8",
+      opacity: "opacity-35 md:opacity-55",
+      delay: 2.5,
+    },
+    {
+      type: "book",
+      top: "28%",
+      right: "22%",
+      size: "w-9 h-9 md:w-14 h-14",
+      opacity: "opacity-25 md:opacity-40",
+      delay: 3.0,
+    },
+    {
+      type: "star",
+      top: "34%",
+      right: "25%",
+      size: "w-6 h-6 md:w-8 h-8",
+      opacity: "opacity-35 md:opacity-55",
+      delay: 3.5,
+    },
+    {
+      type: "star",
+      top: "76%",
+      left: "4%",
+      size: "w-8 h-8 md:w-10 h-10",
+      opacity: "opacity-35 md:opacity-55",
+      delay: 4.0,
+    },
+    {
+      type: "cap",
+      top: "84%",
+      left: "28%",
+      size: "w-12 h-12 md:w-18 h-18",
+      opacity: "opacity-25 md:opacity-40",
+      delay: 4.5,
+    },
+    {
+      type: "book",
+      top: "82%",
+      left: "45%",
+      size: "w-9 h-9 md:w-14 h-14",
+      opacity: "opacity-25 md:opacity-40",
+      delay: 5.0,
+    },
+    {
+      type: "star",
+      top: "86%",
+      left: "35%",
+      size: "w-6 h-6 md:w-8 h-8",
+      opacity: "opacity-35 md:opacity-55",
+      delay: 5.5,
+    },
+    {
+      type: "cap",
+      top: "72%",
+      right: "5%",
+      size: "w-10 h-10 md:w-16 h-16",
+      opacity: "opacity-25 md:opacity-40",
+      delay: 6.0,
+    },
   ],
   about: [
-    { type: "book", top: "15%", right: "6%", size: "w-9 h-9 md:w-12 h-12", opacity: "opacity-20 md:opacity-30", delay: 0.2 },
-    { type: "star", top: "45%", left: "5%", size: "w-6 h-6 md:w-8 h-8", opacity: "opacity-30 md:opacity-45", delay: 0.7 },
-    { type: "cap", top: "75%", right: "8%", size: "w-10 h-10 md:w-14 h-14", opacity: "opacity-20 md:opacity-30", delay: 1.2 },
+    {
+      type: "book",
+      top: "15%",
+      right: "6%",
+      size: "w-9 h-9 md:w-12 h-12",
+      opacity: "opacity-20 md:opacity-30",
+      delay: 0.2,
+    },
+    {
+      type: "star",
+      top: "45%",
+      left: "5%",
+      size: "w-6 h-6 md:w-8 h-8",
+      opacity: "opacity-30 md:opacity-45",
+      delay: 0.7,
+    },
+    {
+      type: "cap",
+      top: "75%",
+      right: "8%",
+      size: "w-10 h-10 md:w-14 h-14",
+      opacity: "opacity-20 md:opacity-30",
+      delay: 1.2,
+    },
   ],
   programs: [
-    { type: "star", top: "15%", left: "6%", size: "w-6 h-6 md:w-8 h-8", opacity: "opacity-30 md:opacity-45", delay: 0.4 },
-    { type: "cap", top: "50%", right: "6%", size: "w-10 h-10 md:w-14 h-14", opacity: "opacity-20 md:opacity-30", delay: 0.9 },
-    { type: "book", top: "80%", left: "5%", size: "w-9 h-9 md:w-12 h-12", opacity: "opacity-20 md:opacity-30", delay: 1.4 },
+    {
+      type: "star",
+      top: "15%",
+      left: "6%",
+      size: "w-6 h-6 md:w-8 h-8",
+      opacity: "opacity-30 md:opacity-45",
+      delay: 0.4,
+    },
+    {
+      type: "cap",
+      top: "50%",
+      right: "6%",
+      size: "w-10 h-10 md:w-14 h-14",
+      opacity: "opacity-20 md:opacity-30",
+      delay: 0.9,
+    },
+    {
+      type: "book",
+      top: "80%",
+      left: "5%",
+      size: "w-9 h-9 md:w-12 h-12",
+      opacity: "opacity-20 md:opacity-30",
+      delay: 1.4,
+    },
   ],
   why: [
-    { type: "cap", top: "20%", right: "7%", size: "w-10 h-10 md:w-14 h-14", opacity: "opacity-20 md:opacity-30", delay: 0.1 },
-    { type: "book", top: "55%", left: "6%", size: "w-9 h-9 md:w-12 h-12", opacity: "opacity-20 md:opacity-30", delay: 0.6 },
-    { type: "star", top: "80%", right: "6%", size: "w-6 h-6 md:w-8 h-8", opacity: "opacity-30 md:opacity-45", delay: 1.1 },
-    { type: "book", top: "90%", left: "4%", size: "w-9 h-9 md:w-12 h-12", opacity: "opacity-20 md:opacity-30", delay: 1.6 },
+    {
+      type: "cap",
+      top: "20%",
+      right: "7%",
+      size: "w-10 h-10 md:w-14 h-14",
+      opacity: "opacity-20 md:opacity-30",
+      delay: 0.1,
+    },
+    {
+      type: "book",
+      top: "55%",
+      left: "6%",
+      size: "w-9 h-9 md:w-12 h-12",
+      opacity: "opacity-20 md:opacity-30",
+      delay: 0.6,
+    },
+    {
+      type: "star",
+      top: "80%",
+      right: "6%",
+      size: "w-6 h-6 md:w-8 h-8",
+      opacity: "opacity-30 md:opacity-45",
+      delay: 1.1,
+    },
+    {
+      type: "book",
+      top: "90%",
+      left: "4%",
+      size: "w-9 h-9 md:w-12 h-12",
+      opacity: "opacity-20 md:opacity-30",
+      delay: 1.6,
+    },
   ],
   learning: [
-    { type: "book", top: "15%", left: "5%", size: "w-9 h-9 md:w-12 h-12", opacity: "opacity-20 md:opacity-30", delay: 0.3 },
-    { type: "cap", top: "45%", right: "6%", size: "w-10 h-10 md:w-14 h-14", opacity: "opacity-20 md:opacity-30", delay: 0.8 },
-    { type: "star", top: "75%", left: "6%", size: "w-6 h-6 md:w-8 h-8", opacity: "opacity-30 md:opacity-45", delay: 1.3 },
+    {
+      type: "book",
+      top: "15%",
+      left: "5%",
+      size: "w-9 h-9 md:w-12 h-12",
+      opacity: "opacity-20 md:opacity-30",
+      delay: 0.3,
+    },
+    {
+      type: "cap",
+      top: "45%",
+      right: "6%",
+      size: "w-10 h-10 md:w-14 h-14",
+      opacity: "opacity-20 md:opacity-30",
+      delay: 0.8,
+    },
+    {
+      type: "star",
+      top: "75%",
+      left: "6%",
+      size: "w-6 h-6 md:w-8 h-8",
+      opacity: "opacity-30 md:opacity-45",
+      delay: 1.3,
+    },
   ],
   gallery: [
-    { type: "cap", top: "20%", left: "5%", size: "w-10 h-10 md:w-14 h-14", opacity: "opacity-20 md:opacity-30", delay: 0.2 },
-    { type: "star", top: "45%", right: "6%", size: "w-6 h-6 md:w-8 h-8", opacity: "opacity-30 md:opacity-45", delay: 0.5 },
-    { type: "book", top: "70%", left: "6%", size: "w-9 h-9 md:w-12 h-12", opacity: "opacity-20 md:opacity-30", delay: 0.8 },
+    {
+      type: "cap",
+      top: "20%",
+      left: "5%",
+      size: "w-10 h-10 md:w-14 h-14",
+      opacity: "opacity-20 md:opacity-30",
+      delay: 0.2,
+    },
+    {
+      type: "star",
+      top: "45%",
+      right: "6%",
+      size: "w-6 h-6 md:w-8 h-8",
+      opacity: "opacity-30 md:opacity-45",
+      delay: 0.5,
+    },
+    {
+      type: "book",
+      top: "70%",
+      left: "6%",
+      size: "w-9 h-9 md:w-12 h-12",
+      opacity: "opacity-20 md:opacity-30",
+      delay: 0.8,
+    },
   ],
   testimonials: [
-    { type: "star", top: "25%", right: "7%", size: "w-6 h-6 md:w-8 h-8", opacity: "opacity-30 md:opacity-45", delay: 0.5 },
-    { type: "cap", top: "50%", left: "5%", size: "w-10 h-10 md:w-14 h-14", opacity: "opacity-20 md:opacity-30", delay: 0.8 },
-    { type: "book", top: "75%", right: "5%", size: "w-9 h-9 md:w-12 h-12", opacity: "opacity-20 md:opacity-30", delay: 1.0 },
+    {
+      type: "star",
+      top: "25%",
+      right: "7%",
+      size: "w-6 h-6 md:w-8 h-8",
+      opacity: "opacity-30 md:opacity-45",
+      delay: 0.5,
+    },
+    {
+      type: "cap",
+      top: "50%",
+      left: "5%",
+      size: "w-10 h-10 md:w-14 h-14",
+      opacity: "opacity-20 md:opacity-30",
+      delay: 0.8,
+    },
+    {
+      type: "book",
+      top: "75%",
+      right: "5%",
+      size: "w-9 h-9 md:w-12 h-12",
+      opacity: "opacity-20 md:opacity-30",
+      delay: 1.0,
+    },
   ],
   admissions: [
-    { type: "star", top: "25%", left: "7%", size: "w-6 h-6 md:w-8 h-8", opacity: "opacity-30 md:opacity-45", delay: 0.3 },
-    { type: "book", top: "65%", right: "7%", size: "w-9 h-9 md:w-12 h-12", opacity: "opacity-20 md:opacity-30", delay: 0.9 },
-    { type: "cap", top: "85%", left: "5%", size: "w-10 h-10 md:w-14 h-14", opacity: "opacity-20 md:opacity-30", delay: 1.2 },
+    {
+      type: "star",
+      top: "25%",
+      left: "7%",
+      size: "w-6 h-6 md:w-8 h-8",
+      opacity: "opacity-30 md:opacity-45",
+      delay: 0.3,
+    },
+    {
+      type: "book",
+      top: "65%",
+      right: "7%",
+      size: "w-9 h-9 md:w-12 h-12",
+      opacity: "opacity-20 md:opacity-30",
+      delay: 0.9,
+    },
+    {
+      type: "cap",
+      top: "85%",
+      left: "5%",
+      size: "w-10 h-10 md:w-14 h-14",
+      opacity: "opacity-20 md:opacity-30",
+      delay: 1.2,
+    },
   ],
   contact: [
-    { type: "book", top: "25%", right: "6%", size: "w-9 h-9 md:w-12 h-12", opacity: "opacity-20 md:opacity-30", delay: 0.4 },
-    { type: "star", top: "50%", left: "6%", size: "w-6 h-6 md:w-8 h-8", opacity: "opacity-30 md:opacity-45", delay: 0.7 },
-    { type: "cap", top: "75%", right: "7%", size: "w-10 h-10 md:w-14 h-14", opacity: "opacity-20 md:opacity-30", delay: 1.0 },
+    {
+      type: "book",
+      top: "25%",
+      right: "6%",
+      size: "w-9 h-9 md:w-12 h-12",
+      opacity: "opacity-20 md:opacity-30",
+      delay: 0.4,
+    },
+    {
+      type: "star",
+      top: "50%",
+      left: "6%",
+      size: "w-6 h-6 md:w-8 h-8",
+      opacity: "opacity-30 md:opacity-45",
+      delay: 0.7,
+    },
+    {
+      type: "cap",
+      top: "75%",
+      right: "7%",
+      size: "w-10 h-10 md:w-14 h-14",
+      opacity: "opacity-20 md:opacity-30",
+      delay: 1.0,
+    },
   ],
 };
 
@@ -264,7 +659,10 @@ export function FloatingDecor({ section }: { section: keyof typeof config }) {
   const items = config[section] || [];
 
   return (
-    <div aria-hidden className="pointer-events-none absolute inset-0 z-0 overflow-hidden select-none">
+    <div
+      aria-hidden
+      className="pointer-events-none absolute inset-0 z-0 overflow-hidden select-none"
+    >
       {/* Dashed background lines winding across the section */}
       <SectionDashedPaths section={section} />
 

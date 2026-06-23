@@ -7,7 +7,10 @@ const mapsQuery = encodeURIComponent(address);
 
 export function Contact() {
   return (
-    <section id="contact" className="section-pad relative bg-cream min-h-[70vh] lg:min-h-[75vh] flex items-center overflow-hidden">
+    <section
+      id="contact"
+      className="section-pad relative bg-cream min-h-[70vh] lg:min-h-[75vh] flex items-center overflow-hidden"
+    >
       <FloatingDecor section="contact" />
       <div className="mx-auto max-w-7xl px-4 w-full relative z-10">
         <div className="grid gap-10 lg:grid-cols-[1fr_1.2fr]">
@@ -17,7 +20,8 @@ export function Contact() {
               Come say <span className="gradient-text-gold">hello.</span>
             </h2>
             <p className="mt-4 text-foreground/75 leading-relaxed">
-              We'd love to show you around our campus. Drop by, call us, or message us on WhatsApp — we're here for every question.
+              We'd love to show you around our campus. Drop by, call us, or message us on WhatsApp —
+              we're here for every question.
             </p>
 
             <div className="mt-8 space-y-4">
@@ -45,7 +49,10 @@ export function Contact() {
               <InfoRow
                 icon="⏱"
                 title="School Hours"
-                lines={["Preschool · Mon – Sat · 9:00 AM – 3:30 PM", "Day Care · Mon – Sat · 9:00 AM – 3:30 PM"]}
+                lines={[
+                  "Preschool · Mon – Sat · 9:00 AM – 3:30 PM",
+                  "Day Care · Mon – Sat · 9:00 AM – 3:30 PM",
+                ]}
               />
             </div>
           </div>
@@ -66,9 +73,17 @@ export function Contact() {
 }
 
 function InfoRow({
-  icon, title, lines, href, cta,
+  icon,
+  title,
+  lines,
+  href,
+  cta,
 }: {
-  icon: string; title: string; lines: string[]; href?: string; cta?: string;
+  icon: string;
+  title: string;
+  lines: string[];
+  href?: string;
+  cta?: string;
 }) {
   return (
     <div className="hover-lift flex items-start gap-4 rounded-3xl glass p-5">
@@ -76,9 +91,13 @@ function InfoRow({
         {icon}
       </div>
       <div className="flex-1">
-        <div className="text-[11px] font-bold uppercase tracking-[0.18em] text-muted-foreground">{title}</div>
+        <div className="text-[11px] font-bold uppercase tracking-[0.18em] text-muted-foreground">
+          {title}
+        </div>
         {lines.map((l) => (
-          <div key={l} className="mt-0.5 text-sm font-medium text-primary-deep leading-relaxed">{l}</div>
+          <div key={l} className="mt-0.5 text-sm font-medium text-primary-deep leading-relaxed">
+            {l}
+          </div>
         ))}
         {href && cta && (
           <a

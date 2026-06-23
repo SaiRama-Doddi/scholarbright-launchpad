@@ -7,7 +7,10 @@ export function WhatsAppFab() {
         aria-label="Call Us"
         className="relative grid h-14 w-14 place-items-center rounded-full bg-[#0B2286] text-white shadow-[0_16px_32px_rgba(11,34,134,0.3)] transition hover:scale-110 active:scale-95 cursor-pointer"
       >
-        <span className="absolute inset-0 rounded-full animate-pulse-ring" style={{ animationDelay: "1.2s" }} />
+        <span
+          className="absolute inset-0 rounded-full animate-pulse-ring"
+          style={{ animationDelay: "1.2s" }}
+        />
         <svg
           viewBox="0 0 24 24"
           fill="none"

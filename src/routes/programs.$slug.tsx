@@ -35,7 +35,7 @@ import {
   Box,
   Sun,
   Pencil,
-  Home
+  Home,
 } from "lucide-react";
 
 import g1 from "@/assets/gallery-1.jpg";
@@ -73,20 +73,74 @@ const PROGRAMS: Record<string, Program> = {
       "Our Day Care wraps your child in warmth, safety and meaningful play from morning to evening. Trained caregivers, hygienic spaces, nap rooms and freshly prepared meals make this a true second home.",
     img: g3,
     highlights: [
-      { title: "Trained nannies & supervisors", desc: "Caring professionals dedicated to your child's well-being.", icon: "users" },
-      { title: "CCTV-monitored, AC rooms", desc: "Safe, secure and comfortable spaces for your peace of mind.", icon: "camera" },
-      { title: "Hygienic nap & changing areas", desc: "Clean, cozy spaces for rest and personal care.", icon: "moon" },
-      { title: "Nutritious meals & snacks", desc: "Fresh, balanced meals prepared daily.", icon: "utensils" },
-      { title: "Sensory & motor play zones", desc: "Designed to spark curiosity and build key skills.", icon: "smile" },
-      { title: "Flexible half-day / full-day slots", desc: "Timings that adapt to your family's needs.", icon: "clock" },
+      {
+        title: "Trained nannies & supervisors",
+        desc: "Caring professionals dedicated to your child's well-being.",
+        icon: "users",
+      },
+      {
+        title: "CCTV-monitored, AC rooms",
+        desc: "Safe, secure and comfortable spaces for your peace of mind.",
+        icon: "camera",
+      },
+      {
+        title: "Hygienic nap & changing areas",
+        desc: "Clean, cozy spaces for rest and personal care.",
+        icon: "moon",
+      },
+      {
+        title: "Nutritious meals & snacks",
+        desc: "Fresh, balanced meals prepared daily.",
+        icon: "utensils",
+      },
+      {
+        title: "Sensory & motor play zones",
+        desc: "Designed to spark curiosity and build key skills.",
+        icon: "smile",
+      },
+      {
+        title: "Flexible half-day / full-day slots",
+        desc: "Timings that adapt to your family's needs.",
+        icon: "clock",
+      },
     ],
     daily: [
-      { time: "9:00 – 9:30 AM", title: "Arrival & Breakfast", desc: "Welcoming children with warm greetings and healthy breakfast.", icon: "utensils" },
-      { time: "9:30 – 11:00 AM", title: "Circle Time & Sensory Play", desc: "Engaging songs, stories, and sensory learning experiences.", icon: "music" },
-      { time: "11:00 – 12:30 PM", title: "Activity Rotation", desc: "Fun rotations of indoor games and outdoor play.", icon: "activity" },
-      { time: "12:30 – 1:30 PM", title: "Lunch & Story Time", desc: "Hygienic lunch followed by creative, winding-down stories.", icon: "utensils" },
-      { time: "1:30 – 3:00 PM", title: "Nap Time", desc: "Cozy rest in clean, quiet, AC nap rooms.", icon: "moon" },
-      { time: "3:00 – 3:30 PM", title: "Afternoon Snack & Dispersal", desc: "Light refreshments and preparing for parent pick-up.", icon: "home" },
+      {
+        time: "9:00 – 9:30 AM",
+        title: "Arrival & Breakfast",
+        desc: "Welcoming children with warm greetings and healthy breakfast.",
+        icon: "utensils",
+      },
+      {
+        time: "9:30 – 11:00 AM",
+        title: "Circle Time & Sensory Play",
+        desc: "Engaging songs, stories, and sensory learning experiences.",
+        icon: "music",
+      },
+      {
+        time: "11:00 – 12:30 PM",
+        title: "Activity Rotation",
+        desc: "Fun rotations of indoor games and outdoor play.",
+        icon: "activity",
+      },
+      {
+        time: "12:30 – 1:30 PM",
+        title: "Lunch & Story Time",
+        desc: "Hygienic lunch followed by creative, winding-down stories.",
+        icon: "utensils",
+      },
+      {
+        time: "1:30 – 3:00 PM",
+        title: "Nap Time",
+        desc: "Cozy rest in clean, quiet, AC nap rooms.",
+        icon: "moon",
+      },
+      {
+        time: "3:00 – 3:30 PM",
+        title: "Afternoon Snack & Dispersal",
+        desc: "Light refreshments and preparing for parent pick-up.",
+        icon: "home",
+      },
     ],
     outcomes: [
       "Builds independence & social confidence",
@@ -104,20 +158,74 @@ const PROGRAMS: Record<string, Program> = {
       "Play Group is your child's very first classroom — full of rhymes, colours, textures and friends. Short, joyful sessions help them separate happily and discover the magic of learning together.",
     img: g2,
     highlights: [
-      { title: "Sensory & messy-play stations", desc: "Exploring textures, colors, and shapes creatively.", icon: "palette" },
-      { title: "Music, movement & rhymes", desc: "Developing rhythm, speech, and physical coordination.", icon: "music" },
-      { title: "Toilet-training support", desc: "Gentle guidance for key early milestones.", icon: "sparkles" },
-      { title: "Parent-orientation sessions", desc: "Partnering together for a smooth transition.", icon: "handshake" },
-      { title: "Tiny-tot circle time", desc: "Learning to listen, share, and make friends.", icon: "users" },
-      { title: "Buddy system for new joiners", desc: "Ensuring every child feels welcomed and happy.", icon: "heart" },
+      {
+        title: "Sensory & messy-play stations",
+        desc: "Exploring textures, colors, and shapes creatively.",
+        icon: "palette",
+      },
+      {
+        title: "Music, movement & rhymes",
+        desc: "Developing rhythm, speech, and physical coordination.",
+        icon: "music",
+      },
+      {
+        title: "Toilet-training support",
+        desc: "Gentle guidance for key early milestones.",
+        icon: "sparkles",
+      },
+      {
+        title: "Parent-orientation sessions",
+        desc: "Partnering together for a smooth transition.",
+        icon: "handshake",
+      },
+      {
+        title: "Tiny-tot circle time",
+        desc: "Learning to listen, share, and make friends.",
+        icon: "users",
+      },
+      {
+        title: "Buddy system for new joiners",
+        desc: "Ensuring every child feels welcomed and happy.",
+        icon: "heart",
+      },
     ],
     daily: [
-      { time: "9:00 – 9:45 AM", title: "Welcome & Creative Free Play", desc: "Children explore, imagine and settle in.", icon: "palette" },
-      { time: "9:45 – 10:15 AM", title: "Circle Time, Music & Rhymes", desc: "Songs, stories and fun group activities.", icon: "music" },
-      { time: "10:15 – 11:00 AM", title: "Hands-on Sensory Activity", desc: "Exploring textures, colors and creativity.", icon: "hand" },
-      { time: "11:00 – 11:30 AM", title: "Healthy Snack Break", desc: "Nutritious snacks to refuel and refresh.", icon: "apple" },
-      { time: "11:30 – 12:15 PM", title: "Outdoor Play & Interactive Games", desc: "Active play, teamwork and motor skills.", icon: "slide" },
-      { time: "12:15 – 12:30 PM", title: "Creative Block Building & Goodbye", desc: "Build, share and end the day with smiles.", icon: "blocks" },
+      {
+        time: "9:00 – 9:45 AM",
+        title: "Welcome & Creative Free Play",
+        desc: "Children explore, imagine and settle in.",
+        icon: "palette",
+      },
+      {
+        time: "9:45 – 10:15 AM",
+        title: "Circle Time, Music & Rhymes",
+        desc: "Songs, stories and fun group activities.",
+        icon: "music",
+      },
+      {
+        time: "10:15 – 11:00 AM",
+        title: "Hands-on Sensory Activity",
+        desc: "Exploring textures, colors and creativity.",
+        icon: "hand",
+      },
+      {
+        time: "11:00 – 11:30 AM",
+        title: "Healthy Snack Break",
+        desc: "Nutritious snacks to refuel and refresh.",
+        icon: "apple",
+      },
+      {
+        time: "11:30 – 12:15 PM",
+        title: "Outdoor Play & Interactive Games",
+        desc: "Active play, teamwork and motor skills.",
+        icon: "slide",
+      },
+      {
+        time: "12:15 – 12:30 PM",
+        title: "Creative Block Building & Goodbye",
+        desc: "Build, share and end the day with smiles.",
+        icon: "blocks",
+      },
     ],
     outcomes: [
       "Confident separation from parent",
@@ -135,20 +243,74 @@ const PROGRAMS: Record<string, Program> = {
       "Nursery introduces structured learning through stories, role-play and hands-on exploration. Children build vocabulary, recognise letters and numbers, and start expressing themselves with confidence.",
     img: g1,
     highlights: [
-      { title: "Phonics & pre-writing patterns", desc: "Fun activities to build vocabulary and pencil grip.", icon: "pentool" },
-      { title: "Numbers 1–20 with manipulatives", desc: "Hands-on math concepts using toys and blocks.", icon: "calculator" },
-      { title: "Smart-class storytelling", desc: "Interactive screens bring classic tales to life.", icon: "tv" },
-      { title: "Show-and-tell & speech days", desc: "Building early confidence and public speaking skills.", icon: "mic" },
-      { title: "Art, craft & music", desc: "Unleashing creative minds through self-expression.", icon: "paintbrush" },
-      { title: "Field trips & theme weeks", desc: "Real-world experiences to expand young horizons.", icon: "compass" },
+      {
+        title: "Phonics & pre-writing patterns",
+        desc: "Fun activities to build vocabulary and pencil grip.",
+        icon: "pentool",
+      },
+      {
+        title: "Numbers 1–20 with manipulatives",
+        desc: "Hands-on math concepts using toys and blocks.",
+        icon: "calculator",
+      },
+      {
+        title: "Smart-class storytelling",
+        desc: "Interactive screens bring classic tales to life.",
+        icon: "tv",
+      },
+      {
+        title: "Show-and-tell & speech days",
+        desc: "Building early confidence and public speaking skills.",
+        icon: "mic",
+      },
+      {
+        title: "Art, craft & music",
+        desc: "Unleashing creative minds through self-expression.",
+        icon: "paintbrush",
+      },
+      {
+        title: "Field trips & theme weeks",
+        desc: "Real-world experiences to expand young horizons.",
+        icon: "compass",
+      },
     ],
     daily: [
-      { time: "9:00 – 9:20 AM", title: "Assembly & Prayer", desc: "Starting the day with positive affirmations and prayers.", icon: "prayer" },
-      { time: "9:20 – 10:00 AM", title: "Literacy & Phonics", desc: "Fun letter recognition, sounds, and language games.", icon: "book" },
-      { time: "10:00 – 10:30 AM", title: "Snack Break", desc: "Fueling up with healthy snacks and social time.", icon: "apple" },
-      { time: "10:30 – 11:15 AM", title: "Numeracy & Concepts", desc: "Hands-on math activities with shapes and numbers.", icon: "blocks" },
-      { time: "11:15 – 12:00 PM", title: "Art & Creative Expression", desc: "Exploring colors, rhythms, and music.", icon: "palette" },
-      { time: "12:00 – 12:30 PM", title: "Circle Time & Goodbye", desc: "Sharing highlights of the day and saying goodbye.", icon: "goodbye" },
+      {
+        time: "9:00 – 9:20 AM",
+        title: "Assembly & Prayer",
+        desc: "Starting the day with positive affirmations and prayers.",
+        icon: "prayer",
+      },
+      {
+        time: "9:20 – 10:00 AM",
+        title: "Literacy & Phonics",
+        desc: "Fun letter recognition, sounds, and language games.",
+        icon: "book",
+      },
+      {
+        time: "10:00 – 10:30 AM",
+        title: "Snack Break",
+        desc: "Fueling up with healthy snacks and social time.",
+        icon: "apple",
+      },
+      {
+        time: "10:30 – 11:15 AM",
+        title: "Numeracy & Concepts",
+        desc: "Hands-on math activities with shapes and numbers.",
+        icon: "blocks",
+      },
+      {
+        time: "11:15 – 12:00 PM",
+        title: "Art & Creative Expression",
+        desc: "Exploring colors, rhythms, and music.",
+        icon: "palette",
+      },
+      {
+        time: "12:00 – 12:30 PM",
+        title: "Circle Time & Goodbye",
+        desc: "Sharing highlights of the day and saying goodbye.",
+        icon: "goodbye",
+      },
     ],
     outcomes: [
       "Reads 50+ sight words & basic phonics",
@@ -166,23 +328,92 @@ const PROGRAMS: Record<string, Program> = {
       "Junior KG balances structured academics with play. Children read simple words, write letters and numbers, and explore the world through themes, experiments and group projects.",
     img: g4,
     highlights: [
-      { title: "Reading & writing readiness", desc: "Phonics-based reading and letter formation guides.", icon: "pentool" },
-      { title: "Numeracy with concrete material", desc: "Simple addition, subtraction, and patterns.", icon: "calculator" },
-      { title: "EVS through hands-on projects", desc: "Exploring nature, seasons, and community help.", icon: "compass" },
-      { title: "Smart-class & digital learning", desc: "Interactive smartboard lessons for high engagement.", icon: "tv" },
-      { title: "Public speaking opportunities", desc: "Presentations and debates to build leadership.", icon: "megaphone" },
-      { title: "Yoga, dance & sports", desc: "Active play for physical fitness and focus.", icon: "activity" },
+      {
+        title: "Reading & writing readiness",
+        desc: "Phonics-based reading and letter formation guides.",
+        icon: "pentool",
+      },
+      {
+        title: "Numeracy with concrete material",
+        desc: "Simple addition, subtraction, and patterns.",
+        icon: "calculator",
+      },
+      {
+        title: "EVS through hands-on projects",
+        desc: "Exploring nature, seasons, and community help.",
+        icon: "compass",
+      },
+      {
+        title: "Smart-class & digital learning",
+        desc: "Interactive smartboard lessons for high engagement.",
+        icon: "tv",
+      },
+      {
+        title: "Public speaking opportunities",
+        desc: "Presentations and debates to build leadership.",
+        icon: "megaphone",
+      },
+      {
+        title: "Yoga, dance & sports",
+        desc: "Active play for physical fitness and focus.",
+        icon: "activity",
+      },
     ],
     daily: [
-      { time: "9:00 – 9:20 AM", title: "Assembly & Circle Time", desc: "Group discussion, theme of the day, and morning prayer.", icon: "sun" },
-      { time: "9:20 – 10:10 AM", title: "English Literacy & Phonics", desc: "Phonics-based reading, sight words, and letter writing.", icon: "book" },
-      { time: "10:10 – 10:40 AM", title: "Snack & Outdoor Play", desc: "Active playground time and healthy snacking.", icon: "slide" },
-      { time: "10:40 – 11:30 AM", title: "Math Concepts & Writing", desc: "Exploring numbers, writing patterns, and early calculations.", icon: "math" },
-      { time: "11:30 – 12:30 PM", title: "EVS & Science Projects", desc: "Interactive science themes, nature, and surroundings.", icon: "flask" },
-      { time: "12:30 – 1:30 PM", title: "Lunch Break & Stories", desc: "Freshly prepared lunch and calming storytelling sessions.", icon: "utensils" },
-      { time: "1:30 – 2:30 PM", title: "Creative Arts & Movement", desc: "Music, dance, and hands-on crafts.", icon: "palette" },
-      { time: "2:30 – 3:15 PM", title: "Physical Development", desc: "Active sports, yoga, and coordination exercises.", icon: "activity" },
-      { time: "3:15 – 3:30 PM", title: "Reflection & Dispersal", desc: "Recalling the day's lessons and packing bags.", icon: "home" },
+      {
+        time: "9:00 – 9:20 AM",
+        title: "Assembly & Circle Time",
+        desc: "Group discussion, theme of the day, and morning prayer.",
+        icon: "sun",
+      },
+      {
+        time: "9:20 – 10:10 AM",
+        title: "English Literacy & Phonics",
+        desc: "Phonics-based reading, sight words, and letter writing.",
+        icon: "book",
+      },
+      {
+        time: "10:10 – 10:40 AM",
+        title: "Snack & Outdoor Play",
+        desc: "Active playground time and healthy snacking.",
+        icon: "slide",
+      },
+      {
+        time: "10:40 – 11:30 AM",
+        title: "Math Concepts & Writing",
+        desc: "Exploring numbers, writing patterns, and early calculations.",
+        icon: "math",
+      },
+      {
+        time: "11:30 – 12:30 PM",
+        title: "EVS & Science Projects",
+        desc: "Interactive science themes, nature, and surroundings.",
+        icon: "flask",
+      },
+      {
+        time: "12:30 – 1:30 PM",
+        title: "Lunch Break & Stories",
+        desc: "Freshly prepared lunch and calming storytelling sessions.",
+        icon: "utensils",
+      },
+      {
+        time: "1:30 – 2:30 PM",
+        title: "Creative Arts & Movement",
+        desc: "Music, dance, and hands-on crafts.",
+        icon: "palette",
+      },
+      {
+        time: "2:30 – 3:15 PM",
+        title: "Physical Development",
+        desc: "Active sports, yoga, and coordination exercises.",
+        icon: "activity",
+      },
+      {
+        time: "3:15 – 3:30 PM",
+        title: "Reflection & Dispersal",
+        desc: "Recalling the day's lessons and packing bags.",
+        icon: "home",
+      },
     ],
     outcomes: [
       "Reads 3- & 4-letter words confidently",
@@ -200,23 +431,92 @@ const PROGRAMS: Record<string, Program> = {
       "Senior KG prepares children for primary school with reading, writing, reasoning and problem solving. Our integrated curriculum nurtures curiosity, leadership and a love for learning.",
     img: g6,
     highlights: [
-      { title: "Reading fluency & comprehension", desc: "Independent reading and comprehension skills.", icon: "pentool" },
-      { title: "Cursive writing introduction", desc: "Learning pencil control and flow for writing.", icon: "pentool" },
-      { title: "Maths reasoning & word problems", desc: "Analytical thinking and early problem solving.", icon: "brain" },
-      { title: "Science experiments & STEM", desc: "Hands-on science lab activities and construction.", icon: "flask" },
-      { title: "Leadership & house activities", desc: "Team projects, roles, and school houses.", icon: "shield" },
-      { title: "Big-school transition program", desc: "Prepping for primary school academic rigor.", icon: "users" },
+      {
+        title: "Reading fluency & comprehension",
+        desc: "Independent reading and comprehension skills.",
+        icon: "pentool",
+      },
+      {
+        title: "Cursive writing introduction",
+        desc: "Learning pencil control and flow for writing.",
+        icon: "pentool",
+      },
+      {
+        title: "Maths reasoning & word problems",
+        desc: "Analytical thinking and early problem solving.",
+        icon: "brain",
+      },
+      {
+        title: "Science experiments & STEM",
+        desc: "Hands-on science lab activities and construction.",
+        icon: "flask",
+      },
+      {
+        title: "Leadership & house activities",
+        desc: "Team projects, roles, and school houses.",
+        icon: "shield",
+      },
+      {
+        title: "Big-school transition program",
+        desc: "Prepping for primary school academic rigor.",
+        icon: "users",
+      },
     ],
     daily: [
-      { time: "9:00 – 9:20 AM", title: "Morning Assembly & News", desc: "Singing national anthem, prayers, and sharing daily updates.", icon: "sun" },
-      { time: "9:20 – 10:15 AM", title: "English Reading & Comprehension", desc: "Story analysis, cursive writing, and sentence structures.", icon: "book" },
-      { time: "10:15 – 10:45 AM", title: "Snack Break & Outdoor Play", desc: "Outdoor coordination games and healthy snack break.", icon: "slide" },
-      { time: "10:45 – 11:40 AM", title: "Mathematics Reasoning", desc: "Problem solving, mathematical logical reasoning and geometry.", icon: "math" },
-      { time: "11:40 – 12:30 PM", title: "EVS & STEM Hands-on Lab", desc: "Performing simple science experiments and STEM construction.", icon: "flask" },
-      { time: "12:30 – 1:30 PM", title: "Lunch Break & Quiet Time", desc: "Eating lunch together and quiet reading sessions.", icon: "utensils" },
-      { time: "1:30 – 2:30 PM", title: "Language Writing", desc: "Introduction to cursive writing and regional languages.", icon: "pencil" },
-      { time: "2:30 – 3:15 PM", title: "Sports & Leadership", desc: "Team sports, yoga poses, and confidence-building games.", icon: "trophy" },
-      { time: "3:15 – 3:30 PM", title: "Reflection & Dispersal", desc: "Self-reflection, checklist review, and home dispersal.", icon: "home" },
+      {
+        time: "9:00 – 9:20 AM",
+        title: "Morning Assembly & News",
+        desc: "Singing national anthem, prayers, and sharing daily updates.",
+        icon: "sun",
+      },
+      {
+        time: "9:20 – 10:15 AM",
+        title: "English Reading & Comprehension",
+        desc: "Story analysis, cursive writing, and sentence structures.",
+        icon: "book",
+      },
+      {
+        time: "10:15 – 10:45 AM",
+        title: "Snack Break & Outdoor Play",
+        desc: "Outdoor coordination games and healthy snack break.",
+        icon: "slide",
+      },
+      {
+        time: "10:45 – 11:40 AM",
+        title: "Mathematics Reasoning",
+        desc: "Problem solving, mathematical logical reasoning and geometry.",
+        icon: "math",
+      },
+      {
+        time: "11:40 – 12:30 PM",
+        title: "EVS & STEM Hands-on Lab",
+        desc: "Performing simple science experiments and STEM construction.",
+        icon: "flask",
+      },
+      {
+        time: "12:30 – 1:30 PM",
+        title: "Lunch Break & Quiet Time",
+        desc: "Eating lunch together and quiet reading sessions.",
+        icon: "utensils",
+      },
+      {
+        time: "1:30 – 2:30 PM",
+        title: "Language Writing",
+        desc: "Introduction to cursive writing and regional languages.",
+        icon: "pencil",
+      },
+      {
+        time: "2:30 – 3:15 PM",
+        title: "Sports & Leadership",
+        desc: "Team sports, yoga poses, and confidence-building games.",
+        icon: "trophy",
+      },
+      {
+        time: "3:15 – 3:30 PM",
+        title: "Reflection & Dispersal",
+        desc: "Self-reflection, checklist review, and home dispersal.",
+        icon: "home",
+      },
     ],
     outcomes: [
       "Reads short stories independently",
@@ -317,7 +617,10 @@ export const Route = createFileRoute("/programs/$slug")({
       <div>
         <h1 className="font-display text-3xl font-bold text-primary-deep">Program not found</h1>
         <p className="mt-2 text-foreground/70">The program you're looking for doesn't exist.</p>
-        <Link to="/" className="mt-6 inline-flex rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground">
+        <Link
+          to="/"
+          className="mt-6 inline-flex rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground"
+        >
           Back to home
         </Link>
       </div>
@@ -327,7 +630,12 @@ export const Route = createFileRoute("/programs/$slug")({
     <div className="min-h-screen grid place-items-center px-4 text-center">
       <div>
         <h1 className="font-display text-2xl font-bold text-primary-deep">Something went wrong</h1>
-        <button onClick={reset} className="mt-4 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground">Retry</button>
+        <button
+          onClick={reset}
+          className="mt-4 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground"
+        >
+          Retry
+        </button>
       </div>
     </div>
   ),
@@ -336,8 +644,19 @@ export const Route = createFileRoute("/programs/$slug")({
 
 function RainbowDecor() {
   return (
-    <svg viewBox="0 0 120 70" className="w-20 h-12 opacity-80 animate-float" style={{ animationDuration: "14s" }} fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M10 60 A 50 50 0 0 1 110 60" stroke="#FF8DA1" strokeWidth="5" strokeLinecap="round" />
+    <svg
+      viewBox="0 0 120 70"
+      className="w-20 h-12 opacity-80 animate-float"
+      style={{ animationDuration: "14s" }}
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M10 60 A 50 50 0 0 1 110 60"
+        stroke="#FF8DA1"
+        strokeWidth="5"
+        strokeLinecap="round"
+      />
       <path d="M22 60 A 38 38 0 0 1 98 60" stroke="#FFD269" strokeWidth="5" strokeLinecap="round" />
       <path d="M34 60 A 26 26 0 0 1 86 60" stroke="#7FE492" strokeWidth="5" strokeLinecap="round" />
       <path d="M46 60 A 14 14 0 0 1 74 60" stroke="#87C4FF" strokeWidth="5" strokeLinecap="round" />
@@ -404,7 +723,6 @@ function ProgramDetail() {
         </div>
         <div className="relative mx-auto max-w-7xl px-6 md:px-12 relative z-10">
           <div className="grid gap-10 lg:grid-cols-[1.2fr_1fr] lg:items-center lg:gap-14">
-            
             {/* Left Column Content */}
             <div>
               <Link
@@ -413,7 +731,7 @@ function ProgramDetail() {
               >
                 <ArrowLeft className="h-4 w-4" /> Back to all programs
               </Link>
-              
+
               {/* Badge & Age */}
               <div className="mt-6 flex items-center gap-3.5">
                 <div className="grid h-11 w-11 place-items-center rounded-full bg-accent font-display text-lg font-extrabold text-primary-deep shadow-sm select-none">
@@ -423,38 +741,44 @@ function ProgramDetail() {
                   {p.age}
                 </span>
               </div>
-              
+
               <h1 className="mt-5 font-display text-4xl font-extrabold leading-[1.1] text-primary-deep sm:text-5xl lg:text-[62px] text-balance">
                 {p.name}
               </h1>
-              
+
               <p className="mt-4 font-display text-lg font-bold text-primary-deep/90 sm:text-xl lg:text-2xl text-balance">
                 {p.tagline}
               </p>
-              
+
               <p className="mt-4 text-sm leading-relaxed text-foreground/75 sm:text-base">
                 {p.overview}
               </p>
-              
+
               {/* Core Attributes */}
               <div className="mt-8 flex flex-col sm:flex-row sm:items-center gap-5 border-t border-border/60 pt-6">
                 <div className="flex items-center gap-2.5">
                   <div className="grid h-8 w-8 place-items-center rounded-lg bg-accent/20">
                     <Heart className="h-4.5 w-4.5 text-primary-deep fill-primary-deep/20" />
                   </div>
-                  <span className="text-xs font-bold text-primary-deep">Nurturing & Trained Staff</span>
+                  <span className="text-xs font-bold text-primary-deep">
+                    Nurturing & Trained Staff
+                  </span>
                 </div>
                 <div className="flex items-center gap-2.5">
                   <div className="grid h-8 w-8 place-items-center rounded-lg bg-primary/10">
                     <ShieldCheck className="h-4.5 w-4.5 text-primary-deep" />
                   </div>
-                  <span className="text-xs font-bold text-primary-deep">Safe & Secure Environment</span>
+                  <span className="text-xs font-bold text-primary-deep">
+                    Safe & Secure Environment
+                  </span>
                 </div>
                 <div className="flex items-center gap-2.5">
                   <div className="grid h-8 w-8 place-items-center rounded-lg bg-emerald-50">
                     <Sparkles className="h-4.5 w-4.5 text-emerald-600" />
                   </div>
-                  <span className="text-xs font-bold text-primary-deep">Hygienic & Child Friendly Spaces</span>
+                  <span className="text-xs font-bold text-primary-deep">
+                    Hygienic & Child Friendly Spaces
+                  </span>
                 </div>
               </div>
             </div>
@@ -481,12 +805,15 @@ function ProgramDetail() {
                   <WhatsAppIcon className="h-5 w-5 fill-current" />
                 </div>
                 <div className="text-left">
-                  <div className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground leading-none">Have questions?</div>
-                  <div className="mt-0.5 text-xs font-bold text-primary-deep leading-none">Chat on WhatsApp</div>
+                  <div className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground leading-none">
+                    Have questions?
+                  </div>
+                  <div className="mt-0.5 text-xs font-bold text-primary-deep leading-none">
+                    Chat on WhatsApp
+                  </div>
                 </div>
               </a>
             </div>
-
           </div>
         </div>
       </section>
@@ -507,7 +834,7 @@ function ProgramDetail() {
               <StarIcon className="h-5 w-5" />
             </div>
           </div>
-          
+
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {p.highlights.map((h) => (
               <div
@@ -520,9 +847,7 @@ function ProgramDetail() {
                 <h3 className="mt-5 font-display text-lg font-bold text-primary-deep leading-snug">
                   {h.title}
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-foreground/70">
-                  {h.desc}
-                </p>
+                <p className="mt-2 text-sm leading-relaxed text-foreground/70">{h.desc}</p>
               </div>
             ))}
           </div>
@@ -534,7 +859,6 @@ function ProgramDetail() {
         <FloatingDecor section="learning" />
         <div className="relative z-10 w-full">
           <div className="grid gap-8 lg:grid-cols-12 lg:items-stretch">
-            
             {/* Left Column title and decorations */}
             <div className="lg:col-span-5 relative flex flex-col justify-between pb-12 lg:pb-0 min-h-[350px] lg:min-h-0 schedule-left-col">
               <div>
@@ -549,9 +873,10 @@ function ProgramDetail() {
                   <span className="text-accent">the life</span>
                 </h2>
                 <div className="mt-4 h-1.5 w-20 rounded-full bg-accent" />
-                
+
                 <p className="mt-6 text-sm sm:text-base text-foreground/70 max-w-sm font-semibold leading-relaxed">
-                  Thoughtfully designed activities that spark curiosity, build confidence, and make every moment meaningful.
+                  Thoughtfully designed activities that spark curiosity, build confidence, and make
+                  every moment meaningful.
                 </p>
 
                 {/* 3 columns of attributes */}
@@ -561,7 +886,9 @@ function ProgramDetail() {
                       <Users className="h-6 w-6" />
                     </div>
                     <span className="mt-2.5 text-[9px] sm:text-[10px] font-bold text-primary-deep leading-tight">
-                      Safe & Nurturing<br />Environment
+                      Safe & Nurturing
+                      <br />
+                      Environment
                     </span>
                   </div>
                   <div className="flex flex-col items-center text-center">
@@ -569,7 +896,9 @@ function ProgramDetail() {
                       <Heart className="h-6 w-6 fill-amber-600/10" />
                     </div>
                     <span className="mt-2.5 text-[9px] sm:text-[10px] font-bold text-primary-deep leading-tight">
-                      Holistic Learning<br />Approach
+                      Holistic Learning
+                      <br />
+                      Approach
                     </span>
                   </div>
                   <div className="flex flex-col items-center text-center">
@@ -577,7 +906,9 @@ function ProgramDetail() {
                       <Leaf className="h-6 w-6" />
                     </div>
                     <span className="mt-2.5 text-[9px] sm:text-[10px] font-bold text-primary-deep leading-tight">
-                      Play-based<br />Activities
+                      Play-based
+                      <br />
+                      Activities
                     </span>
                   </div>
                 </div>
@@ -585,7 +916,11 @@ function ProgramDetail() {
 
               {/* Wavy hill/blob at bottom-left */}
               <div className="absolute bottom-0 -left-20 w-80 h-28 -z-10 pointer-events-none select-none hidden lg:block text-indigo-100/35">
-                <svg viewBox="0 0 100 40" className="w-full h-full fill-current" preserveAspectRatio="none">
+                <svg
+                  viewBox="0 0 100 40"
+                  className="w-full h-full fill-current"
+                  preserveAspectRatio="none"
+                >
                   <path d="M0,40 Q30,10 60,30 T100,20 L100,40 Z" />
                 </svg>
               </div>
@@ -597,117 +932,132 @@ function ProgramDetail() {
 
               {/* Floating paper airplane */}
               <div className="absolute top-[20%] right-[-5%] w-24 h-auto opacity-70 hidden xl:block animate-float pointer-events-none select-none z-10">
-                <img src={mockupAirplane} alt="Paper Airplane" className="w-full h-auto object-contain" />
+                <img
+                  src={mockupAirplane}
+                  alt="Paper Airplane"
+                  className="w-full h-auto object-contain"
+                />
               </div>
             </div>
 
             {/* Right Column timeline card wrapper & card */}
             <div className="px-6 md:px-12 lg:px-0 lg:col-span-7 flex flex-col justify-stretch">
               <div className="schedule-right-card relative overflow-hidden flex flex-col justify-between h-full">
-                
-              <div>
-                {/* Card Header */}
-                <div className="relative flex items-center justify-between border-b border-border/60 pb-6 mb-6">
-                  <div className="flex items-center gap-4">
-                    <div className="grid h-12 w-12 place-items-center rounded-full bg-[#0B2286] text-white shadow-sm">
-                      <Clock className="h-6 w-6" />
+                <div>
+                  {/* Card Header */}
+                  <div className="relative flex items-center justify-between border-b border-border/60 pb-6 mb-6">
+                    <div className="flex items-center gap-4">
+                      <div className="grid h-12 w-12 place-items-center rounded-full bg-[#0B2286] text-white shadow-sm">
+                        <Clock className="h-6 w-6" />
+                      </div>
+                      <div>
+                        <h3 className="font-display text-xl font-bold text-[#0B2286]">
+                          Today's Schedule
+                        </h3>
+                        <p className="text-xs font-semibold text-foreground/50">
+                          A perfect blend of learning, play & growth
+                        </p>
+                      </div>
                     </div>
-                    <div>
-                      <h3 className="font-display text-xl font-bold text-[#0B2286]">
-                        Today's Schedule
-                      </h3>
-                      <p className="text-xs font-semibold text-foreground/50">
-                        A perfect blend of learning, play & growth
-                      </p>
+
+                    {/* Rainbow & Sun Illustration on top-right */}
+                    <div className="hidden sm:flex items-center gap-1.5 select-none pointer-events-none">
+                      <RainbowDecor />
+                      <img
+                        src={mockupSun}
+                        alt="Sun"
+                        className="w-12 h-12 animate-float object-contain"
+                      />
                     </div>
                   </div>
-                  
-                  {/* Rainbow & Sun Illustration on top-right */}
-                  <div className="hidden sm:flex items-center gap-1.5 select-none pointer-events-none">
-                    <RainbowDecor />
-                    <img src={mockupSun} alt="Sun" className="w-12 h-12 animate-float object-contain" />
-                  </div>
-                </div>
 
-                {/* Timeline Rows */}
-                <div className="relative divide-y divide-border/20">
-                  {p.daily.map((d, i) => {
-                    const style = getTimelineStyles(d.icon);
-                    const Icon = style.icon;
-                    return (
-                      <div key={i} className="flex items-start gap-4 sm:gap-6 py-5 first:pt-0 last:pb-0 relative group">
-                        
-                        {/* Time Column */}
-                        <div className="w-24 sm:w-28 shrink-0 pt-2 text-xs sm:text-sm font-bold text-primary-deep whitespace-nowrap">
-                          {d.time}
-                        </div>
+                  {/* Timeline Rows */}
+                  <div className="relative divide-y divide-border/20">
+                    {p.daily.map((d, i) => {
+                      const style = getTimelineStyles(d.icon);
+                      const Icon = style.icon;
+                      return (
+                        <div
+                          key={i}
+                          className="flex items-start gap-4 sm:gap-6 py-5 first:pt-0 last:pb-0 relative group"
+                        >
+                          {/* Time Column */}
+                          <div className="w-24 sm:w-28 shrink-0 pt-2 text-xs sm:text-sm font-bold text-primary-deep whitespace-nowrap">
+                            {d.time}
+                          </div>
 
-                        {/* Icon & Connection Line Column */}
-                        <div className="relative flex flex-col items-center justify-center shrink-0 w-12 h-12">
-                          {/* Connecting Line (hidden for the last item) */}
-                          {i < p.daily.length - 1 && (
-                            <div className="absolute top-10 bottom-[-30px] w-[2px] border-l-2 border-dashed border-slate-200/80 -z-10" />
-                          )}
-                          {/* Circle Icon */}
-                          <div className={`grid h-10 w-10 place-items-center rounded-full ${style.bg} ${style.text} border shadow-sm transition-transform duration-300 group-hover:scale-105`}>
-                            <Icon className="h-5 w-5" />
+                          {/* Icon & Connection Line Column */}
+                          <div className="relative flex flex-col items-center justify-center shrink-0 w-12 h-12">
+                            {/* Connecting Line (hidden for the last item) */}
+                            {i < p.daily.length - 1 && (
+                              <div className="absolute top-10 bottom-[-30px] w-[2px] border-l-2 border-dashed border-slate-200/80 -z-10" />
+                            )}
+                            {/* Circle Icon */}
+                            <div
+                              className={`grid h-10 w-10 place-items-center rounded-full ${style.bg} ${style.text} border shadow-sm transition-transform duration-300 group-hover:scale-105`}
+                            >
+                              <Icon className="h-5 w-5" />
+                            </div>
+                          </div>
+
+                          {/* Content Column */}
+                          <div className="flex-1 pt-1.5">
+                            <h4 className="font-display text-sm sm:text-base font-bold text-primary-deep leading-snug">
+                              {d.title}
+                            </h4>
+                            {d.desc && (
+                              <p className="mt-1 text-xs text-foreground/60 leading-relaxed">
+                                {d.desc}
+                              </p>
+                            )}
                           </div>
                         </div>
-
-                        {/* Content Column */}
-                        <div className="flex-1 pt-1.5">
-                          <h4 className="font-display text-sm sm:text-base font-bold text-primary-deep leading-snug">
-                            {d.title}
-                          </h4>
-                          {d.desc && (
-                            <p className="mt-1 text-xs text-foreground/60 leading-relaxed">
-                              {d.desc}
-                            </p>
-                          )}
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
-
-              {/* Card Footer Banner */}
-              <div className="mt-8 bg-indigo-50/70 border border-indigo-100/40 rounded-2xl p-4 flex items-center justify-between overflow-hidden relative">
-                <div className="flex items-center gap-3 relative z-10">
-                  <div className="grid h-8 w-8 place-items-center rounded-full bg-[#0B2286] text-white shadow-sm">
-                    <Heart className="h-4.5 w-4.5 fill-white" />
+                      );
+                    })}
                   </div>
-                  <span className="text-xs font-bold text-primary-deep">
-                    Every moment is a step towards a brighter tomorrow.
-                  </span>
                 </div>
-                {/* Waving kids drawing */}
-                <div className="absolute right-4 bottom-0 opacity-20 pointer-events-none select-none hidden md:block">
-                  <svg viewBox="0 0 120 40" className="h-10 w-28 text-indigo-600" fill="none" stroke="currentColor" strokeWidth="1.5">
-                    <circle cx="20" cy="28" r="8" />
-                    <path d="M16 26 Q20 28 24 26" />
-                    <circle cx="18" cy="24" r="0.75" fill="currentColor" />
-                    <circle cx="22" cy="24" r="0.75" fill="currentColor" />
-                    <path d="M10 32 C8 28 4 28 2 30" />
-                    
-                    <circle cx="60" cy="24" r="8" />
-                    <path d="M56 22 Q60 24 64 22" />
-                    <circle cx="58" cy="20" r="0.75" fill="currentColor" />
-                    <circle cx="62" cy="20" r="0.75" fill="currentColor" />
-                    <path d="M50 30 Q54 28 58 30" />
-                    
-                    <circle cx="100" cy="28" r="8" />
-                    <path d="M96 26 Q100 28 104 26" />
-                    <circle cx="98" cy="24" r="0.75" fill="currentColor" />
-                    <circle cx="102" cy="24" r="0.75" fill="currentColor" />
-                    <path d="M110 32 C112 28 116 28 118 30" />
-                  </svg>
+
+                {/* Card Footer Banner */}
+                <div className="mt-8 bg-indigo-50/70 border border-indigo-100/40 rounded-2xl p-4 flex items-center justify-between overflow-hidden relative">
+                  <div className="flex items-center gap-3 relative z-10">
+                    <div className="grid h-8 w-8 place-items-center rounded-full bg-[#0B2286] text-white shadow-sm">
+                      <Heart className="h-4.5 w-4.5 fill-white" />
+                    </div>
+                    <span className="text-xs font-bold text-primary-deep">
+                      Every moment is a step towards a brighter tomorrow.
+                    </span>
+                  </div>
+                  {/* Waving kids drawing */}
+                  <div className="absolute right-4 bottom-0 opacity-20 pointer-events-none select-none hidden md:block">
+                    <svg
+                      viewBox="0 0 120 40"
+                      className="h-10 w-28 text-indigo-600"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                    >
+                      <circle cx="20" cy="28" r="8" />
+                      <path d="M16 26 Q20 28 24 26" />
+                      <circle cx="18" cy="24" r="0.75" fill="currentColor" />
+                      <circle cx="22" cy="24" r="0.75" fill="currentColor" />
+                      <path d="M10 32 C8 28 4 28 2 30" />
+
+                      <circle cx="60" cy="24" r="8" />
+                      <path d="M56 22 Q60 24 64 22" />
+                      <circle cx="58" cy="20" r="0.75" fill="currentColor" />
+                      <circle cx="62" cy="20" r="0.75" fill="currentColor" />
+                      <path d="M50 30 Q54 28 58 30" />
+
+                      <circle cx="100" cy="28" r="8" />
+                      <path d="M96 26 Q100 28 104 26" />
+                      <circle cx="98" cy="24" r="0.75" fill="currentColor" />
+                      <circle cx="102" cy="24" r="0.75" fill="currentColor" />
+                      <path d="M110 32 C112 28 116 28 118 30" />
+                    </svg>
+                  </div>
                 </div>
               </div>
-
             </div>
-          </div>
-
           </div>
         </div>
       </section>
@@ -725,7 +1075,8 @@ function ProgramDetail() {
               "No Bag Day" Saturday Program
             </h2>
             <p className="mt-4 text-sm sm:text-base leading-relaxed text-foreground/75 max-w-2xl mx-auto">
-              Every Saturday, children leave their school bags at home to engage in a day of cultural enrichment, creative arts, and general knowledge development.
+              Every Saturday, children leave their school bags at home to engage in a day of
+              cultural enrichment, creative arts, and general knowledge development.
             </p>
           </div>
 
@@ -736,15 +1087,35 @@ function ProgramDetail() {
                 <div className="flex items-center gap-3.5 mb-8">
                   {/* Bell Icon Wrapper */}
                   <div className="grid h-12 w-12 place-items-center rounded-2xl bg-amber-100/70 text-amber-600 shadow-sm">
-                    <svg viewBox="0 0 24 24" fill="none" className="h-6 w-6" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      className="h-6 w-6"
+                      stroke="currentColor"
+                      strokeWidth="2.2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
                       <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9" />
                       <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0" />
                     </svg>
                   </div>
                   {/* Diya (Oil Lamp) Icon Wrapper */}
                   <div className="grid h-12 w-12 place-items-center rounded-2xl bg-amber-100/70 text-amber-600 shadow-sm">
-                    <svg viewBox="0 0 24 24" fill="none" className="h-6.5 w-6.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M12 2C12 2 9.5 5 9.5 7.5c0 1.38 1.12 2.5 2.5 2.5s2.5-1.12 2.5-2.5C14.5 5 12 2 12 2z" fill="currentColor" className="text-amber-500" />
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      className="h-6.5 w-6.5"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <path
+                        d="M12 2C12 2 9.5 5 9.5 7.5c0 1.38 1.12 2.5 2.5 2.5s2.5-1.12 2.5-2.5C14.5 5 12 2 12 2z"
+                        fill="currentColor"
+                        className="text-amber-500"
+                      />
                       <path d="M2 14c0 3.3 4.5 6 10 6s10-2.7 10-6" />
                       <path d="M3.5 14h17" />
                     </svg>
@@ -755,17 +1126,23 @@ function ProgramDetail() {
                   Spiritual & Cultural Learning
                 </h3>
                 <p className="mt-4 text-sm leading-relaxed text-foreground/70">
-                  Building deep moral roots and cultural awareness. Every Saturday, children learn and recite:
+                  Building deep moral roots and cultural awareness. Every Saturday, children learn
+                  and recite:
                 </p>
 
                 <ul className="mt-6 space-y-4">
                   {[
                     "Sanskrit Slokas Recitation",
                     "Hanuman Chalisa Chanting",
-                    "Devotional Stories"
+                    "Devotional Stories",
                   ].map((item, idx) => (
-                    <li key={idx} className="flex items-center gap-3.5 text-sm font-semibold text-amber-900 bg-amber-50/40 rounded-2xl p-3 border border-amber-100/30">
-                      <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-amber-100 text-amber-600 text-xs">🌸</span>
+                    <li
+                      key={idx}
+                      className="flex items-center gap-3.5 text-sm font-semibold text-amber-900 bg-amber-50/40 rounded-2xl p-3 border border-amber-100/30"
+                    >
+                      <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-amber-100 text-amber-600 text-xs">
+                        🌸
+                      </span>
                       {item}
                     </li>
                   ))}
@@ -786,23 +1163,53 @@ function ProgramDetail() {
                   Creative & Cognitive Activities
                 </h3>
                 <p className="mt-4 text-sm leading-relaxed text-foreground/70">
-                  Interactive and engaging sessions designed to foster creativity, global awareness, and self-confidence.
+                  Interactive and engaging sessions designed to foster creativity, global awareness,
+                  and self-confidence.
                 </p>
 
                 <div className="mt-6 grid gap-4 sm:grid-cols-2">
                   {[
-                    { title: "Dance & Rhythms", desc: "Expression & Coordination", icon: "activity", color: "text-rose-500 bg-rose-50 border-rose-100/50" },
-                    { title: "Vocal & Instrument Music", desc: "Ear Training & Rhythm", icon: "music", color: "text-purple-500 bg-purple-50 border-purple-100/50" },
-                    { title: "General Awareness", desc: "World Facts & Logic", icon: "brain", color: "text-emerald-500 bg-emerald-50 border-emerald-100/50" },
-                    { title: "States & Capitals", desc: "Geography & Map Basics", icon: "compass", color: "text-sky-500 bg-sky-50 border-sky-100/50" }
+                    {
+                      title: "Dance & Rhythms",
+                      desc: "Expression & Coordination",
+                      icon: "activity",
+                      color: "text-rose-500 bg-rose-50 border-rose-100/50",
+                    },
+                    {
+                      title: "Vocal & Instrument Music",
+                      desc: "Ear Training & Rhythm",
+                      icon: "music",
+                      color: "text-purple-500 bg-purple-50 border-purple-100/50",
+                    },
+                    {
+                      title: "General Awareness",
+                      desc: "World Facts & Logic",
+                      icon: "brain",
+                      color: "text-emerald-500 bg-emerald-50 border-emerald-100/50",
+                    },
+                    {
+                      title: "States & Capitals",
+                      desc: "Geography & Map Basics",
+                      icon: "compass",
+                      color: "text-sky-500 bg-sky-50 border-sky-100/50",
+                    },
                   ].map((act, idx) => (
-                    <div key={idx} className="bg-white rounded-2xl p-4 border border-slate-100 shadow-[0_2px_8px_-3px_rgba(0,0,0,0.05)] hover-lift flex items-start gap-3">
-                      <div className={`grid h-9 w-9 shrink-0 place-items-center rounded-xl ${act.color.split(" ")[1]} ${act.color.split(" ")[0]}`}>
+                    <div
+                      key={idx}
+                      className="bg-white rounded-2xl p-4 border border-slate-100 shadow-[0_2px_8px_-3px_rgba(0,0,0,0.05)] hover-lift flex items-start gap-3"
+                    >
+                      <div
+                        className={`grid h-9 w-9 shrink-0 place-items-center rounded-xl ${act.color.split(" ")[1]} ${act.color.split(" ")[0]}`}
+                      >
                         <HighlightIcon name={act.icon} className="h-5 w-5" />
                       </div>
                       <div className="min-w-0">
-                        <h4 className="text-xs font-bold text-primary-deep truncate">{act.title}</h4>
-                        <p className="text-[10px] font-medium text-muted-foreground mt-0.5 leading-tight">{act.desc}</p>
+                        <h4 className="text-xs font-bold text-primary-deep truncate">
+                          {act.title}
+                        </h4>
+                        <p className="text-[10px] font-medium text-muted-foreground mt-0.5 leading-tight">
+                          {act.desc}
+                        </p>
                       </div>
                     </div>
                   ))}
@@ -829,7 +1236,7 @@ function ProgramDetail() {
               <StarIcon className="h-5 w-5" />
             </div>
           </div>
-          
+
           <div className="mt-12 grid gap-6 sm:grid-cols-3">
             {/* Card 1: Gold / Yellow Theme */}
             <div className="relative overflow-hidden rounded-[2.25rem] bg-amber-50/30 p-8 shadow-[var(--shadow-soft)] ring-1 ring-amber-100/75 hover-lift flex flex-col justify-between h-full min-h-[180px]">

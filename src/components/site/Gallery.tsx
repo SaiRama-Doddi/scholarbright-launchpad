@@ -26,7 +26,8 @@ export function Gallery() {
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") setIdx(null);
       if (e.key === "ArrowRight") setIdx((i) => (i === null ? null : (i + 1) % photos.length));
-      if (e.key === "ArrowLeft") setIdx((i) => (i === null ? null : (i - 1 + photos.length) % photos.length));
+      if (e.key === "ArrowLeft")
+        setIdx((i) => (i === null ? null : (i - 1 + photos.length) % photos.length));
     };
     window.addEventListener("keydown", onKey);
     document.body.style.overflow = "hidden";
@@ -48,7 +49,8 @@ export function Gallery() {
             </h2>
           </div>
           <p className="max-w-md text-foreground/75">
-            A peek into a typical day — full of giggles, glue sticks and great discoveries. Click any photo to enlarge.
+            A peek into a typical day — full of giggles, glue sticks and great discoveries. Click
+            any photo to enlarge.
           </p>
         </div>
 
@@ -101,8 +103,20 @@ export function Gallery() {
             >
               ×
             </button>
-            <NavBtn dir="prev" onClick={(e) => { e.stopPropagation(); setIdx((i) => (i === null ? null : (i - 1 + photos.length) % photos.length)); }} />
-            <NavBtn dir="next" onClick={(e) => { e.stopPropagation(); setIdx((i) => (i === null ? null : (i + 1) % photos.length)); }} />
+            <NavBtn
+              dir="prev"
+              onClick={(e) => {
+                e.stopPropagation();
+                setIdx((i) => (i === null ? null : (i - 1 + photos.length) % photos.length));
+              }}
+            />
+            <NavBtn
+              dir="next"
+              onClick={(e) => {
+                e.stopPropagation();
+                setIdx((i) => (i === null ? null : (i + 1) % photos.length));
+              }}
+            />
             <motion.figure
               key={idx}
               initial={{ opacity: 0, scale: 0.95 }}
@@ -112,7 +126,11 @@ export function Gallery() {
               className="relative max-h-[85vh] max-w-5xl overflow-hidden rounded-3xl"
               onClick={(e) => e.stopPropagation()}
             >
-              <img src={photos[idx].src} alt={photos[idx].alt} className="max-h-[85vh] w-auto object-contain" />
+              <img
+                src={photos[idx].src}
+                alt={photos[idx].alt}
+                className="max-h-[85vh] w-auto object-contain"
+              />
               <figcaption className="absolute bottom-4 left-4 rounded-full bg-white/90 px-4 py-1.5 text-sm font-semibold text-primary-deep">
                 {photos[idx].label}
               </figcaption>
@@ -124,7 +142,13 @@ export function Gallery() {
   );
 }
 
-function NavBtn({ dir, onClick }: { dir: "prev" | "next"; onClick: (e: React.MouseEvent) => void }) {
+function NavBtn({
+  dir,
+  onClick,
+}: {
+  dir: "prev" | "next";
+  onClick: (e: React.MouseEvent) => void;
+}) {
   return (
     <button
       aria-label={dir}

@@ -21,13 +21,26 @@ export function Hero() {
   }, []);
 
   return (
-    <section id="top" className="relative isolate overflow-hidden bg-gradient-to-r from-[#F8F7F4] via-white to-[#FFF9EE] pt-[115px] pb-[280px] sm:pb-[240px] lg:pb-52">
+    <section
+      id="top"
+      className="relative isolate overflow-hidden bg-gradient-to-r from-[#F8F7F4] via-white to-[#FFF9EE] pt-[115px] pb-[280px] sm:pb-[240px] lg:pb-52"
+    >
       <FloatingDecor section="hero" />
       {/* Background decorations */}
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
         {/* Soft leaf branch on left */}
-        <svg viewBox="0 0 120 400" className="absolute left-0 top-20 h-[350px] w-24 text-accent/10 pointer-events-none select-none hidden 2xl:block" fill="currentColor">
-          <path d="M0,50 Q40,150 10,250 T30,400" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
+        <svg
+          viewBox="0 0 120 400"
+          className="absolute left-0 top-20 h-[350px] w-24 text-accent/10 pointer-events-none select-none hidden 2xl:block"
+          fill="currentColor"
+        >
+          <path
+            d="M0,50 Q40,150 10,250 T30,400"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2.5"
+            strokeLinecap="round"
+          />
           <path d="M10,80 C25,70 45,75 50,90 C45,105 25,100 10,80 Z" />
           <path d="M18,140 C35,130 55,135 60,150 C55,165 35,160 18,140 Z" />
           <path d="M15,210 C32,200 52,205 57,220 C52,235 32,230 15,210 Z" />
@@ -48,10 +61,21 @@ export function Hero() {
         {/* left: copy */}
         <div className="relative animate-fade-up flex flex-col justify-center">
           {/* Dotted airplane path SVG */}
-          <svg viewBox="0 0 120 100" className="absolute -top-8 right-0 w-24 h-20 text-accent/15 pointer-events-none select-none hidden xl:block" fill="none" stroke="currentColor" strokeWidth="1.5">
+          <svg
+            viewBox="0 0 120 100"
+            className="absolute -top-8 right-0 w-24 h-20 text-accent/15 pointer-events-none select-none hidden xl:block"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.5"
+          >
             <path d="M10,90 C40,70 20,20 60,30 C80,35 90,15 105,10" strokeDasharray="3 3" />
             <g transform="translate(105, 10) rotate(-15)">
-              <path d="M0,0 L-12,8 L-8,2 L-14,0 L0,0" fill="currentColor" stroke="currentColor" strokeWidth="1" />
+              <path
+                d="M0,0 L-12,8 L-8,2 L-14,0 L0,0"
+                fill="currentColor"
+                stroke="currentColor"
+                strokeWidth="1"
+              />
             </g>
           </svg>
 
@@ -71,7 +95,9 @@ export function Hero() {
           </p>
 
           <p className="mt-2.5 max-w-md text-xs leading-relaxed text-foreground/70 sm:text-sm lg:text-base">
-            A premium international preschool in Srikakulam where curious little minds discover, play and grow through activity-based learning in safe, joyful and digitally-enabled classrooms.
+            A premium international preschool in Srikakulam where curious little minds discover,
+            play and grow through activity-based learning in safe, joyful and digitally-enabled
+            classrooms.
           </p>
 
           <div className="mt-6 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full sm:w-auto">
@@ -109,7 +135,7 @@ export function Hero() {
                 />
               ))}
               <div className="absolute inset-0 bg-gradient-to-tr from-primary-deep/20 via-transparent to-transparent z-20" />
-              
+
               {/* Dot Indicators */}
               <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-30">
                 {carouselImages.map((_, idx) => (
@@ -147,7 +173,9 @@ export function Hero() {
                 </div>
                 <div className="min-w-0">
                   <div className="text-xs font-bold text-primary-deep truncate">Priya A.</div>
-                  <div className="text-[10px] font-semibold text-muted-foreground truncate">Parent • Junior KG</div>
+                  <div className="text-[10px] font-semibold text-muted-foreground truncate">
+                    Parent • Junior KG
+                  </div>
                 </div>
               </div>
               <p className="mt-2 text-[11px] leading-snug text-foreground/75">
@@ -192,8 +220,12 @@ export function Hero() {
                     <Icon className="h-5 w-5 lg:h-6 lg:w-6 text-primary-deep" />
                   </div>
                   <div className="min-w-0">
-                    <dt className="font-display text-lg lg:text-2xl font-bold text-accent">{s.k}</dt>
-                    <dd className="text-xs lg:text-sm font-semibold leading-tight text-white/95 mt-0.5">{s.v}</dd>
+                    <dt className="font-display text-lg lg:text-2xl font-bold text-accent">
+                      {s.k}
+                    </dt>
+                    <dd className="text-xs lg:text-sm font-semibold leading-tight text-white/95 mt-0.5">
+                      {s.v}
+                    </dd>
                   </div>
                 </div>
               );
@@ -209,7 +241,12 @@ function CapIcon({ className = "" }: { className?: string }) {
   return (
     <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden>
       <path d="M2 9l10-5 10 5-10 5L2 9z" fill="currentColor" />
-      <path d="M6 11v4c0 1.5 2.7 3 6 3s6-1.5 6-3v-4" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+      <path
+        d="M6 11v4c0 1.5 2.7 3 6 3s6-1.5 6-3v-4"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+      />
       <path d="M22 9v5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
     </svg>
   );

@@ -17,14 +17,13 @@ import mockupIcon7 from "@/assets/mockup-icon-7.png";
 import mockupIcon8 from "@/assets/mockup-icon-8.png";
 import playgroundIcon from "@/assets/playground-icon.png";
 
-
 // --- Background Decorative Components ---
 
 function SunDecor() {
   return (
-    <img 
-      src={mockupSun} 
-      alt="Sun Decoration" 
+    <img
+      src={mockupSun}
+      alt="Sun Decoration"
       className="w-16 h-16 animate-float object-contain"
       style={{ animationDuration: "8s" }}
     />
@@ -33,9 +32,9 @@ function SunDecor() {
 
 function TrainDecor() {
   return (
-    <img 
-      src={mockupTrain} 
-      alt="Train Decoration" 
+    <img
+      src={mockupTrain}
+      alt="Train Decoration"
       className="w-24 h-auto opacity-95 animate-float object-contain"
       style={{ animationDuration: "12s" }}
     />
@@ -46,9 +45,19 @@ function AirplaneDecor() {
   return (
     <div className="relative w-36 h-24">
       {/* Dotted path SVG remains as a background line */}
-      <svg viewBox="0 0 200 120" className="absolute inset-0 w-full h-full text-cyan-400" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M20 100 C 60 120, 100 60, 120 40 C 140 20, 170 30, 160 50 C 150 70, 120 90, 140 100 C 155 107, 170 80, 180 65" 
-          stroke="#93C5FD" strokeWidth="2" strokeLinecap="round" strokeDasharray="6,6" />
+      <svg
+        viewBox="0 0 200 120"
+        className="absolute inset-0 w-full h-full text-cyan-400"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M20 100 C 60 120, 100 60, 120 40 C 140 20, 170 30, 160 50 C 150 70, 120 90, 140 100 C 155 107, 170 80, 180 65"
+          stroke="#93C5FD"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeDasharray="6,6"
+        />
       </svg>
       {/* 3D paper airplane image placed at the end of path */}
       <div className="absolute top-[36px] left-[134px] w-10 h-10 rotate-[-15deg]">
@@ -60,9 +69,9 @@ function AirplaneDecor() {
 
 function BlocksDecor() {
   return (
-    <img 
-      src={mockupBlocks} 
-      alt="Blocks Decoration" 
+    <img
+      src={mockupBlocks}
+      alt="Blocks Decoration"
       className="w-24 h-auto animate-float-rev object-contain"
     />
   );
@@ -70,8 +79,19 @@ function BlocksDecor() {
 
 function RainbowDecor() {
   return (
-    <svg viewBox="0 0 120 70" className="w-24 h-14 opacity-75 animate-float" style={{ animationDuration: "14s" }} fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M10 60 A 50 50 0 0 1 110 60" stroke="#FF8DA1" strokeWidth="5" strokeLinecap="round" />
+    <svg
+      viewBox="0 0 120 70"
+      className="w-24 h-14 opacity-75 animate-float"
+      style={{ animationDuration: "14s" }}
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M10 60 A 50 50 0 0 1 110 60"
+        stroke="#FF8DA1"
+        strokeWidth="5"
+        strokeLinecap="round"
+      />
       <path d="M22 60 A 38 38 0 0 1 98 60" stroke="#FFD269" strokeWidth="5" strokeLinecap="round" />
       <path d="M34 60 A 26 26 0 0 1 86 60" stroke="#7FE492" strokeWidth="5" strokeLinecap="round" />
       <path d="M46 60 A 14 14 0 0 1 74 60" stroke="#87C4FF" strokeWidth="5" strokeLinecap="round" />
@@ -85,21 +105,56 @@ function RainbowDecor() {
 
 function IconClassrooms() {
   return (
-    <svg viewBox="0 0 64 64" className="w-[50px] h-[50px]" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      viewBox="0 0 64 64"
+      className="w-[50px] h-[50px]"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       {/* Screen background shadow */}
       <rect x="8" y="10" width="48" height="34" rx="4" fill="#8B5CF6" />
       {/* Screen display */}
       <rect x="11" y="13" width="42" height="28" rx="2" fill="#FFE699" />
       {/* Screen content - laptop display */}
       <rect x="15" y="16" width="10" height="10" rx="1.5" fill="#EC4899" />
-      <text x="20" y="24" fontFamily="'Outfit', sans-serif" fontWeight="bold" fontSize="8" fill="#FFFFFF" textAnchor="middle">A</text>
-      
+      <text
+        x="20"
+        y="24"
+        fontFamily="'Outfit', sans-serif"
+        fontWeight="bold"
+        fontSize="8"
+        fill="#FFFFFF"
+        textAnchor="middle"
+      >
+        A
+      </text>
+
       <rect x="27" y="16" width="10" height="10" rx="1.5" fill="#3B82F6" />
-      <text x="32" y="24" fontFamily="'Outfit', sans-serif" fontWeight="bold" fontSize="8" fill="#FFFFFF" textAnchor="middle">B</text>
-      
+      <text
+        x="32"
+        y="24"
+        fontFamily="'Outfit', sans-serif"
+        fontWeight="bold"
+        fontSize="8"
+        fill="#FFFFFF"
+        textAnchor="middle"
+      >
+        B
+      </text>
+
       <rect x="39" y="16" width="10" height="10" rx="1.5" fill="#10B981" />
-      <text x="44" y="24" fontFamily="'Outfit', sans-serif" fontWeight="bold" fontSize="8" fill="#FFFFFF" textAnchor="middle">C</text>
-      
+      <text
+        x="44"
+        y="24"
+        fontFamily="'Outfit', sans-serif"
+        fontWeight="bold"
+        fontSize="8"
+        fill="#FFFFFF"
+        textAnchor="middle"
+      >
+        C
+      </text>
+
       {/* Stylized keyboard base */}
       <path d="M4 44 H60 L56 50 H8 Z" fill="#F43F5E" />
       <rect x="8" y="47" width="48" height="3" rx="1.5" fill="#FB7185" />
@@ -110,12 +165,31 @@ function IconClassrooms() {
 
 function IconCctv() {
   return (
-    <svg viewBox="0 0 64 64" className="w-[50px] h-[50px]" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      viewBox="0 0 64 64"
+      className="w-[50px] h-[50px]"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       {/* Bracket / Wall mount */}
-      <path d="M12 44 L24 44 L24 34" stroke="#93C5FD" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
+      <path
+        d="M12 44 L24 44 L24 34"
+        stroke="#93C5FD"
+        strokeWidth="4"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
       <path d="M16 48 L16 38" stroke="#3B82F6" strokeWidth="4" strokeLinecap="round" />
       {/* Camera Body */}
-      <rect x="20" y="16" width="30" height="18" rx="6" fill="#3B82F6" transform="rotate(-15 35 25)" />
+      <rect
+        x="20"
+        y="16"
+        width="30"
+        height="18"
+        rx="6"
+        fill="#3B82F6"
+        transform="rotate(-15 35 25)"
+      />
       {/* Lens */}
       <ellipse cx="44" cy="20" rx="5" ry="8" fill="#1D4ED8" transform="rotate(-15 44 20)" />
       <circle cx="44" cy="20" r="3" fill="#000000" />
@@ -123,7 +197,15 @@ function IconCctv() {
       {/* Sunshield/Visor */}
       <path d="M16 16 L42 10" stroke="#60A5FA" strokeWidth="4" strokeLinecap="round" />
       {/* Antenna */}
-      <line x1="22" y1="18" x2="16" y2="10" stroke="#93C5FD" strokeWidth="2.5" strokeLinecap="round" />
+      <line
+        x1="22"
+        y1="18"
+        x2="16"
+        y2="10"
+        stroke="#93C5FD"
+        strokeWidth="2.5"
+        strokeLinecap="round"
+      />
       <circle cx="16" cy="10" r="2" fill="#3B82F6" />
       {/* Red recording dot */}
       <circle cx="28" cy="28" r="2" fill="#EF4444" className="animate-pulse" />
@@ -133,20 +215,50 @@ function IconCctv() {
 
 function IconSafeHygienic() {
   return (
-    <svg viewBox="0 0 64 64" className="w-[50px] h-[50px]" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      viewBox="0 0 64 64"
+      className="w-[50px] h-[50px]"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       {/* Green Shield */}
-      <path d="M10 14 C22 10, 30 6, 30 6 C30 6, 38 10, 50 14 C50 28, 42 44, 30 50 C18 44, 10 28, 10 14 Z" fill="#10B981" />
-      <path d="M18 25 L26 33 L42 17" stroke="#FFFFFF" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round" />
+      <path
+        d="M10 14 C22 10, 30 6, 30 6 C30 6, 38 10, 50 14 C50 28, 42 44, 30 50 C18 44, 10 28, 10 14 Z"
+        fill="#10B981"
+      />
+      <path
+        d="M18 25 L26 33 L42 17"
+        stroke="#FFFFFF"
+        strokeWidth="5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
       {/* Sanitizer Bottle overlaying the bottom right of the shield */}
       <g transform="translate(32, 26)">
         {/* Bottle Body */}
-        <rect x="4" y="8" width="16" height="20" rx="4" fill="#F0FDF4" stroke="#047857" strokeWidth="2" />
+        <rect
+          x="4"
+          y="8"
+          width="16"
+          height="20"
+          rx="4"
+          fill="#F0FDF4"
+          stroke="#047857"
+          strokeWidth="2"
+        />
         {/* Fill level inside bottle */}
         <rect x="6" y="14" width="12" height="12" rx="1" fill="#A7F3D0" />
         {/* Pump cap & dispenser neck */}
         <rect x="9" y="4" width="6" height="4" fill="#E5E7EB" stroke="#047857" strokeWidth="2" />
         {/* Dispenser nozzle spout */}
-        <path d="M12 4 L12 1 L6 1" stroke="#047857" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+        <path
+          d="M12 4 L12 1 L6 1"
+          stroke="#047857"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          fill="none"
+        />
         {/* Small label on bottle */}
         <circle cx="12" cy="20" r="3" fill="#3B82F6" />
         <path d="M12 18.5 V21.5 M10.5 20 H13.5" stroke="#FFFFFF" strokeWidth="1" />
@@ -157,7 +269,12 @@ function IconSafeHygienic() {
 
 function IconTeachers() {
   return (
-    <svg viewBox="0 0 64 64" className="w-[50px] h-[50px]" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      viewBox="0 0 64 64"
+      className="w-[50px] h-[50px]"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       {/* Books Stack */}
       {/* Blue Book */}
       <rect x="10" y="38" width="38" height="10" rx="2" fill="#3B82F6" />
@@ -165,22 +282,39 @@ function IconTeachers() {
       {/* Yellow Book */}
       <rect x="14" y="30" width="34" height="9" rx="2" fill="#FBBF24" />
       <rect x="12" y="33" width="34" height="3" fill="#D97706" />
-      
+
       {/* Red Apple */}
       <circle cx="48" cy="40" r="6" fill="#EF4444" />
-      <path d="M48 34 C47 31, 50 31, 50 31" stroke="#047857" strokeWidth="1.5" strokeLinecap="round" fill="none" />
+      <path
+        d="M48 34 C47 31, 50 31, 50 31"
+        stroke="#047857"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        fill="none"
+      />
       <circle cx="49" cy="40" r="5" fill="#EF4444" />
-      
+
       {/* Graduation Cap */}
       <g transform="translate(6, 2)">
         {/* Cap base */}
-        <path d="M16 22 V27 C16 30, 32 30, 32 27 V22" fill="#374151" stroke="#1F2937" strokeWidth="1.5" />
+        <path
+          d="M16 22 V27 C16 30, 32 30, 32 27 V22"
+          fill="#374151"
+          stroke="#1F2937"
+          strokeWidth="1.5"
+        />
         {/* Cap Diamond */}
         <path d="M32 10 L54 17 L32 24 L10 17 Z" fill="#1F2937" stroke="#111827" strokeWidth="1.5" />
         {/* Button */}
         <circle cx="32" cy="17" r="1.5" fill="#F59E0B" />
         {/* Tassel */}
-        <path d="M33.5 17 L44 23 L44 28" stroke="#EF4444" strokeWidth="1.5" strokeLinecap="round" fill="none" />
+        <path
+          d="M33.5 17 L44 23 L44 28"
+          stroke="#EF4444"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          fill="none"
+        />
         <circle cx="44" cy="29" r="1" fill="#B91C1C" />
       </g>
     </svg>
@@ -189,11 +323,31 @@ function IconTeachers() {
 
 function IconVentilated() {
   return (
-    <svg viewBox="0 0 64 64" className="w-[50px] h-[50px]" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      viewBox="0 0 64 64"
+      className="w-[50px] h-[50px]"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       {/* School/House Body */}
-      <rect x="14" y="24" width="36" height="30" rx="4" fill="#FDE047" stroke="#CA8A04" strokeWidth="2" />
+      <rect
+        x="14"
+        y="24"
+        width="36"
+        height="30"
+        rx="4"
+        fill="#FDE047"
+        stroke="#CA8A04"
+        strokeWidth="2"
+      />
       {/* Roof */}
-      <path d="M10 26 L32 8 L54 26 Z" fill="#EF4444" stroke="#B91C1C" strokeWidth="2" strokeLinejoin="round" />
+      <path
+        d="M10 26 L32 8 L54 26 Z"
+        fill="#EF4444"
+        stroke="#B91C1C"
+        strokeWidth="2"
+        strokeLinejoin="round"
+      />
       {/* Chimney */}
       <rect x="42" y="12" width="6" height="10" fill="#4B5563" stroke="#1F2937" strokeWidth="1.5" />
       {/* Door */}
@@ -204,20 +358,65 @@ function IconVentilated() {
       <line x1="32" y1="15" x2="32" y2="25" stroke="#0284C7" strokeWidth="1" />
       <line x1="27" y1="20" x2="37" y2="20" stroke="#0284C7" strokeWidth="1" />
       {/* Side Windows */}
-      <rect x="18" y="32" width="6" height="8" rx="1" fill="#E0F2FE" stroke="#0284C7" strokeWidth="1.5" />
-      <rect x="40" y="32" width="6" height="8" rx="1" fill="#E0F2FE" stroke="#0284C7" strokeWidth="1.5" />
+      <rect
+        x="18"
+        y="32"
+        width="6"
+        height="8"
+        rx="1"
+        fill="#E0F2FE"
+        stroke="#0284C7"
+        strokeWidth="1.5"
+      />
+      <rect
+        x="40"
+        y="32"
+        width="6"
+        height="8"
+        rx="1"
+        fill="#E0F2FE"
+        stroke="#0284C7"
+        strokeWidth="1.5"
+      />
     </svg>
   );
 }
 
 function IconActivityLearning() {
   return (
-    <svg viewBox="0 0 64 64" className="w-[50px] h-[50px]" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      viewBox="0 0 64 64"
+      className="w-[50px] h-[50px]"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       {/* Rockers (Curved base) */}
-      <path d="M10 46 C20 54, 44 54, 54 46" stroke="#EF4444" strokeWidth="4.5" strokeLinecap="round" fill="none" />
+      <path
+        d="M10 46 C20 54, 44 54, 54 46"
+        stroke="#EF4444"
+        strokeWidth="4.5"
+        strokeLinecap="round"
+        fill="none"
+      />
       {/* Rocker legs */}
-      <line x1="22" y1="36" x2="16" y2="48" stroke="#B91C1C" strokeWidth="3" strokeLinecap="round" />
-      <line x1="42" y1="36" x2="48" y2="48" stroke="#B91C1C" strokeWidth="3" strokeLinecap="round" />
+      <line
+        x1="22"
+        y1="36"
+        x2="16"
+        y2="48"
+        stroke="#B91C1C"
+        strokeWidth="3"
+        strokeLinecap="round"
+      />
+      <line
+        x1="42"
+        y1="36"
+        x2="48"
+        y2="48"
+        stroke="#B91C1C"
+        strokeWidth="3"
+        strokeLinecap="round"
+      />
       {/* Horse Body */}
       <rect x="22" y="24" width="20" height="12" rx="4" fill="#F97316" />
       {/* Neck & Head */}
@@ -225,7 +424,12 @@ function IconActivityLearning() {
       {/* Saddle */}
       <rect x="26" y="22" width="10" height="6" rx="2.5" fill="#3B82F6" />
       {/* Tail */}
-      <path d="M22 26 C16 26, 14 30, 12 28" stroke="#FBBF24" strokeWidth="3.5" strokeLinecap="round" />
+      <path
+        d="M22 26 C16 26, 14 30, 12 28"
+        stroke="#FBBF24"
+        strokeWidth="3.5"
+        strokeLinecap="round"
+      />
       {/* Handlebar */}
       <circle cx="48" cy="13" r="2.5" fill="#FDE047" />
     </svg>
@@ -234,18 +438,35 @@ function IconActivityLearning() {
 
 function IconHolistic() {
   return (
-    <svg viewBox="0 0 64 64" className="w-[50px] h-[50px]" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      viewBox="0 0 64 64"
+      className="w-[50px] h-[50px]"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       {/* Glow */}
-      <path d="M32 54 C32 54, 8 36, 8 22 C8 12, 18 6, 26 12 C30 15, 32 18, 32 18 C32 18, 34 15, 38 12 C46 6, 56 12, 56 22 C56 36, 32 54, 32 54 Z" fill="#EC4899" />
+      <path
+        d="M32 54 C32 54, 8 36, 8 22 C8 12, 18 6, 26 12 C30 15, 32 18, 32 18 C32 18, 34 15, 38 12 C46 6, 56 12, 56 22 C56 36, 32 54, 32 54 Z"
+        fill="#EC4899"
+      />
       {/* Inner Heart body */}
-      <path d="M32 51 C32 51, 11 34, 11 22 C11 14, 19 9, 26 14 C29 16, 32 19, 32 19 C32 19, 35 16, 38 14 C45 9, 53 14, 53 22 C53 34, 32 51, 32 51 Z" fill="#F472B6" />
+      <path
+        d="M32 51 C32 51, 11 34, 11 22 C11 14, 19 9, 26 14 C29 16, 32 19, 32 19 C32 19, 35 16, 38 14 C45 9, 53 14, 53 22 C53 34, 32 51, 32 51 Z"
+        fill="#F472B6"
+      />
       {/* Eyes */}
       <circle cx="24" cy="22" r="3" fill="#1F2937" />
       <circle cx="40" cy="22" r="3" fill="#1F2937" />
       <circle cx="23" cy="21" r="1" fill="#FFFFFF" />
       <circle cx="39" cy="21" r="1" fill="#FFFFFF" />
       {/* Smile */}
-      <path d="M28 27 C30 29.5, 34 29.5, 36 27" stroke="#1F2937" strokeWidth="2.5" strokeLinecap="round" fill="none" />
+      <path
+        d="M28 27 C30 29.5, 34 29.5, 36 27"
+        stroke="#1F2937"
+        strokeWidth="2.5"
+        strokeLinecap="round"
+        fill="none"
+      />
       {/* Rosy Cheeks */}
       <circle cx="19" cy="25" r="2.5" fill="#F43F5E" opacity="0.6" />
       <circle cx="45" cy="25" r="2.5" fill="#F43F5E" opacity="0.6" />
@@ -255,9 +476,23 @@ function IconHolistic() {
 
 function IconNutritiousMeals() {
   return (
-    <svg viewBox="0 0 64 64" className="w-[50px] h-[50px]" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      viewBox="0 0 64 64"
+      className="w-[50px] h-[50px]"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       {/* Bento Box Base */}
-      <rect x="8" y="14" width="48" height="38" rx="8" fill="#0D9488" stroke="#115E59" strokeWidth="2.5" />
+      <rect
+        x="8"
+        y="14"
+        width="48"
+        height="38"
+        rx="8"
+        fill="#0D9488"
+        stroke="#115E59"
+        strokeWidth="2.5"
+      />
       {/* Bento Box Interior */}
       <rect x="12" y="18" width="40" height="30" rx="4" fill="#F0FDFA" />
       {/* Compartment Dividers */}
@@ -270,7 +505,13 @@ function IconNutritiousMeals() {
       <path d="M18 28 C16 28, 16 31, 18 31" fill="#10B981" />
       {/* Right top side: Apple/Strawberry */}
       <circle cx="41" cy="26" r="4.5" fill="#EF4444" />
-      <path d="M41 21.5 Q42 20, 44 20" stroke="#047857" strokeWidth="1.5" strokeLinecap="round" fill="none" />
+      <path
+        d="M41 21.5 Q42 20, 44 20"
+        stroke="#047857"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        fill="none"
+      />
       {/* Right bottom side: Broccoli/Orange slice */}
       <circle cx="41" cy="41" r="4" fill="#22C55E" />
       <circle cx="37" cy="41" r="3" fill="#4ADE80" />
@@ -358,30 +599,55 @@ const items = [
 
 export function WhyChooseUs() {
   return (
-    <section 
-      id="facilities" 
+    <section
+      id="facilities"
       className="relative overflow-hidden bg-gradient-to-br from-[#F8FAFF] to-[#FFF9F4] min-h-[900px] lg:h-[1020px] py-16 lg:py-24 flex flex-col justify-between"
     >
       <FloatingDecor section="why" />
       {/* Background/Floating Decorations */}
-      <div aria-hidden className="pointer-events-none absolute inset-0 z-0 select-none overflow-hidden">
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 z-0 select-none overflow-hidden"
+      >
         {/* Soft clouds */}
         <div className="absolute top-[8rem] left-[18%] w-32 h-16 bg-white/60 rounded-full blur-[1px] shadow-sm opacity-60" />
         <div className="absolute top-[18rem] right-[25%] w-24 h-12 bg-white/60 rounded-full blur-[1px] shadow-sm opacity-50" />
-        
+
         {/* Confetti / sparkles / circles */}
-        <div className="absolute w-3 h-3 rounded-full bg-[#FFB800]/30" style={{ left: "10%", top: "30%" }} />
-        <div className="absolute w-4 h-4 rounded-full bg-[#FF5C8A]/20" style={{ left: "85%", top: "25%" }} />
-        <div className="absolute w-3 h-3 rounded-full bg-[#53C46B]/25" style={{ left: "75%", top: "85%" }} />
-        <div className="absolute w-3.5 h-3.5 rounded-full bg-[#8B5CF6]/20" style={{ left: "20%", top: "75%" }} />
+        <div
+          className="absolute w-3 h-3 rounded-full bg-[#FFB800]/30"
+          style={{ left: "10%", top: "30%" }}
+        />
+        <div
+          className="absolute w-4 h-4 rounded-full bg-[#FF5C8A]/20"
+          style={{ left: "85%", top: "25%" }}
+        />
+        <div
+          className="absolute w-3 h-3 rounded-full bg-[#53C46B]/25"
+          style={{ left: "75%", top: "85%" }}
+        />
+        <div
+          className="absolute w-3.5 h-3.5 rounded-full bg-[#8B5CF6]/20"
+          style={{ left: "20%", top: "75%" }}
+        />
 
         {/* Floating Stars */}
-        <span className="absolute top-[12rem] left-[40%] text-yellow-400 text-lg opacity-60 animate-bounce">⭐</span>
-        <span className="absolute top-[28rem] left-[20%] text-amber-400 text-base opacity-50">⭐</span>
-        <span className="absolute top-[18rem] right-[38%] text-purple-400 text-sm opacity-60">✨</span>
-        <span className="absolute top-[32rem] right-[18%] text-yellow-400 text-lg opacity-70">⭐</span>
-        <span className="absolute bottom-[16rem] left-[32%] text-pink-400 text-sm opacity-60">✨</span>
-        
+        <span className="absolute top-[12rem] left-[40%] text-yellow-400 text-lg opacity-60 animate-bounce">
+          ⭐
+        </span>
+        <span className="absolute top-[28rem] left-[20%] text-amber-400 text-base opacity-50">
+          ⭐
+        </span>
+        <span className="absolute top-[18rem] right-[38%] text-purple-400 text-sm opacity-60">
+          ✨
+        </span>
+        <span className="absolute top-[32rem] right-[18%] text-yellow-400 text-lg opacity-70">
+          ⭐
+        </span>
+        <span className="absolute bottom-[16rem] left-[32%] text-pink-400 text-sm opacity-60">
+          ✨
+        </span>
+
         {/* Rainbow element */}
         <div className="absolute top-[12rem] left-[26%] hidden xl:block">
           <RainbowDecor />
@@ -390,7 +656,7 @@ export function WhyChooseUs() {
         {/* --- 3D illustrations positioned in four corners (using viewport margins for safety) --- */}
 
         {/* Top Left: Teddy Bear, ABC blocks, Ring stacking toy */}
-        <div 
+        <div
           className="absolute top-[5rem] sm:top-[9rem] -left-6 sm:left-4 lg:left-16 xl:left-28 2xl:left-40 w-[6.5rem] sm:w-[9rem] xl:w-[13rem] 2xl:w-[14.5rem] transition-all duration-300 mix-blend-multiply"
           style={{ mixBlendMode: "multiply" }}
         >
@@ -398,16 +664,16 @@ export function WhyChooseUs() {
           <div className="absolute -top-10 sm:-top-20 left-4 sm:left-10 scale-75 sm:scale-100">
             <SunDecor />
           </div>
-          <img 
-            src={teddyBearToys} 
-            alt="Teddy Bear, Blocks & Rings" 
+          <img
+            src={teddyBearToys}
+            alt="Teddy Bear, Blocks & Rings"
             className="w-full h-auto object-contain mix-blend-multiply"
             style={{ mixBlendMode: "multiply" }}
           />
         </div>
 
         {/* Top Right: Blue school bag, Pencil holder, Globe */}
-        <div 
+        <div
           className="absolute top-[5rem] sm:top-[9rem] -right-8 sm:right-4 lg:right-16 xl:right-28 2xl:right-40 w-[7.5rem] sm:w-[10rem] xl:w-[14rem] 2xl:w-[15.5rem] transition-all duration-300 mix-blend-multiply"
           style={{ mixBlendMode: "multiply" }}
         >
@@ -415,9 +681,9 @@ export function WhyChooseUs() {
           <div className="absolute -top-10 sm:-top-20 right-4 sm:right-10 scale-75 sm:scale-100 origin-top-right">
             <AirplaneDecor />
           </div>
-          <img 
-            src={schoolBackpackGlobe} 
-            alt="School Backpack & Globe" 
+          <img
+            src={schoolBackpackGlobe}
+            alt="School Backpack & Globe"
             className="w-full h-auto object-contain mix-blend-multiply"
             style={{ mixBlendMode: "multiply" }}
           />
@@ -435,7 +701,6 @@ export function WhyChooseUs() {
       </div>
 
       <div className="mx-auto max-w-[1360px] px-6 lg:px-8 relative z-10 w-full flex flex-col justify-between h-full">
-        
         {/* Content Wrapper */}
         <div className="relative z-10 w-full flex flex-col justify-between h-full">
           {/* Header */}
@@ -443,8 +708,7 @@ export function WhyChooseUs() {
             <h2 className="font-display text-4xl font-extrabold leading-[1.1] text-[#162A8A] sm:text-5xl lg:text-[64px] text-balance">
               Where Little Minds <br className="hidden sm:inline" />
               <span className="text-[#FF5C8A]">Learn</span>{" "}
-              <span className="text-[#FFB800]">&</span>{" "}
-              <span className="text-[#53C46B]">Grow</span>
+              <span className="text-[#FFB800]">&</span> <span className="text-[#53C46B]">Grow</span>
             </h2>
             <p className="mt-5 text-sm sm:text-base text-[#162A8A]/70 max-w-[700px] mx-auto font-medium leading-relaxed">
               The little details that make Little Scholars a place children love and parents trust.
@@ -472,19 +736,15 @@ export function WhyChooseUs() {
                   <div className="relative z-10 flex flex-col h-full justify-between">
                     <div>
                       {/* Large circular icon (72px) with transparent image */}
-                      <div className={`inline-grid h-[72px] w-[72px] place-items-center rounded-full ${it.badgeBg} border ${it.badgeBorder} transition-transform duration-300 group-hover:scale-105 shadow-sm overflow-hidden`}>
-                        <img 
-                          src={it.img} 
-                          alt={it.t} 
-                          className="w-full h-full object-contain"
-                        />
+                      <div
+                        className={`inline-grid h-[72px] w-[72px] place-items-center rounded-full ${it.badgeBg} border ${it.badgeBorder} transition-transform duration-300 group-hover:scale-105 shadow-sm overflow-hidden`}
+                      >
+                        <img src={it.img} alt={it.t} className="w-full h-full object-contain" />
                       </div>
                       <h3 className="mt-4 font-display text-lg font-bold text-[#162A8A] leading-snug">
                         {it.t}
                       </h3>
-                      <p className="mt-1.5 text-[13px] leading-relaxed text-[#162A8A]/70">
-                        {it.d}
-                      </p>
+                      <p className="mt-1.5 text-[13px] leading-relaxed text-[#162A8A]/70">{it.d}</p>
                     </div>
                   </div>
                 </motion.article>
@@ -499,7 +759,7 @@ export function WhyChooseUs() {
                 <span className="text-base">🛡️</span>
                 <span>Safe Environment</span>
               </div>
-              
+
               <div className="flex items-center gap-2.5 text-sm font-bold text-[#162A8A] sm:border-l sm:border-[#C4BFFF]/80 sm:pl-6 lg:pl-10">
                 <span className="text-base">👩‍🏫</span>
                 <span>Certified Educators</span>
@@ -516,7 +776,6 @@ export function WhyChooseUs() {
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </section>

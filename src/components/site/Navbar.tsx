@@ -19,9 +19,9 @@ export function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 15);
-      
+
       const scrollPosition = window.scrollY + 160;
-      
+
       for (const link of links) {
         const id = link.href.split("#")[1];
         const el = document.getElementById(id);
@@ -34,7 +34,7 @@ export function Navbar() {
           }
         }
       }
-      
+
       if (window.scrollY < 100) {
         setActiveSection("");
       }
@@ -65,8 +65,8 @@ export function Navbar() {
         open
           ? "bg-white border-b border-border/20 shadow-lg h-auto pb-6"
           : scrolled
-          ? "bg-white/90 backdrop-blur-md border-b border-border/20 h-[90px]"
-          : "bg-transparent h-[90px]"
+            ? "bg-white/90 backdrop-blur-md border-b border-border/20 h-[90px]"
+            : "bg-transparent h-[90px]"
       }`}
     >
       <nav className="mx-auto flex h-[90px] max-w-[1440px] items-center justify-between px-6 md:px-12">
@@ -74,10 +74,10 @@ export function Navbar() {
           <div className="grid h-16 w-16 place-items-center p-1">
             <img src={logoAsset} alt="Little Scholars" className="h-full w-full object-contain" />
           </div>
-          <img 
-            src="/logo-title.png" 
-            alt="Little Scholars International Preschool" 
-            className="h-14 md:h-[70px] w-auto object-contain" 
+          <img
+            src="/logo-title.png"
+            alt="Little Scholars International Preschool"
+            className="h-14 md:h-[70px] w-auto object-contain"
           />
         </a>
 

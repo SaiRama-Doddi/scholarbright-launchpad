@@ -8,7 +8,11 @@ const pillars = [
   { t: "Creativity", d: "Art, music and free play to set young imaginations free.", icon: "✿" },
   { t: "Social Skills", d: "Friendships, sharing and confidence in a kind community.", icon: "♥" },
   { t: "Communication", d: "Expressive language built through conversation and rhyme.", icon: "✎" },
-  { t: "Emotional Growth", d: "Empathy, resilience and self-awareness, gently nurtured.", icon: "❋" },
+  {
+    t: "Emotional Growth",
+    d: "Empathy, resilience and self-awareness, gently nurtured.",
+    icon: "❋",
+  },
   { t: "Interactive Education", d: "Smart-board lessons and hands-on discovery zones.", icon: "▣" },
 ];
 
@@ -40,8 +44,12 @@ export function LearningEnvironment() {
 
             {/* floating badge */}
             <div className="absolute -bottom-6 -right-4 w-56 rounded-3xl glass p-4 shadow-[var(--shadow-soft)] animate-float">
-              <div className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Learning Style</div>
-              <div className="mt-1 font-display text-2xl font-bold text-primary-deep">Activity-Based</div>
+              <div className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
+                Learning Style
+              </div>
+              <div className="mt-1 font-display text-2xl font-bold text-primary-deep">
+                Activity-Based
+              </div>
               <div className="text-xs text-foreground/70">Learning by doing</div>
             </div>
             <div className="absolute -top-5 -left-5 grid h-16 w-16 place-items-center rounded-2xl gradient-gold shadow-[var(--shadow-gold)] animate-float-rev">
@@ -57,8 +65,8 @@ export function LearningEnvironment() {
               <span className="gradient-text-gold">bloom in their own way.</span>
             </h2>
             <p className="mt-5 text-lg leading-relaxed text-foreground/75">
-              From storytime to STEM corners, every moment is designed to balance discovery with joy —
-              so children grow into confident, kind, curious humans.
+              From storytime to STEM corners, every moment is designed to balance discovery with joy
+              — so children grow into confident, kind, curious humans.
             </p>
 
             <ul className="mt-8 grid gap-3 sm:grid-cols-2">

@@ -72,7 +72,11 @@ export function Testimonials() {
               <div className="relative rounded-[2.25rem] bg-card p-8 pt-10 sm:p-10 shadow-[0_20px_50px_-12px_rgba(7,29,131,0.08)] ring-1 ring-border/50">
                 {/* Custom Quote Icon Offset */}
                 <span className="absolute -top-6 left-8 flex h-12 w-12 items-center justify-center rounded-2xl bg-orange-500 text-white shadow-lg shadow-orange-500/30">
-                  <svg className="h-6 w-6 transform scale-x-[-1]" fill="currentColor" viewBox="0 0 24 24">
+                  <svg
+                    className="h-6 w-6 transform scale-x-[-1]"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
                     <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.851h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.851h3.999v10h-10z" />
                   </svg>
                 </span>
@@ -129,7 +133,7 @@ export function Testimonials() {
             <div className="relative w-full max-w-[340px] sm:max-w-[360px] aspect-square flex items-center justify-center">
               {/* Outer decorative dashed circle */}
               <div className="absolute inset-0 rounded-full border-2 border-dashed border-orange-300/80 animate-float-rev" />
-              
+
               {/* Inner container with solid circle border */}
               <div className="absolute inset-4 rounded-full border border-orange-200/60 p-2.5 bg-white/70 shadow-[var(--shadow-soft)]">
                 {/* Circular image */}

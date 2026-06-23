@@ -49,25 +49,51 @@
   --animate-marquee: marquee 40s linear infinite;
 
   @keyframes float-slow {
-    0%, 100% { transform: translateY(0) rotate(0deg); }
-    50% { transform: translateY(-18px) rotate(4deg); }
+    0%,
+    100% {
+      transform: translateY(0) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-18px) rotate(4deg);
+    }
   }
   @keyframes float-slower {
-    0%, 100% { transform: translateY(0) rotate(0deg); }
-    50% { transform: translateY(14px) rotate(-5deg); }
+    0%,
+    100% {
+      transform: translateY(0) rotate(0deg);
+    }
+    50% {
+      transform: translateY(14px) rotate(-5deg);
+    }
   }
   @keyframes fade-up {
-    from { opacity: 0; transform: translateY(24px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+      opacity: 0;
+      transform: translateY(24px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
   @keyframes pulse-ring {
-    0% { box-shadow: 0 0 0 0 color-mix(in oklab, var(--accent) 55%, transparent); }
-    70% { box-shadow: 0 0 0 18px color-mix(in oklab, var(--accent) 0%, transparent); }
-    100% { box-shadow: 0 0 0 0 color-mix(in oklab, var(--accent) 0%, transparent); }
+    0% {
+      box-shadow: 0 0 0 0 color-mix(in oklab, var(--accent) 55%, transparent);
+    }
+    70% {
+      box-shadow: 0 0 0 18px color-mix(in oklab, var(--accent) 0%, transparent);
+    }
+    100% {
+      box-shadow: 0 0 0 0 color-mix(in oklab, var(--accent) 0%, transparent);
+    }
   }
   @keyframes marquee {
-    from { transform: translateX(0); }
-    to { transform: translateX(-50%); }
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
   }
 }
 
@@ -75,20 +101,20 @@
   --radius: 1rem;
 
   /* Brand colors — #373A98 royal blue, #F4B223 golden yellow, #FFFDF7 light cream */
-  --background: oklch(0.992 0.008 95);            /* #FFFDF7 light cream */
-  --foreground: oklch(0.22 0.09 268);             /* deep navy text */
+  --background: oklch(0.992 0.008 95); /* #FFFDF7 light cream */
+  --foreground: oklch(0.22 0.09 268); /* deep navy text */
   --cream: oklch(0.985 0.012 90);
 
-  --card: oklch(1 0 0);                           /* #FFFFFF */
+  --card: oklch(1 0 0); /* #FFFFFF */
   --card-foreground: oklch(0.22 0.09 268);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.22 0.09 268);
 
-  --primary: oklch(0.34 0.18 269);                /* #373A98 royal blue */
+  --primary: oklch(0.34 0.18 269); /* #373A98 royal blue */
   --primary-foreground: oklch(0.992 0.008 95);
   --primary-deep: oklch(0.27 0.16 269);
 
-  --accent: oklch(0.79 0.16 78);                  /* #F4B223 golden yellow */
+  --accent: oklch(0.79 0.16 78); /* #F4B223 golden yellow */
   --accent-foreground: oklch(0.22 0.09 268);
 
   --secondary: oklch(0.95 0.03 90);
@@ -106,7 +132,9 @@
 }
 
 @layer base {
-  * { border-color: var(--color-border); }
+  * {
+    border-color: var(--color-border);
+  }
   html {
     scroll-behavior: smooth;
   }
@@ -119,7 +147,13 @@
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
   }
-  h1, h2, h3, h4 { font-family: var(--font-display); letter-spacing: -0.02em; }
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
 }
 
 /* ---------- Custom Utilities ---------- */
@@ -138,15 +172,30 @@
 }
 
 @utility gradient-royal {
-  background-image: linear-gradient(135deg, var(--primary-deep), var(--primary) 55%, oklch(0.55 0.2 270));
+  background-image: linear-gradient(
+    135deg,
+    var(--primary-deep),
+    var(--primary) 55%,
+    oklch(0.55 0.2 270)
+  );
 }
 
 @utility gradient-gold {
-  background-image: linear-gradient(135deg, oklch(0.88 0.16 92), var(--accent) 60%, oklch(0.72 0.18 75));
+  background-image: linear-gradient(
+    135deg,
+    oklch(0.88 0.16 92),
+    var(--accent) 60%,
+    oklch(0.72 0.18 75)
+  );
 }
 
 @utility gradient-text-gold {
-  background-image: linear-gradient(135deg, oklch(0.92 0.14 95), var(--accent) 60%, oklch(0.78 0.17 70));
+  background-image: linear-gradient(
+    135deg,
+    oklch(0.92 0.14 95),
+    var(--accent) 60%,
+    oklch(0.78 0.17 70)
+  );
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -157,7 +206,9 @@
 }
 
 @utility hover-lift {
-  transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.4s ease;
+  transition:
+    transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1),
+    box-shadow 0.4s ease;
 }
 .hover-lift:hover {
   transform: translateY(-6px);
@@ -172,7 +223,7 @@
 .hero-visual {
   border-radius: 40px;
   overflow: hidden;
-  box-shadow: 0 40px 100px rgba(7,29,131,0.14);
+  box-shadow: 0 40px 100px rgba(7, 29, 131, 0.14);
   transform: translateZ(0);
 }
 .hero-image {
@@ -181,7 +232,7 @@
   height: 100%;
   object-fit: cover;
   transform: scale(1.02);
-  transition: transform 650ms cubic-bezier(0.2,0.9,0.2,1);
+  transition: transform 650ms cubic-bezier(0.2, 0.9, 0.2, 1);
 }
 .hero-visual:hover .hero-image {
   transform: scale(1.04);
@@ -190,7 +241,7 @@
 .testimonial-card {
   border-radius: 28px;
   padding: 1rem 1.25rem;
-  box-shadow: 0 30px 80px rgba(7,29,131,0.16);
+  box-shadow: 0 30px 80px rgba(7, 29, 131, 0.16);
   border: 1px solid color-mix(in oklab, var(--primary-deep) 8%, transparent);
 }
 
@@ -206,11 +257,20 @@
   letter-spacing: 0.06em;
 }
 
-.hero-wave svg path { fill: var(--primary-deep); }
+.hero-wave svg path {
+  fill: var(--primary-deep);
+}
 
 @media (max-width: 1024px) {
-  .hero-visual { width: 100% !important; height: 420px !important; border-radius: 28px; }
-  .testimonial-card { width: auto; margin: 0 auto; }
+  .hero-visual {
+    width: 100% !important;
+    height: 420px !important;
+    border-radius: 28px;
+  }
+  .testimonial-card {
+    width: auto;
+    margin: 0 auto;
+  }
 }
 
 /* ---------- Daily Schedule Split Screen Grid & Card (Full Bleed on Desktop) ---------- */
@@ -253,7 +313,3 @@
     padding-right: max(3rem, calc((100vw - 1280px) / 2 + 3rem));
   }
 }
-
-
-
-

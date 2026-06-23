@@ -17,11 +17,14 @@ export function Footer() {
               </div>
               <div className="leading-tight">
                 <div className="font-display text-lg font-bold">Little Scholars</div>
-                <div className="text-[11px] uppercase tracking-[0.18em] text-white/60">International Preschool</div>
+                <div className="text-[11px] uppercase tracking-[0.18em] text-white/60">
+                  International Preschool
+                </div>
               </div>
             </div>
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-white/75">
-              Inspiring future leaders through joyful, holistic early-childhood education in the heart of Srikakulam.
+              Inspiring future leaders through joyful, holistic early-childhood education in the
+              heart of Srikakulam.
             </p>
             <div className="mt-5 flex gap-2">
               {["f", "in", "ig", "yt"].map((s) => (
@@ -37,8 +40,14 @@ export function Footer() {
             </div>
           </div>
 
-          <FootCol title="Programs" items={["Day Care", "Play Group", "Nursery", "Junior KG", "Senior KG"]} />
-          <FootCol title="School" items={["About", "Facilities", "Gallery", "Testimonials", "Admissions"]} />
+          <FootCol
+            title="Programs"
+            items={["Day Care", "Play Group", "Nursery", "Junior KG", "Senior KG"]}
+          />
+          <FootCol
+            title="School"
+            items={["About", "Facilities", "Gallery", "Testimonials", "Admissions"]}
+          />
           <FootCol
             title="Contact"
             items={[
@@ -51,7 +60,10 @@ export function Footer() {
         </div>
 
         <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-white/10 pt-6 text-xs text-white/60 sm:flex-row">
-          <div>© {new Date().getFullYear()} Little Scholars International Preschool. All rights reserved.</div>
+          <div>
+            © {new Date().getFullYear()} Little Scholars International Preschool. All rights
+            reserved.
+          </div>
           <div>Inspiring Future Leaders ✦</div>
         </div>
       </div>
@@ -65,7 +77,11 @@ function FootCol({ title, items }: { title: string; items: string[] }) {
       <div className="text-[11px] font-bold uppercase tracking-[0.22em] text-accent">{title}</div>
       <ul className="mt-4 space-y-2 text-sm text-white/80">
         {items.map((i) => (
-          <li key={i}><a href="#" className="transition hover:text-white">{i}</a></li>
+          <li key={i}>
+            <a href="#" className="transition hover:text-white">
+              {i}
+            </a>
+          </li>
         ))}
       </ul>
     </div>
