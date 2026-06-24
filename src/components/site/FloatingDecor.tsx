@@ -679,23 +679,29 @@ export function FloatingDecor({ section }: { section: keyof typeof config }) {
               right: it.right,
             }}
             animate={{
-              y: [0, -18, 0],
-              x: [0, 8, -8, 0],
-              rotate: [-12, 12, -12],
+              y: [0, -25, 0],
+              x: [0, 12, -12, 0],
+              rotate: [-15, 15, -15],
+              scale: [1, 1.05, 1],
             }}
             transition={{
               y: {
-                duration: 6 + (i % 3) * 3,
+                duration: 5 + (i % 3) * 2,
                 repeat: Infinity,
                 ease: "easeInOut",
               },
               x: {
-                duration: 7 + (i % 3) * 2.5,
+                duration: 6 + (i % 3) * 2,
                 repeat: Infinity,
                 ease: "easeInOut",
               },
               rotate: {
-                duration: 8 + (i % 2) * 4,
+                duration: 7 + (i % 2) * 3,
+                repeat: Infinity,
+                ease: "easeInOut",
+              },
+              scale: {
+                duration: 4 + (i % 2) * 2,
                 repeat: Infinity,
                 ease: "easeInOut",
               },

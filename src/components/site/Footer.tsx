@@ -1,8 +1,10 @@
 import logoAsset from "@/assets/little.png";
+import { FloatingDecor } from "./FloatingDecor";
 
 export function Footer() {
   return (
     <footer className="relative overflow-hidden bg-primary-deep text-white">
+      <FloatingDecor section="contact" />
       <div aria-hidden className="pointer-events-none absolute inset-0">
         <div className="absolute -top-32 right-1/4 h-80 w-80 rounded-full bg-accent/20 blur-3xl" />
         <div className="absolute -bottom-32 -left-10 h-80 w-80 rounded-full bg-primary/40 blur-3xl" />
