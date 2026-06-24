@@ -27,16 +27,15 @@ export function Footer() {
               heart of Srikakulam.
             </p>
             <div className="mt-5 flex gap-2">
-              {["f", "in", "ig", "yt"].map((s) => (
-                <a
-                  key={s}
-                  href="#"
-                  aria-label={`Social ${s}`}
-                  className="grid h-10 w-10 place-items-center rounded-full bg-white/10 text-sm font-semibold transition hover:bg-accent hover:text-primary-deep"
-                >
-                  {s}
-                </a>
-              ))}
+              <a
+                href="https://www.instagram.com/littlescholars2ips?utm_source=qr&igsh=dnU4dWZ4czAzOHcy"
+                aria-label="Instagram"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="grid h-10 w-10 place-items-center rounded-full bg-white/10 text-sm font-semibold transition hover:bg-accent hover:text-primary-deep"
+              >
+                ig
+              </a>
             </div>
           </div>
 
