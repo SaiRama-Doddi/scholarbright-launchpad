@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import learningImg from "@/assets/learning-environment.jpg";
+import learningImg from "@/assets/18.png";
 import { SectionEyebrow } from "./About";
 import { FloatingDecor } from "./FloatingDecor";
 

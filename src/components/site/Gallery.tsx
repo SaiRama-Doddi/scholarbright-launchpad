@@ -18,6 +18,7 @@ import img13 from "@/assets/13.jfif";
 import img14 from "@/assets/14.jfif";
 import img15 from "@/assets/15.jfif";
 import img16 from "@/assets/16.jfif";
+import img17 from "@/assets/17.jfif";
 
 const photos = [
   { src: img1, alt: "Gallery image 1", label: "Moment 1" },
@@ -36,6 +37,7 @@ const photos = [
   { src: img14, alt: "Gallery image 14", label: "Moment 14" },
   { src: img15, alt: "Gallery image 15", label: "Moment 15" },
   { src: img16, alt: "Gallery image 16", label: "Moment 16" },
+  { src: img17, alt: "Gallery image 17", label: "Moment 17" },
 ];
 
 export function Gallery() {

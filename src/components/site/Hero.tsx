@@ -1,14 +1,12 @@
 import { useEffect, useState } from "react";
 import { GraduationCap, ShieldCheck, Users, Globe, Calendar, Star, User } from "lucide-react";
-import heroImg from "@/assets/hero-children.jpg";
 import logoAsset from "@/assets/little.png";
-import gallery1 from "@/assets/gallery-1.jpg";
-import gallery2 from "@/assets/gallery-2.jpg";
-import gallery3 from "@/assets/gallery-3.jpg";
-import gallery4 from "@/assets/gallery-4.jpg";
+import img19 from "@/assets/19.jfif";
+import img20 from "@/assets/20.jfif";
+import img21 from "@/assets/21.jfif";
 import { FloatingDecor } from "./FloatingDecor";
 
-const carouselImages = [heroImg, gallery1, gallery2, gallery3, gallery4];
+const carouselImages = [img19, img20, img21];
 
 export function Hero() {
   const [imgIndex, setImgIndex] = useState(0);
