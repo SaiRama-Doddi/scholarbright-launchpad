@@ -95,7 +95,7 @@ export function Gallery() {
                 loading="lazy"
                 width={1024}
                 height={1024}
-                className="h-full w-full object-cover transition duration-700 group-hover:scale-110"
+                className="h-48 w-full object-cover transition duration-700 group-hover:scale-110 md:h-auto md:aspect-square"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary-deep/70 via-primary-deep/0 to-transparent opacity-90 transition group-hover:opacity-100" />
               <figcaption className="absolute bottom-3 left-3 rounded-full glass px-3 py-1 text-xs font-semibold text-primary-deep">
