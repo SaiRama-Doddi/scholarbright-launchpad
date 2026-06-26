@@ -2,43 +2,39 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { SectionEyebrow } from "./About";
 import { FloatingDecor } from "./FloatingDecor";
-import img1 from "@/assets/1.jfif";
-import img2 from "@/assets/2.jfif";
-import img3 from "@/assets/3.jfif";
-import img4 from "@/assets/4.jfif";
-import img5 from "@/assets/5.jfif";
-import img6 from "@/assets/6.jfif";
-import img7 from "@/assets/7.jfif";
-import img8 from "@/assets/8.jfif";
-import img9 from "@/assets/9.jfif";
-import img10 from "@/assets/10.jfif";
-import img11 from "@/assets/11.jfif";
-import img12 from "@/assets/12.jfif";
-import img13 from "@/assets/13.jfif";
-import img14 from "@/assets/14.jfif";
-import img15 from "@/assets/15.jfif";
-import img16 from "@/assets/16.jfif";
-import img17 from "@/assets/17.jfif";
+const imageModules = import.meta.glob<string>("../../assets/gallery/*.{jfif,png,jpg,jpeg,webp}", {
+  eager: true,
+  import: "default",
+});
 
-const photos = [
-  { src: img1, alt: "Gallery image 1", label: "Moment 1" },
-  { src: img2, alt: "Gallery image 2", label: "Moment 2" },
-  { src: img3, alt: "Gallery image 3", label: "Moment 3" },
-  { src: img4, alt: "Gallery image 4", label: "Moment 4" },
-  { src: img5, alt: "Gallery image 5", label: "Moment 5" },
-  { src: img6, alt: "Gallery image 6", label: "Moment 6" },
-  { src: img7, alt: "Gallery image 7", label: "Moment 7" },
-  { src: img8, alt: "Gallery image 8", label: "Moment 8" },
-  { src: img9, alt: "Gallery image 9", label: "Moment 9" },
-  { src: img10, alt: "Gallery image 10", label: "Moment 10" },
-  { src: img11, alt: "Gallery image 11", label: "Moment 11" },
-  { src: img12, alt: "Gallery image 12", label: "Moment 12" },
-  { src: img13, alt: "Gallery image 13", label: "Moment 13" },
-  { src: img14, alt: "Gallery image 14", label: "Moment 14" },
-  { src: img15, alt: "Gallery image 15", label: "Moment 15" },
-  { src: img16, alt: "Gallery image 16", label: "Moment 16" },
-  { src: img17, alt: "Gallery image 17", label: "Moment 17" },
-];
+const sortedImages = Object.entries(imageModules)
+  .map(([path, src]) => {
+    const filename = path.split("/").pop()?.split(".")[0] || "";
+    return { path, src, filename };
+  })
+  .sort((a, b) => {
+    const aNum = parseInt(a.filename, 10);
+    const bNum = parseInt(b.filename, 10);
+    const aIsNum = !isNaN(aNum);
+    const bIsNum = !isNaN(bNum);
+
+    if (aIsNum && bIsNum) return aNum - bNum;
+    if (aIsNum) return -1;
+    if (bIsNum) return 1;
+    return a.filename.localeCompare(b.filename);
+  });
+
+const photos = sortedImages.map((img) => {
+  const isNumeric = !isNaN(parseInt(img.filename, 10));
+  const label = isNumeric
+    ? `Moment ${img.filename}`
+    : img.filename.charAt(0).toUpperCase() + img.filename.slice(1);
+  return {
+    src: img.src,
+    alt: `Gallery image - ${label}`,
+    label,
+  };
+});
 
 export function Gallery() {
   const [idx, setIdx] = useState<number | null>(null);

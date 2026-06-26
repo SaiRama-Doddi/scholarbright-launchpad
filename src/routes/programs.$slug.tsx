@@ -38,12 +38,12 @@ import {
   Home,
 } from "lucide-react";
 
-import g1 from "@/assets/gallery-1.jpg";
-import g2 from "@/assets/gallery-2.jpg";
-import g3 from "@/assets/gallery-3.jpg";
-import g4 from "@/assets/gallery-4.jpg";
-import g5 from "@/assets/gallery-5.jpg";
-import g6 from "@/assets/gallery-6.jpg";
+import g1 from "@/assets/gallery/1.jfif";
+import g2 from "@/assets/gallery/2.jfif";
+import g3 from "@/assets/gallery/3.jfif";
+import g4 from "@/assets/gallery/4.jfif";
+import g5 from "@/assets/gallery/5.jfif";
+import g6 from "@/assets/gallery/6.jfif";
 
 import teddyBearToys from "@/assets/teddy-bear-toys.png";
 import mockupSun from "@/assets/mockup-sun.png";

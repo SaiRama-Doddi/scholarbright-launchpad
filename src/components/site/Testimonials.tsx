@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { FloatingDecor } from "./FloatingDecor";
-import parentChildImg from "@/assets/parent_child_testimonial.png";
+import parentImg1 from "@/assets/parent/1.jfif";
+import parentImg2 from "@/assets/parent/2.jfif";
+import parentImg3 from "@/assets/parent/3.jfif";
+import parentImg4 from "@/assets/parent/4.jfif";
 
 const reviews = [
   {
@@ -10,6 +13,8 @@ const reviews = [
     quote:
       "The play-based learning curriculum is fantastic. My daughter has become so expressive, social, and creative within just a few months.",
     rating: 5,
+    image: parentImg1,
+    position: "center 18%",
   },
   {
     name: "Sneha R.",
@@ -17,6 +22,8 @@ const reviews = [
     quote:
       "The teachers are incredibly patient and warm. Aarav has grown so confident in just a few months — we genuinely feel he's in the safest place.",
     rating: 5,
+    image: parentImg2,
+    position: "center 28%",
   },
   {
     name: "Karthik M.",
@@ -24,6 +31,8 @@ const reviews = [
     quote:
       "Clean campus, attentive caregivers and a curriculum that actually engages the kids. Worth every bit of our trust.",
     rating: 5,
+    image: parentImg3,
+    position: "center 15%",
   },
   {
     name: "Lakshmi P.",
@@ -31,6 +40,8 @@ const reviews = [
     quote:
       "From sanitisation to CCTV to the daily reports — Little Scholars sets a new benchmark for preschools in Srikakulam.",
     rating: 5,
+    image: parentImg4,
+    position: "center 22%",
   },
 ];
 
@@ -128,21 +139,29 @@ export function Testimonials() {
             </div>
           </div>
 
-          {/* Right Column: Circular Portrait Frame */}
+          {/* Right Column: Rounded Photo Frame */}
           <div className="lg:col-span-5 flex justify-center items-center">
-            <div className="relative w-full max-w-[340px] sm:max-w-[360px] aspect-square flex items-center justify-center">
-              {/* Outer decorative dashed circle */}
-              <div className="absolute inset-0 rounded-full border-2 border-dashed border-orange-300/80 animate-float-rev" />
+            <div className="relative w-full max-w-[380px] sm:max-w-[400px] aspect-[4/3] flex items-center justify-center">
+              {/* Outer decorative dashed frame */}
+              <div className="absolute inset-0 rounded-[2.5rem] border-2 border-dashed border-orange-300/80 animate-float-rev" />
 
-              {/* Inner container with solid circle border */}
-              <div className="absolute inset-4 rounded-full border border-orange-200/60 p-2.5 bg-white/70 shadow-[var(--shadow-soft)]">
-                {/* Circular image */}
-                <div className="h-full w-full rounded-full overflow-hidden shadow-inner">
-                  <img
-                    src={parentChildImg}
-                    alt="Happy mother hugging her daughter"
-                    className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
-                  />
+              {/* Inner container with solid rounded border */}
+              <div className="absolute inset-3 rounded-[2.25rem] border border-orange-200/60 p-2 bg-white/70 shadow-[var(--shadow-soft)]">
+                {/* Rounded image */}
+                <div className="h-full w-full rounded-[2rem] overflow-hidden shadow-inner relative">
+                  <AnimatePresence mode="wait">
+                    <motion.img
+                      key={i}
+                      src={r.image}
+                      alt={`Parent testimonial - ${r.name}`}
+                      initial={{ opacity: 0, scale: 0.95 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      exit={{ opacity: 0, scale: 0.95 }}
+                      transition={{ duration: 0.4 }}
+                      style={{ objectPosition: r.position || "center" }}
+                      className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 hover:scale-105"
+                    />
+                  </AnimatePresence>
                 </div>
               </div>
 

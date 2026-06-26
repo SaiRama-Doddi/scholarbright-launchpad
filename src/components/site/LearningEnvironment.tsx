@@ -1,19 +1,15 @@
 import { motion } from "motion/react";
-import learningImg from "@/assets/18.png";
+import schoolBuildingImg from "@/assets/school-building.png";
 import { SectionEyebrow } from "./About";
 import { FloatingDecor } from "./FloatingDecor";
 
 const pillars = [
-  { t: "Fun Learning", d: "Curiosity sparked through games, songs and stories.", icon: "✦" },
-  { t: "Creativity", d: "Art, music and free play to set young imaginations free.", icon: "✿" },
-  { t: "Social Skills", d: "Friendships, sharing and confidence in a kind community.", icon: "♥" },
-  { t: "Communication", d: "Expressive language built through conversation and rhyme.", icon: "✎" },
-  {
-    t: "Emotional Growth",
-    d: "Empathy, resilience and self-awareness, gently nurtured.",
-    icon: "❋",
-  },
-  { t: "Interactive Education", d: "Smart-board lessons and hands-on discovery zones.", icon: "▣" },
+  { t: "Bright Classrooms", d: "Spacious, well-ventilated, AC rooms filled with natural light.", icon: "🏫" },
+  { t: "Safe Playgrounds", d: "Secure outdoor zones with premium, child-safe play equipment.", icon: "🛝" },
+  { t: "Discovery Zones", d: "Interactive STEM corners and sensory labs for hands-on learning.", icon: "🔬" },
+  { t: "Creative Studios", d: "Dedicated spaces for art, craft, music, and dramatic play.", icon: "🎨" },
+  { t: "Secure Campus", d: "Continuous CCTV monitoring and child-safe infrastructure.", icon: "🛡️" },
+  { t: "Nature & Greenery", d: "Lush outdoor green spaces connecting children with nature.", icon: "🌱" },
 ];
 
 export function LearningEnvironment() {
@@ -32,8 +28,8 @@ export function LearningEnvironment() {
           >
             <div className="relative overflow-hidden rounded-[2.25rem] shadow-[var(--shadow-glow)] ring-1 ring-white/60">
               <img
-                src={learningImg}
-                alt="Children reading and learning in a bright preschool environment"
+                src={schoolBuildingImg}
+                alt="Beautiful state-of-the-art preschool campus"
                 width={1280}
                 height={1024}
                 loading="lazy"
@@ -45,28 +41,27 @@ export function LearningEnvironment() {
             {/* floating badge */}
             <div className="absolute -bottom-6 -right-4 w-56 rounded-3xl glass p-4 shadow-[var(--shadow-soft)] animate-float">
               <div className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
-                Learning Style
+                Campus Environment
               </div>
               <div className="mt-1 font-display text-2xl font-bold text-primary-deep">
-                Activity-Based
+                State-of-the-Art
               </div>
-              <div className="text-xs text-foreground/70">Learning by doing</div>
+              <div className="text-xs text-foreground/70">Designed for discovery</div>
             </div>
             <div className="absolute -top-5 -left-5 grid h-16 w-16 place-items-center rounded-2xl gradient-gold shadow-[var(--shadow-gold)] animate-float-rev">
-              <span className="text-2xl">✏︎</span>
+              <span className="text-2xl">🏫</span>
             </div>
           </motion.div>
 
           {/* Content side */}
           <div>
-            <SectionEyebrow>Learning Environment</SectionEyebrow>
+            <SectionEyebrow>Our Campus</SectionEyebrow>
             <h2 className="mt-4 font-display text-4xl font-bold leading-tight text-primary-deep sm:text-5xl text-balance">
-              An environment that helps every child{" "}
-              <span className="gradient-text-gold">bloom in their own way.</span>
+              A safe, vibrant campus where{" "}
+              <span className="gradient-text-gold">curiosity blooms.</span>
             </h2>
             <p className="mt-5 text-lg leading-relaxed text-foreground/75">
-              From storytime to STEM corners, every moment is designed to balance discovery with joy
-              — so children grow into confident, kind, curious humans.
+              Our custom-built preschool campus features secure AC classrooms, interactive discovery zones, and wide-open play areas—all designed to give your child the perfect atmosphere to learn, play, and grow.
             </p>
 
             <ul className="mt-8 grid gap-3 sm:grid-cols-2">

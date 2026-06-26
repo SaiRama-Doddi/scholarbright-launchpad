@@ -1,12 +1,28 @@
 import { useEffect, useState } from "react";
 import { GraduationCap, ShieldCheck, Users, Globe, Calendar, Star, User } from "lucide-react";
 import logoAsset from "@/assets/little.png";
-import img19 from "@/assets/19.jfif";
-import img20 from "@/assets/20.jfif";
-import img21 from "@/assets/21.jfif";
+import heroChildren from "@/assets/hero-children.jpg";
+import learningEnvironment from "@/assets/learning-environment.jpg";
+import schoolBuilding from "@/assets/school-building.png";
+import gallery1 from "@/assets/gallery/1.jfif";
+import gallery2 from "@/assets/gallery/2.jfif";
+import gallery3 from "@/assets/gallery/3.jfif";
+import gallery4 from "@/assets/gallery/4.jfif";
+import gallery5 from "@/assets/gallery/5.jfif";
+import gallery6 from "@/assets/gallery/6.jfif";
 import { FloatingDecor } from "./FloatingDecor";
 
-const carouselImages = [img19, img20, img21];
+const carouselImages = [
+  heroChildren,
+  schoolBuilding,
+  learningEnvironment,
+  gallery1,
+  gallery2,
+  gallery3,
+  gallery4,
+  gallery5,
+  gallery6,
+];
 
 export function Hero() {
   const [imgIndex, setImgIndex] = useState(0);
@@ -119,9 +135,9 @@ export function Hero() {
         </div>
 
         {/* right: visual */}
-        <div className="relative animate-fade-up [animation-delay:120ms] hidden lg:block">
+        <div className="relative animate-fade-up [animation-delay:120ms] block mt-12 lg:mt-0">
           <div className="relative">
-            <div className="relative overflow-hidden rounded-[2rem] shadow-[0_12px_40px_rgba(0,0,0,0.08)] ring-1 ring-white/60 h-[390px] min-h-[300px] max-h-[500px]">
+            <div className="relative overflow-hidden rounded-[2rem] shadow-[0_12px_40px_rgba(0,0,0,0.08)] ring-1 ring-white/60 h-[280px] sm:h-[350px] lg:h-[390px]">
               {carouselImages.map((img, idx) => (
                 <img
                   key={img}
