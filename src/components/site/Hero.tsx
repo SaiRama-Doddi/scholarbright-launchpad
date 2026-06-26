@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { GraduationCap, ShieldCheck, Users, Globe, Calendar, Star, User } from "lucide-react";
 import logoAsset from "@/assets/little.png";
-import heroChildren from "@/assets/hero-children.jpg";
-import learningEnvironment from "@/assets/learning-environment.jpg";
+import heroChildren from "@/assets/19.jfif";
+import learningEnvironment from "@/assets/21.jfif";
 import schoolBuilding from "@/assets/school-building.png";
 import gallery1 from "@/assets/gallery/1.jfif";
 import gallery2 from "@/assets/gallery/2.jfif";
