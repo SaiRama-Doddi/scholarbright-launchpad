@@ -1,27 +1,35 @@
 import { useEffect, useState } from "react";
-import { GraduationCap, ShieldCheck, Users, Globe, Calendar, Star, User } from "lucide-react";
+import { GraduationCap, ShieldCheck, Users, Globe, Calendar, Star, ChevronLeft, ChevronRight } from "lucide-react";
 import logoAsset from "@/assets/little.png";
-import heroChildren from "@/assets/19.jfif";
-import learningEnvironment from "@/assets/21.jfif";
 import schoolBuilding from "@/assets/school-building.png";
-import gallery1 from "@/assets/gallery/1.jfif";
-import gallery2 from "@/assets/gallery/2.jfif";
-import gallery3 from "@/assets/gallery/3.jfif";
-import gallery4 from "@/assets/gallery/4.jfif";
-import gallery5 from "@/assets/gallery/5.jfif";
-import gallery6 from "@/assets/gallery/6.jfif";
 import { FloatingDecor } from "./FloatingDecor";
 
+const galleryModules = import.meta.glob<string>("../../assets/gallery/*.{jfif,png,jpg,jpeg,webp}", {
+  eager: true,
+  import: "default",
+});
+
+const sortedGalleryImages = Object.entries(galleryModules)
+  .map(([path, src]) => {
+    const filename = path.split("/").pop()?.split(".")[0] || "";
+    return { path, src, filename };
+  })
+  .sort((a, b) => {
+    const aNum = parseInt(a.filename, 10);
+    const bNum = parseInt(b.filename, 10);
+    const aIsNum = !isNaN(aNum);
+    const bIsNum = !isNaN(bNum);
+
+    if (aIsNum && bIsNum) return aNum - bNum;
+    if (aIsNum) return -1;
+    if (bIsNum) return 1;
+    return a.filename.localeCompare(b.filename);
+  })
+  .map((img) => img.src);
+
 const carouselImages = [
-  heroChildren,
   schoolBuilding,
-  learningEnvironment,
-  gallery1,
-  gallery2,
-  gallery3,
-  gallery4,
-  gallery5,
-  gallery6,
+  ...sortedGalleryImages,
 ];
 
 export function Hero() {
@@ -150,17 +158,37 @@ export function Hero() {
               ))}
               <div className="absolute inset-0 bg-gradient-to-tr from-primary-deep/20 via-transparent to-transparent z-20" />
 
-              {/* Dot Indicators */}
-              <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-30">
-                {carouselImages.map((_, idx) => (
-                  <button
-                    key={idx}
-                    onClick={() => setImgIndex(idx)}
-                    className={`h-1.5 w-1.5 rounded-full transition-all duration-300 ${
-                      idx === imgIndex ? "bg-white w-3" : "bg-white/50"
-                    }`}
-                  />
-                ))}
+              {/* Progress Bar */}
+              <div className="absolute bottom-0 left-0 right-0 h-1 bg-white/20 z-30">
+                <div
+                  className="h-full bg-accent transition-all duration-500 ease-out"
+                  style={{ width: `${((imgIndex + 1) / carouselImages.length) * 100}%` }}
+                />
+              </div>
+
+              {/* Glassmorphic Carousel Controls */}
+              <div className="absolute bottom-3 right-3 z-30 flex items-center gap-1.5 rounded-full glass px-2.5 py-1 shadow-lg select-none">
+                <button
+                  onClick={() =>
+                    setImgIndex(
+                      (prev) => (prev - 1 + carouselImages.length) % carouselImages.length
+                    )
+                  }
+                  className="grid h-6 w-6 place-items-center rounded-full bg-white/10 hover:bg-white text-primary-deep hover:scale-105 transition-all duration-200 cursor-pointer"
+                  aria-label="Previous image"
+                >
+                  <ChevronLeft className="h-3.5 w-3.5" />
+                </button>
+                <span className="text-[10px] font-bold text-primary-deep px-1 tabular-nums">
+                  {String(imgIndex + 1).padStart(2, "0")} / {String(carouselImages.length).padStart(2, "0")}
+                </span>
+                <button
+                  onClick={() => setImgIndex((prev) => (prev + 1) % carouselImages.length)}
+                  className="grid h-6 w-6 place-items-center rounded-full bg-white/10 hover:bg-white text-primary-deep hover:scale-105 transition-all duration-200 cursor-pointer"
+                  aria-label="Next image"
+                >
+                  <ChevronRight className="h-3.5 w-3.5" />
+                </button>
               </div>
             </div>
 
@@ -179,24 +207,7 @@ export function Hero() {
               <StarIcon className="h-5 w-5 sm:h-6 sm:w-6 text-accent" />
             </div>
 
-            {/* testimonial card */}
-            <div className="absolute -bottom-8 sm:-bottom-10 right-2 sm:right-3 z-30 w-60 sm:w-64 rounded-2xl bg-white p-3 sm:p-4 shadow-[0_12px_40px_rgba(0,0,0,0.08)] animate-float">
-              <div className="flex items-center gap-2.5">
-                <div className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-primary-deep text-white">
-                  <User className="h-4 w-4" />
-                </div>
-                <div className="min-w-0">
-                  <div className="text-xs font-bold text-primary-deep truncate">Priya A.</div>
-                  <div className="text-[10px] font-semibold text-muted-foreground truncate">
-                    Parent • Junior KG
-                  </div>
-                </div>
-              </div>
-              <p className="mt-2 text-[11px] leading-snug text-foreground/75">
-                "My daughter actually asks to go to school every morning. That says it all!"
-              </p>
-              <div className="mt-1.5 text-xs text-accent">★★★★★</div>
-            </div>
+
           </div>
         </div>
       </div>
