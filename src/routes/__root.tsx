@@ -69,9 +69,10 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
 }
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
-  head: () => ({
-    meta: [
-      { charSet: "utf-8" },
+  head: () => {
+    const googleVerification = import.meta.env.VITE_GOOGLE_SITE_VERIFICATION;
+    const metaTags = [
+      { charSet: "utf-8" as const },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Little Scholars International Preschool | Inspiring Future Leaders" },
       {
@@ -79,6 +80,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         content:
           "Premium international preschool in Srikakulam offering Day Care, Play Group, Nursery, Junior & Senior KG. Admissions Open 2026-27.",
       },
+      {
+        name: "keywords",
+        content:
+          "preschool, play group, nursery, day care, junior kg, senior kg, international preschool, srikakulam, little scholars, child education, pre-primary school",
+      },
+      { name: "author", content: "Little Scholars International Preschool" },
+      { name: "robots", content: "index, follow" },
       {
         property: "og:title",
         content: "Little Scholars International Preschool | Inspiring Future Leaders",
@@ -109,17 +117,25 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         content:
           "https://storage.googleapis.com/gpt-engineer-file-uploads/o1rIWpbCDWgg2FDh35u8OTJeKU63/social-images/social-1780539802887-little.webp",
       },
-    ],
-    links: [
-      { rel: "stylesheet", href: appCss },
-      { rel: "preconnect", href: "https://fonts.googleapis.com" },
-      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      {
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap",
-      },
-    ],
-  }),
+    ];
+
+    if (googleVerification && googleVerification !== "your_google_site_verification_id_here") {
+      metaTags.push({ name: "google-site-verification", content: googleVerification });
+    }
+
+    return {
+      meta: metaTags,
+      links: [
+        { rel: "stylesheet", href: appCss },
+        { rel: "preconnect", href: "https://fonts.googleapis.com" },
+        { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+        {
+          rel: "stylesheet",
+          href: "https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap",
+        },
+      ],
+    };
+  },
   shellComponent: RootShell,
   component: RootComponent,
   notFoundComponent: NotFoundComponent,

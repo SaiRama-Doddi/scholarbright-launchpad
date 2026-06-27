@@ -1,5 +1,14 @@
 import { useEffect, useState } from "react";
-import { GraduationCap, ShieldCheck, Users, Globe, Calendar, Star, ChevronLeft, ChevronRight } from "lucide-react";
+import {
+  GraduationCap,
+  ShieldCheck,
+  Users,
+  Globe,
+  Calendar,
+  Star,
+  ChevronLeft,
+  ChevronRight,
+} from "lucide-react";
 import logoAsset from "@/assets/little.png";
 import schoolBuilding from "@/assets/school-building.png";
 import { FloatingDecor } from "./FloatingDecor";
@@ -27,10 +36,7 @@ const sortedGalleryImages = Object.entries(galleryModules)
   })
   .map((img) => img.src);
 
-const carouselImages = [
-  schoolBuilding,
-  ...sortedGalleryImages,
-];
+const carouselImages = [schoolBuilding, ...sortedGalleryImages];
 
 export function Hero() {
   const [imgIndex, setImgIndex] = useState(0);
@@ -171,7 +177,7 @@ export function Hero() {
                 <button
                   onClick={() =>
                     setImgIndex(
-                      (prev) => (prev - 1 + carouselImages.length) % carouselImages.length
+                      (prev) => (prev - 1 + carouselImages.length) % carouselImages.length,
                     )
                   }
                   className="grid h-6 w-6 place-items-center rounded-full bg-white/10 hover:bg-white text-primary-deep hover:scale-105 transition-all duration-200 cursor-pointer"
@@ -180,7 +186,8 @@ export function Hero() {
                   <ChevronLeft className="h-3.5 w-3.5" />
                 </button>
                 <span className="text-[10px] font-bold text-primary-deep px-1 tabular-nums">
-                  {String(imgIndex + 1).padStart(2, "0")} / {String(carouselImages.length).padStart(2, "0")}
+                  {String(imgIndex + 1).padStart(2, "0")} /{" "}
+                  {String(carouselImages.length).padStart(2, "0")}
                 </span>
                 <button
                   onClick={() => setImgIndex((prev) => (prev + 1) % carouselImages.length)}
@@ -206,8 +213,6 @@ export function Hero() {
             <div className="absolute bottom-16 left-2 z-30 grid h-10 w-10 sm:h-12 sm:w-12 md:h-14 md:w-14 place-items-center rounded-lg glass shadow-[0_12px_40px_rgba(0,0,0,0.08)] animate-float-rev">
               <StarIcon className="h-5 w-5 sm:h-6 sm:w-6 text-accent" />
             </div>
-
-
           </div>
         </div>
       </div>

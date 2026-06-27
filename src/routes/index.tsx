@@ -15,27 +15,65 @@ import { ScrollToTop } from "@/components/site/ScrollToTop";
 import { AdmissionsBanner } from "@/components/site/AdmissionsBanner";
 
 export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "Little Scholars International Preschool | Inspiring Future Leaders" },
-      {
-        name: "description",
-        content:
-          "Premium international preschool in Srikakulam — Day Care, Play Group, Nursery, Junior & Senior KG. Admissions Open 2026-27. Safe, digital, activity-based learning.",
-      },
-      { property: "og:title", content: "Little Scholars International Preschool" },
-      {
-        property: "og:description",
-        content: "Inspiring Future Leaders — Admissions Open 2026-27 in Srikakulam.",
-      },
-    ],
-  }),
+  head: () => {
+    const siteUrl = import.meta.env.VITE_SITE_URL || "https://littlescholarsips.com";
+    return {
+      meta: [
+        { title: "Little Scholars International Preschool | Inspiring Future Leaders" },
+        {
+          name: "description",
+          content:
+            "Premium international preschool in Srikakulam — Day Care, Play Group, Nursery, Junior & Senior KG. Admissions Open 2026-27. Safe, digital, activity-based learning.",
+        },
+        { property: "og:title", content: "Little Scholars International Preschool" },
+        {
+          property: "og:description",
+          content: "Inspiring Future Leaders — Admissions Open 2026-27 in Srikakulam.",
+        },
+      ],
+      links: [{ rel: "canonical", href: `${siteUrl}/` }],
+    };
+  },
   component: Index,
 });
 
 function Index() {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "Preschool",
+    name: "Little Scholars International Preschool",
+    image: "https://littlescholarsips.com/logo-title.png",
+    "@id": "https://littlescholarsips.com/#preschool",
+    url: "https://littlescholarsips.com",
+    telephone: "+919492848489",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Plot No: 14, Kalki Nagar, Near Kerala Building, Thotapalem Road",
+      addressLocality: "Srikakulam",
+      addressRegion: "Andhra Pradesh",
+      postalCode: "532005",
+      addressCountry: "IN",
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: "18.3019",
+      longitude: "83.8967",
+    },
+    openingHoursSpecification: {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      opens: "09:00",
+      closes: "15:30",
+    },
+    sameAs: ["https://www.instagram.com/littlescholars2ips"],
+  };
+
   return (
     <main className="relative overflow-x-hidden">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
       <Navbar />
       <Hero />
       <About />

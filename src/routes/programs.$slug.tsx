@@ -595,7 +595,7 @@ export const Route = createFileRoute("/programs/$slug")({
     if (!program) throw notFound();
     return { program };
   },
-  head: ({ loaderData }) => {
+  head: ({ loaderData, params }) => {
     const p = loaderData?.program;
     const title = p
       ? `${p.name} (${p.age}) — Little Scholars International Preschool`
@@ -603,6 +603,7 @@ export const Route = createFileRoute("/programs/$slug")({
     const description = p
       ? `${p.tagline} ${p.overview.slice(0, 110)}`
       : "Explore our preschool programs at Little Scholars International, Srikakulam.";
+    const siteUrl = import.meta.env.VITE_SITE_URL || "https://littlescholarsips.com";
     return {
       meta: [
         { title },
@@ -610,6 +611,7 @@ export const Route = createFileRoute("/programs/$slug")({
         { property: "og:title", content: title },
         { property: "og:description", content: description },
       ],
+      links: [{ rel: "canonical", href: `${siteUrl}/programs/${params.slug}` }],
     };
   },
   notFoundComponent: () => (
@@ -710,8 +712,36 @@ function getTimelineStyles(iconName: string) {
 function ProgramDetail() {
   const { program: p } = Route.useLoaderData() as { program: Program };
 
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    name: `${p.name} Program`,
+    description: `${p.tagline} ${p.overview}`,
+    provider: {
+      "@type": "Preschool",
+      name: "Little Scholars International Preschool",
+      sameAs: "https://littlescholarsips.com",
+    },
+    audience: {
+      "@type": "Audience",
+      audienceType: `Children aged ${p.age}`,
+    },
+    hasCourseInstance: {
+      "@type": "CourseInstance",
+      courseMode: "Preschool/Daycare",
+      instructor: {
+        "@type": "Person",
+        name: "Trained Caregivers & Educators",
+      },
+    },
+  };
+
   return (
     <main className="relative overflow-x-hidden bg-cream">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
       <Navbar />
 
       {/* Hero */}

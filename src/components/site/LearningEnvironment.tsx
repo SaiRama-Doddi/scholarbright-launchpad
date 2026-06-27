@@ -4,12 +4,36 @@ import { SectionEyebrow } from "./About";
 import { FloatingDecor } from "./FloatingDecor";
 
 const pillars = [
-  { t: "Bright Classrooms", d: "Spacious, well-ventilated, AC rooms filled with natural light.", icon: "🏫" },
-  { t: "Safe Playgrounds", d: "Secure outdoor zones with premium, child-safe play equipment.", icon: "🛝" },
-  { t: "Discovery Zones", d: "Interactive STEM corners and sensory labs for hands-on learning.", icon: "🔬" },
-  { t: "Creative Studios", d: "Dedicated spaces for art, craft, music, and dramatic play.", icon: "🎨" },
-  { t: "Secure Campus", d: "Continuous CCTV monitoring and child-safe infrastructure.", icon: "🛡️" },
-  { t: "Nature & Greenery", d: "Lush outdoor green spaces connecting children with nature.", icon: "🌱" },
+  {
+    t: "Bright Classrooms",
+    d: "Spacious, well-ventilated, AC rooms filled with natural light.",
+    icon: "🏫",
+  },
+  {
+    t: "Safe Playgrounds",
+    d: "Secure outdoor zones with premium, child-safe play equipment.",
+    icon: "🛝",
+  },
+  {
+    t: "Discovery Zones",
+    d: "Interactive STEM corners and sensory labs for hands-on learning.",
+    icon: "🔬",
+  },
+  {
+    t: "Creative Studios",
+    d: "Dedicated spaces for art, craft, music, and dramatic play.",
+    icon: "🎨",
+  },
+  {
+    t: "Secure Campus",
+    d: "Continuous CCTV monitoring and child-safe infrastructure.",
+    icon: "🛡️",
+  },
+  {
+    t: "Nature & Greenery",
+    d: "Lush outdoor green spaces connecting children with nature.",
+    icon: "🌱",
+  },
 ];
 
 export function LearningEnvironment() {
@@ -61,7 +85,9 @@ export function LearningEnvironment() {
               <span className="gradient-text-gold">curiosity blooms.</span>
             </h2>
             <p className="mt-5 text-lg leading-relaxed text-foreground/75">
-              Our custom-built preschool campus features secure AC classrooms, interactive discovery zones, and wide-open play areas—all designed to give your child the perfect atmosphere to learn, play, and grow.
+              Our custom-built preschool campus features secure AC classrooms, interactive discovery
+              zones, and wide-open play areas—all designed to give your child the perfect atmosphere
+              to learn, play, and grow.
             </p>
 
             <ul className="mt-8 grid gap-3 sm:grid-cols-2">
