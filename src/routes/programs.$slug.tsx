@@ -711,6 +711,7 @@ function getTimelineStyles(iconName: string) {
 
 function ProgramDetail() {
   const { program: p } = Route.useLoaderData() as { program: Program };
+  const siteUrl = import.meta.env.VITE_SITE_URL || "https://www.littlescholarseducation.com";
 
   const schema = {
     "@context": "https://schema.org",
@@ -720,7 +721,7 @@ function ProgramDetail() {
     provider: {
       "@type": "Preschool",
       name: "Little Scholars International Preschool",
-      sameAs: "https://littlescholarsips.com",
+      sameAs: siteUrl,
     },
     audience: {
       "@type": "Audience",

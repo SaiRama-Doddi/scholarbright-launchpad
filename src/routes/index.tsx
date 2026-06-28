@@ -38,13 +38,14 @@ export const Route = createFileRoute("/")({
 });
 
 function Index() {
+  const siteUrl = import.meta.env.VITE_SITE_URL || "https://www.littlescholarseducation.com";
   const schema = {
     "@context": "https://schema.org",
     "@type": "Preschool",
     name: "Little Scholars International Preschool",
-    image: "https://littlescholarsips.com/logo-title.png",
-    "@id": "https://littlescholarsips.com/#preschool",
-    url: "https://littlescholarsips.com",
+    image: `${siteUrl}/logo-title.png`,
+    "@id": `${siteUrl}/#preschool`,
+    url: siteUrl,
     telephone: "+919492848489",
     address: {
       "@type": "PostalAddress",
