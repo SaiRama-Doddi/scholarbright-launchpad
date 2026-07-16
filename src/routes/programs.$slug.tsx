@@ -89,11 +89,6 @@ const PROGRAMS: Record<string, Program> = {
         icon: "moon",
       },
       {
-        title: "Nutritious meals & snacks",
-        desc: "Fresh, balanced meals prepared daily.",
-        icon: "utensils",
-      },
-      {
         title: "Sensory & motor play zones",
         desc: "Designed to spark curiosity and build key skills.",
         icon: "smile",
